@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "outputFile": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Pranj\\.gradle\\caches\\transforms-2\\files-2.1\\31598702325c9e5fcab98c94d89354ff\\jetified-ucrop-2.2.5\\res\\values-zh\\values-zh.xml",

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AXS Lite</string>
+    <string name="app_name">AXS-G</string>
     <string name="delivery_status_btn">Delivery Status</string>
     <string name="delivery_recipient_btn">Delivery Recipeint</string>
     <string name="delivery_to_btn">Delivered To</string>

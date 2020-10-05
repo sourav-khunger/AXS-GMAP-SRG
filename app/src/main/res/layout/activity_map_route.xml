@@ -28,11 +28,10 @@
 
         <fragment
             android:id="@+id/mapfragment1"
-            class="com.here.android.mpa.mapping.AndroidXMapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/markerTxt" />
-
+            tools:context=".MapsActivity" />
         <TextView
             android:id="@+id/markerTxt"
             android:layout_width="match_parent"
@@ -48,6 +47,7 @@
 
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/centerMap"
             android:layout_width="32dp"
             android:layout_height="32dp"

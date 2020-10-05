@@ -139,8 +139,8 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAcbjVoNzSurPy7HAKBOnW1cuAEITkMjWM" />
 
         <activity android:name="com.doozycod.axs.MainActivity" >
             <intent-filter>
@@ -151,6 +151,7 @@
         </activity>
         <activity android:name="com.doozycod.axs.here.turn.HereTurnNavActivity" />
         <activity android:name="com.doozycod.axs.here.adnav.HereAdvanceNavActivity" />
+
         <!--
 Developers should put application credentials here.To obtain them, please register the application
          at https://developer.here.com/develop/mobile-sdks
@@ -165,15 +166,16 @@ Developers should put application credentials here.To obtain them, please regist
         <!-- android:name="com.here.android.maps.license.key" -->
         <!-- android:value="UkvYc18cLZWcphRt69S/BUxLTzd1VOSnk1Jf8lbFlGsN2bIieGCFjWWC61svXaCvK3tLhC6eRY0I1bMitKdVhuhka226GHYcabEx6XWUTRIZ4xdbyvOCs6RGMwzfj2kdqgjyFBBU8xKECE+hqnldl/hdCt8TvEQSpt4W81/HnycMMpKUngKlFkRw3yEba5pS8Yb9Zl6FYhwruIur03fBOtSZr4dtB37pE9EpGUzMi3gBBJrV5tS1vDkFbd0A446DAmgLd6xARlF/SXZoLGV5nkCyy3u9k7+PPqSZzo8wJyPMMhT6EFwJpqes+hU4kiWRTm7Sp+lW8xuyBSGybeX6deO2nmA8YUGWUgRCcmhc/DzJLH6IoqjkhbPbP2EiVgpstghdZF0oR/3R4ZNq7YCxr0Dn2d5XZVUY0cZjQV6SyA2nb7/oxpxCQ6qxfzEMSZ/N52v6L/CMkKc9Oi4V/ul6z5pLUheJV4AmAEEPcFFNhQ6aMhfM5PAXxn6rTHdZ1sjBfBRccrTLEJNQnHgyc2wYg/gi8hn24DsluvQ3wH+K+n4vib7MyYlsQRLFtZ/4KNjeNXdB4TqcL65zumgiVUo9FmTCQidmSWsgYJygcLF96Ojzg4qlgI1ZSFrbcqmGRwRJpx8lMvODH/U0rqyP23nzk1Zqp+sUhli3YhBRvvF9wC8=" /> -->
 
-        <meta-data
-            android:name="com.here.android.maps.appid"
-            android:value="7MOPdv2jnUXMtG1mKtMf" />
-        <meta-data
-            android:name="com.here.android.maps.apptoken"
-            android:value="0iuUmi_XwVgdk4jpxB1xZQ" />
-        <meta-data
-            android:name="com.here.android.maps.license.key"
-            android:value="NWMe0pLEUw9js8gzAREu7AmIT+j0Vhf9wVac9DwCHedd+KTzaSnSiQgXAd+5f8LAbyr+sXeGFIk1x7fsmEGGr3Z1Lh7McYPTXW+44y8Mq9nRx5AyVLoufMzV+5csYjEr6pSzmEtabyvzUx2PhStMoiKUdY/wjW2d6VLoNCwpZ+c00+PvGynv536xv8d+/9WGQ4Oitnhg1sdOR4rWdb+937zexwjxtC7cYRyrCEaQn2kk4WQGKJgYqwWKawdla5eiBsYPZYo99SAbqoZXaMaRfLJm6w5MpSNBo4Da8J97UL1X7maXCxx0RS+4rIMDFJ7qkJasgeFt5N+sbXuzfCQ754NbYiVv/b9Z8djwklgSWp3UFofKR+pmwC7Td8PAGpUMLY8w4D61Naz71MSZ3+WAjyClgwTo6NGo9591sb0W4cskFyLUSsP0EV37bwfZX/hpd9957HgX3R88J3F5b2aN8CgItoMqE0PIRxsPIB0MNNhai+MyJhG1BZoilo8U0j2PcHdoMVbjuJTcmDN9VzBboVNDpifleEIYKerKNUkNi2aihKMUtaRgE0Ub0W6NlqORrP1LRF0X6oAOXjoPyNcCs10ovqM90QezK/JHrrg+Vej9DjCLztQE04DVPpx7cXlDpNNkWpj3UqsH1xgt3wAwwYwZDBm2nOOnHcXs2o9386g=" />
+
+        <!-- <meta-data -->
+        <!-- android:name="com.here.android.maps.appid" -->
+        <!-- android:value="7MOPdv2jnUXMtG1mKtMf" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.here.android.maps.apptoken" -->
+        <!-- android:value="0iuUmi_XwVgdk4jpxB1xZQ" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.here.android.maps.license.key" -->
+        <!-- android:value="NWMe0pLEUw9js8gzAREu7AmIT+j0Vhf9wVac9DwCHedd+KTzaSnSiQgXAd+5f8LAbyr+sXeGFIk1x7fsmEGGr3Z1Lh7McYPTXW+44y8Mq9nRx5AyVLoufMzV+5csYjEr6pSzmEtabyvzUx2PhStMoiKUdY/wjW2d6VLoNCwpZ+c00+PvGynv536xv8d+/9WGQ4Oitnhg1sdOR4rWdb+937zexwjxtC7cYRyrCEaQn2kk4WQGKJgYqwWKawdla5eiBsYPZYo99SAbqoZXaMaRfLJm6w5MpSNBo4Da8J97UL1X7maXCxx0RS+4rIMDFJ7qkJasgeFt5N+sbXuzfCQ754NbYiVv/b9Z8djwklgSWp3UFofKR+pmwC7Td8PAGpUMLY8w4D61Naz71MSZ3+WAjyClgwTo6NGo9591sb0W4cskFyLUSsP0EV37bwfZX/hpd9957HgX3R88J3F5b2aN8CgItoMqE0PIRxsPIB0MNNhai+MyJhG1BZoilo8U0j2PcHdoMVbjuJTcmDN9VzBboVNDpifleEIYKerKNUkNi2aihKMUtaRgE0Ub0W6NlqORrP1LRF0X6oAOXjoPyNcCs10ovqM90QezK/JHrrg+Vej9DjCLztQE04DVPpx7cXlDpNNkWpj3UqsH1xgt3wAwwYwZDBm2nOOnHcXs2o9386g=" /> -->
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -191,6 +193,10 @@ Developers should put application credentials here.To obtain them, please regist
         <service
             android:name="com.nokia.maps.MapServiceInternal"
             android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <activity
             android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
@@ -322,10 +328,6 @@ Developers should put application credentials here.To obtain them, please regist
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"

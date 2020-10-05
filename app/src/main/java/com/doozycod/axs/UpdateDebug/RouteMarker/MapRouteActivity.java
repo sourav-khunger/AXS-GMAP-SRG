@@ -7,18 +7,40 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.doozycod.axs.Database.Entities.TaskInfoEntity;
 import com.doozycod.axs.Database.Repository.TaskInfoRepository;
 import com.doozycod.axs.R;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
+import com.here.android.mpa.common.GeoCoordinate;
+import com.here.android.mpa.mapping.Map;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapRouteActivity extends AppCompatActivity {
+public class MapRouteActivity extends AppCompatActivity implements OnMapReadyCallback {
     private final static int REQUEST_CODE_ASK_PERMISSIONS = 1;
     private static final String[] RUNTIME_PERMISSIONS = {
             Manifest.permission.ACCESS_FINE_LOCATION,
@@ -35,6 +57,14 @@ public class MapRouteActivity extends AppCompatActivity {
     ArrayList<String> getRouteList;
     double lat, lon;
     String dcName;
+    SupportMapFragment supportMapFragment;
+    private GoogleMap mMap;
+    List<String> routeNameList = new ArrayList<>();
+    Spinner routeSpinner;
+    private TextView markerTxt;
+    List<LatLng> latLngList = new ArrayList<>();
+    List<LatLng> geoCoordinates = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,17 +75,147 @@ public class MapRouteActivity extends AppCompatActivity {
             dcName = getIntent().getStringExtra("dcName");
             lat = getIntent().getDoubleExtra("dcLat", 0);
             lon = getIntent().getDoubleExtra("dcLon", 0);
+
 //            Log.e("TAG", "onCreate: " + getRouteList);
         }
 
+        routeSpinner = findViewById(R.id.routeSpinner);
+        markerTxt = findViewById(R.id.markerTxt);
         mTaskInfoRepository = new TaskInfoRepository(getApplication());
         taskInfoEntities = mTaskInfoRepository.getTaskInfos1();
-        if (hasPermissions(this, RUNTIME_PERMISSIONS)) {
-            setupMapFragmentView();
-        } else {
-            ActivityCompat
-                    .requestPermissions(this, RUNTIME_PERMISSIONS, REQUEST_CODE_ASK_PERMISSIONS);
+
+        supportMapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.mapfragment1);
+        supportMapFragment.getMapAsync(this::onMapReady);
+
+//        add to lat long
+        for (int i = 0; i < getRouteList.size(); i++) {
+            String[] latLong = getRouteList.get(i).split(",");
+            double lat = Double.parseDouble(latLong[0]);
+            double longi = Double.parseDouble(latLong[1]);
+            latLngList.add(new LatLng(lat, longi));
+//            Log.e(TAG, "createPolyline: " + geoCoordinates.get(i));
         }
+//        latLngList
+
+        routeNameList.add("   Show All");
+        routeNameList.add("   Show DC");
+        for (int i = 0; i < taskInfoEntityList.size(); i++) {
+            routeNameList.add(" " + (i + 1) + ". " + taskInfoEntityList.get(i));
+        }
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, routeNameList);
+        routeSpinner.setAdapter(arrayAdapter);
+
+        routeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (supportMapFragment != null && mMap != null) {
+                    if (i == 0) {
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 9));
+//                        mMap.setZoomLevel(8.6, Map.Animation.BOW);
+//                        m_map.setCenter(new GeoCoordinate(lat, lon), Map.Animation.BOW);
+                        markerTxt.setVisibility(View.GONE);
+                    }
+                    if (i == 1) {
+//                        mMap.setZoomLevel(14.3, Map.Animation.BOW);
+//                        m_map.setCenter(new GeoCoordinate(lat, lon), Map.Animation.BOW);
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 14));
+
+                        markerTxt.setVisibility(View.VISIBLE);
+                        markerTxt.setText(dcName);
+                    }
+                    if (i > 1) {
+                        markerTxt.setVisibility(View.VISIBLE);
+                        i = i - 2;
+//                        m_map.setZoomLevel(14.6, Map.Animation.BOW);
+                        double lat = Double.parseDouble(taskInfoEntities.get(i).getLatitude());
+                        double longi = Double.parseDouble(taskInfoEntities.get(i).getLongitude());
+//                        m_map.setCenter(geoCoordinates.get(i)/*new GeoCoordinate(lat, longi)*/,
+//                                Map.Animation.BOW);
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(geoCoordinates.get(i), 14));
+
+                        markerTxt.setText(routeSpinner.getSelectedItem().toString());
+                    }
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+//                m_map.setCenter(PositioningManager.getInstance().getLastKnownPosition().getCoordinate(),
+//                        Map.Animation.BOW);
+            }
+        });
+
+
+//        if (hasPermissions(this, RUNTIME_PERMISSIONS)) {
+//            setupMapFragmentView();
+//        } else {
+//            ActivityCompat
+//                    .requestPermissions(this, RUNTIME_PERMISSIONS, REQUEST_CODE_ASK_PERMISSIONS);
+//        }
+    }
+
+    // Draw polyline on map
+    public void drawPolyLineOnMap(List<LatLng> list) {
+        PolylineOptions polyOptions = new PolylineOptions();
+        polyOptions.color(Color.BLUE);
+        polyOptions.width(10);
+        polyOptions.addAll(list);
+
+        mMap.clear();
+        mMap.addPolyline(polyOptions);
+
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+        for (LatLng latLng : list) {
+            builder.include(latLng);
+        }
+
+        final LatLngBounds bounds = builder.build();
+
+        //BOUND_PADDING is an int to specify padding of bound.. try 100.
+        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 20);
+        mMap.animateCamera(cu);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        Log.e("TAG", "onMapReady: map added");
+        mMap.getUiSettings().setCompassEnabled(true);
+        mMap.getUiSettings().setRotateGesturesEnabled(true);
+        // Add a marker in Sydney and move the camera
+        LatLng dc = new LatLng(lat, lon);
+
+
+//        create polyline
+        drawPolyLineOnMap(latLngList);
+
+        mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon))
+                .title(dcName)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+//
+        for (int a = 0; a < routeNameList.size(); a++) {
+            for (int i = 0; i < taskInfoEntities.size(); i++) {
+                if (routeNameList.get(a).contains(taskInfoEntities.get(i).getName())) {
+                    double longi = Double.parseDouble(taskInfoEntities.get(i).getLongitude());
+                    double lat = Double.parseDouble(taskInfoEntities.get(i).getLatitude());
+                    geoCoordinates.add(new LatLng(lat, longi));
+                    mMap.addMarker(new MarkerOptions().position(new LatLng(lat, longi))
+                            .title(taskInfoEntities.get(i).getName())
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+//                    Log.e(TAG, "createPolyline: " + coordinates.get(i));
+
+                }
+            }
+        }
+//        mMap.addMarker(new MarkerOptions()
+//                .position(sydney)
+//                .title("Marker in Sydney").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+//        mMap.moveCamera(CameraUpdateFactory.newLatLng(dc));
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(dc).zoom(9).build();
+
+        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
     /**
@@ -111,6 +271,9 @@ public class MapRouteActivity extends AppCompatActivity {
     private void setupMapFragmentView() {
         // All permission requests are being handled. Create map fragment view. Please note
         // the HERE Mobile SDK requires all permissions defined above to operate properly.
-        m_mapFragmentView = new MapFragmentView(this, getRouteList, taskInfoEntityList, taskInfoEntities,lon,lat,dcName);
+        m_mapFragmentView = new MapFragmentView(this, getRouteList, taskInfoEntityList,
+                taskInfoEntities, lon, lat, dcName);
     }
+
+
 }

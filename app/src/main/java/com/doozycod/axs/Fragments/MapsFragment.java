@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.collection.ArraySet;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -12,6 +13,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.graphics.PointF;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,7 +25,21 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.gson.Gson;
+import com.google.maps.android.ui.IconGenerator;
 import com.here.android.mpa.common.ApplicationContext;
 import com.here.android.mpa.common.GeoCoordinate;
 import com.here.android.mpa.common.Image;
@@ -53,7 +69,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapsFragment extends Fragment implements OnEngineInitListener {
+public class MapsFragment extends Fragment {
     private static final String TAG = MapsFragment.class.getSimpleName();
 
     private AndroidXMapFragment m_mapFragment;
@@ -71,7 +87,7 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
     private MapFragmentView m_mapFragmentView;
     private Route m_route;
     MapRoute mapRoute;
-    private GeoCoordinate geoCoordinate;
+    //    private GeoCoordinate geoCoordinate;
     List<TaskInfoEntity> taskInfoEntities = new ArrayList<>();
     private TaskInfoRepository mTaskInfoRepository;
     private TextView markerTxt;
@@ -79,6 +95,10 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
     MapView mapView;
     TaskInfoViewModel taskInfoViewModel;
     ApplicationContext appContext;
+
+
+    private GoogleMap mMap;
+    private List<LatLng> coordinates = new ArrayList<>();
 
     @Override
     public void onAttach(Activity activity) {
@@ -91,15 +111,18 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
         }
     }
 
+    SupportMapFragment mapFragment;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         appContext = new ApplicationContext(m_activity.getApplicationContext());
+
         // private app's path
-        String path = new File(m_activity.getExternalFilesDir(null), ".here-map-data")
-                .getAbsolutePath();
-        // This method will throw IllegalArgumentException if provided path is not writable
-        com.here.android.mpa.common.MapSettings.setDiskCacheRootPath(path);
+//        String path = new File(m_activity.getExternalFilesDir(null), ".here-map-data")
+//                .getAbsolutePath();
+//        // This method will throw IllegalArgumentException if provided path is not writable
+//        com.here.android.mpa.common.MapSettings.setDiskCacheRootPath(path);
     }
 
 
@@ -110,11 +133,31 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_maps, container, false);
         initUI(view);
+
+        mapFragment = (SupportMapFragment) getChildFragmentManager()
+                .findFragmentById(R.id.gmap);
+
+        if (mapFragment != null) {
+            Log.e(TAG, "onCreateView: not null");
+            mapFragment.getMapAsync(new OnMapReadyCallback() {
+                @Override
+                public void onMapReady(GoogleMap googleMap) {
+                    mMap = googleMap;
+                    Log.e(TAG, "onMapReady: map added");
+                    mMap.getUiSettings().setCompassEnabled(true);
+                    mMap.getUiSettings().setRotateGesturesEnabled(true);
+                    // Add a marker in Sydney and move the camera
+                  /*  LatLng sydney = new LatLng(-34, 151);
+
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));*/
+                }
+            });
+        }
+
 //        m_mapFragment = new AndroidXMapFragment();
 //        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mapfragment1, m_mapFragment).commit();
 
 //        initMapFragment();
-
 
         return view;
     }
@@ -122,8 +165,8 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
 
     void initUI(View v) {
 //        m_naviControlButton = (Button) m_activity.findViewById(R.id.naviCtrlButton);
-        mapView = v.findViewById(R.id.here_map);
-        centerMap = v.findViewById(R.id.centerMap);
+//        mapView = v.findViewById(R.id.here_map);
+//        centerMap = v.findViewById(R.id.centerMap);
 
 //        mTaskInfoRepository = new TaskInfoRepository(getActivity().getApplication());
 //        taskInfoEntities = mTaskInfoRepository.getTaskInfos1();
@@ -137,7 +180,28 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
                 Log.e(TAG, "onChanged: " + taskInfoEnt.size());
                 taskInfoEntities.clear();
                 taskInfoEntities.addAll(taskInfoEnt);
-                MapEngine.getInstance().init(appContext, MapsFragment.this);
+                for (int i = 0; i < taskInfoEntities.size(); i++) {
+                    double longi = Double.parseDouble(taskInfoEntities.get(i).getLongitude());
+                    double lat = Double.parseDouble(taskInfoEntities.get(i).getLatitude());
+                    coordinates.add(new LatLng(lat, longi));
+                }
+
+                if (taskInfoEntities.size() > 0) {
+
+                    double longi = Double.parseDouble(taskInfoEntities.get(0).getLongitude());
+                    double lat = Double.parseDouble(taskInfoEntities.get(0).getLatitude());
+//                    geoCoordinate = new GeoCoordinate(lat, longi);
+                    CameraPosition cameraPosition = new CameraPosition.Builder()
+                            .target(new LatLng(lat, longi)).zoom(9).build();
+
+                    mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                    drawPolyLineOnMap(coordinates, taskInfoEntities);
+
+                } else {
+
+                }
+
+//                MapEngine.getInstance().init(appContext, MapsFragment.this);
 
 //                Collections.sort(taskInfoEntities, new Comparator<TaskInfoEntity>() {
 //                    public int compare(TaskInfoEntity obj1, TaskInfoEntity obj2) {
@@ -159,17 +223,17 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
             routeSelectionList.add(" " + (i + 1) + ". " + taskInfoEntities.get(i).getName());
         }*/
 
-        centerMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                m_map.setZoomLevel(13, Map.Animation.BOW);
-                m_map.setCenter(PositioningManager.getInstance().getLastKnownPosition().getCoordinate(),
-                        Map.Animation.BOW);
-            }
-        });
-        if (m_map != null && !PositioningManager.getInstance().isActive()) {
-            PositioningManager.getInstance().start(PositioningManager.LocationMethod.GPS_NETWORK); // use gps plus cell and wifi
-        }
+//        centerMap.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                m_map.setZoomLevel(13, Map.Animation.BOW);
+//                m_map.setCenter(PositioningManager.getInstance().getLastKnownPosition().getCoordinate(),
+//                        Map.Animation.BOW);
+//            }
+//        });
+//        if (m_map != null && !PositioningManager.getInstance().isActive()) {
+//            PositioningManager.getInstance().start(PositioningManager.LocationMethod.GPS_NETWORK); // use gps plus cell and wifi
+//        }
     }
 
     private AndroidXMapFragment getMapFragment() {
@@ -274,6 +338,42 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
      */
 
 
+    // Draw polyline on map
+    public void drawPolyLineOnMap(List<LatLng> list, List<TaskInfoEntity> taskInfoEntities) {
+//        PolylineOptions polyOptions = new PolylineOptions();
+//        polyOptions.color(Color.BLUE);
+//        polyOptions.width(10);
+//        polyOptions.addAll(list);
+
+        mMap.clear();
+//        mMap.addPolyline(polyOptions);
+
+//        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+        for (int i = 0; i < taskInfoEntities.size(); i++) {
+            IconGenerator iconFactory = new IconGenerator(getContext());
+            // iconFactory.setColor(Color.RED);
+            iconFactory.setStyle(IconGenerator.STYLE_RED);
+
+            MarkerOptions markerOptions = new MarkerOptions()
+                    .title((i + 1) + ". " + taskInfoEntities.get(i).getName())
+                    .icon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon((i + 1) + ""))).
+                            position(list.get(i)).
+                            anchor(iconFactory.getAnchorU(), iconFactory.getAnchorV());
+
+            mMap.addMarker(markerOptions);
+//            builder.include(latLng);
+//            mMap.addMarker(new MarkerOptions()
+//                    .position(latLng).icon(BitmapDescriptorFactory
+//                            .defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+        }
+
+//        final LatLngBounds bounds = builder.build();
+
+        //BOUND_PADDING is an int to specify padding of bound.. try 100.
+//        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 20);
+//        mMap.animateCamera(cu);
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void createPolyline() {
         ArrayList<GeoCoordinate> coordinates = new ArrayList<>();
@@ -362,14 +462,13 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
 
     @Override
     public void onResume() {
-        mapView.onResume();
         super.onResume();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mapView.onPause();
+//        mapView.onPause();
     }
 
     @Override
@@ -384,15 +483,15 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
 //        mapView.;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
+   /* @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onEngineInitializationCompleted(Error error) {
         if (error == Error.NONE) {
-            /*
-             * If no error returned from map fragment initialization, the map will be
-             * rendered on screen at this moment.Further actions on map can be provided
-             * by calling Map APIs.
-             */
+            *//*
+     * If no error returned from map fragment initialization, the map will be
+     * rendered on screen at this moment.Further actions on map can be provided
+     * by calling Map APIs.
+     *//*
             m_map = new Map();
 
             mapView.setMap(m_map);
@@ -408,13 +507,13 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
 
 
             m_map.setCenter(geoCoordinate, Map.Animation.NONE);
-            /* Set the zoom level to the average between min and max zoom level. */
+            *//* Set the zoom level to the average between min and max zoom level. *//*
             m_map.setZoomLevel(8.6);
 
             m_activity.supportInvalidateOptionsMenu();
             mapView.getMapGesture().addOnGestureListener(onGestureListener, 0, false);
 //                        m_map =
-            /*MapPolyline mapPolyline =*/
+            *//*MapPolyline mapPolyline =*//*
             String jsonLoginResponse = PreferenceManager.getDefaultSharedPreferences(m_activity).getString(Constants.PREF_KEY_LOGIN_RESPONSE, "");
             LoginResponse loginResponse = new Gson().fromJson(jsonLoginResponse, LoginResponse.class);
             int isOnduty = loginResponse.getDriverInfo().getOnDuty();
@@ -424,9 +523,9 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
             }
 
 //          m_map.addMapObject(mapPolyline);
-            /*
-             * Set up a handler for handling MapMarker drag events.
-             */
+            *//*
+     * Set up a handler for handling MapMarker drag events.
+     *//*
             mapView.setMapMarkerDragListener(new OnDragListenerHandler());
 
         } else {
@@ -445,103 +544,13 @@ public class MapsFragment extends Fragment implements OnEngineInitListener {
                                 }
                             }).create().show();
         }
-    }
+    }*/
 
-    private static class OnDragListenerHandler implements MapMarker.OnDragListener {
-        @Override
-        public void onMarkerDrag(MapMarker mapMarker) {
-
-            Log.e(TAG, "onMarkerDrag: " + mapMarker.getTitle() + " -> " + mapMarker
-                    .getCoordinate());
-        }
-
-        @Override
-        public void onMarkerDragEnd(MapMarker mapMarker) {
-            Log.e(TAG, "onMarkerDragEnd: " + mapMarker.getTitle() + " -> " + mapMarker
-                    .getCoordinate());
-        }
-
-        @Override
-        public void onMarkerDragStart(MapMarker mapMarker) {
-            Log.e(TAG, "onMarkerDragStart: " + mapMarker.getTitle() + " -> " + mapMarker
-                    .getCoordinate());
-        }
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    private void initMapFragment() {
-        /* Locate the mapFragment UI element */
-        m_mapFragment = getMapFragment();
-
-        // This will use external storage to save map cache data, it is also possible to set
-        // private app's path
-        String path = new File(m_activity.getExternalFilesDir(null), ".here-map-data")
-                .getAbsolutePath();
-        // This method will throw IllegalArgumentException if provided path is not writable
-        com.here.android.mpa.common.MapSettings.setDiskCacheRootPath(path);
-
-        if (m_mapFragment != null) {
-            /* Initialize the AndroidXMapFragment, results will be given via the called back. */
-            m_mapFragment.init(new OnEngineInitListener() {
-                @RequiresApi(api = Build.VERSION_CODES.O)
-                @Override
-                public void onEngineInitializationCompleted(Error error) {
-
-                    if (error == Error.NONE) {
-                        /*
-                         * If no error returned from map fragment initialization, the map will be
-                         * rendered on screen at this moment.Further actions on map can be provided
-                         * by calling Map APIs.
-                         */
-                        m_map = m_mapFragment.getMap();
-
-
-                        /*
-                         * Set the map center to the 4350 Still Creek Dr Burnaby BC (no animation).
-                         */
-                        geoCoordinate = new GeoCoordinate(LocationService.latitude, LocationService.longitude);
-                        geoCoordinate = PositioningManager.getInstance().getLastKnownPosition().getCoordinate();
-                        m_map.setCenter(geoCoordinate,
-                                Map.Animation.BOW);
-
-                        /* Set the zoom level to the average between min and max zoom level. */
-                        m_map.setZoomLevel(8.7);
-
-                        m_activity.supportInvalidateOptionsMenu();
-                        m_mapFragment.getMapGesture().addOnGestureListener(onGestureListener, 0, false);
-//                        m_map =
-                        /*MapPolyline mapPolyline =*/
-                        createPolyline();
-//                        m_map.addMapObject(mapPolyline);
-                        /*
-                         * Set up a handler for handling MapMarker drag events.
-                         */
-
-                        m_mapFragment.setMapMarkerDragListener(new OnDragListenerHandler());
-
-                    } else {
-                        Log.e(this.getClass().toString(), "onEngineInitializationCompleted: " +
-                                "ERROR=" + error.getDetails(), error.getThrowable());
-                        new AlertDialog.Builder(m_activity).setMessage(
-                                "Error : " + error.name() + "\n\n" + error.getDetails())
-                                .setTitle(R.string.engine_init_error)
-                                .setNegativeButton(android.R.string.cancel,
-                                        new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(
-                                                    DialogInterface dialog,
-                                                    int which) {
-                                                m_activity.finish();
-                                            }
-                                        }).create().show();
-                    }
-                }
-            });
-        }
-    }
 
 }

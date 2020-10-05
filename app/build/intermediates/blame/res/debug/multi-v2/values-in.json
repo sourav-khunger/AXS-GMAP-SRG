@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-in\\values-in.xml",
+            "outputFile": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-in\\values-in.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Pranj\\.gradle\\caches\\transforms-2\\files-2.1\\d0f92c0b26fabb47a28488bab3cc8456\\navigation-ui-2.3.0\\res\\values-in\\values-in.xml",

@@ -6,174 +6,174 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml
+8-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="26" />
-9-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml
+9-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
 10    <!--
 11         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
 12         Google Maps Android API v2, but you must specify either coarse or fine
 13         location permissions for the "MyLocation" functionality.
 14    -->
 15    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-15-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:10:5-71
-15-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:10:22-68
+15-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:10:5-71
+15-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:10:22-68
 16
 17    <uses-feature
-17-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:12:5-14:35
+17-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:12:5-14:35
 18        android:name="android.hardware.microphone"
-18-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:13:9-51
+18-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:13:9-51
 19        android:required="true" />
-19-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:14:9-32
+19-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:14:9-32
 20
 21    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-21-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:16:5-79
-21-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:16:22-76
+21-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:16:5-79
+21-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:16:22-76
 22    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-22-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:17:5-81
-22-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:17:22-78
+22-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:17:5-81
+22-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:17:22-78
 23    <uses-permission android:name="android.permission.CALL_PHONE" />
-23-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:18:5-69
-23-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:18:22-66
+23-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:18:5-69
+23-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:18:22-66
 24    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-24-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:19:5-75
-24-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:19:22-72
+24-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:19:5-75
+24-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:19:22-72
 25    <uses-permission android:name="android.permission.INTERNET" />
-25-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:20:5-67
-25-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:20:22-64
+25-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:20:5-67
+25-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:20:22-64
 26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-26-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:21:5-79
-26-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:21:22-76
+26-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:21:5-79
+26-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:21:22-76
 27    <uses-permission android:name="android.permission.CAMERA" />
-27-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:22:5-65
-27-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:22:22-62
+27-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:22:5-65
+27-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:22:22-62
 28    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-28-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:23:5-81
-28-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:23:22-78
+28-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:23:5-81
+28-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:23:22-78
 29    <uses-permission android:name="android.permission.WAKE_LOCK" />
-29-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:24:5-68
-29-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:24:22-65
+29-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:24:5-68
+29-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:24:22-65
 30    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-30-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:25:5-81
-30-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:25:22-78
+30-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:25:5-81
+30-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:25:22-78
 31    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-31-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:26:5-80
-31-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:26:22-77
+31-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:26:5-80
+31-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:26:22-77
 32    <uses-permission android:name="android.permission.VIBRATE" />
-32-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:27:5-66
-32-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:27:22-63
+32-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:27:5-66
+32-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:27:22-63
 33    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-33-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:10:5-71
-33-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:10:22-68
+33-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:10:5-71
+33-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:10:22-68
 34    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-34-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:29:5-76
-34-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:29:22-73
+34-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:29:5-76
+34-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:29:22-73
 35
 36    <permission
-36-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:31:5-34:44
+36-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:31:5-34:44
 37        android:name="android.permission.FLASHLIGHT"
-37-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:32:9-53
+37-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:32:9-53
 38        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
-38-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:33:9-77
+38-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:33:9-77
 39        android:protectionLevel="normal" />
-39-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:34:9-41
+39-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:34:9-41
 40
 41    <uses-feature android:name="android.hardware.camera" />
-41-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:36:5-60
-41-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:36:19-57
+41-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:36:5-60
+41-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:36:19-57
 42    <uses-feature android:name="android.hardware.camera.autofocus" />
-42-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:37:5-70
-42-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:37:19-67
+42-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:37:5-70
+42-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:37:19-67
 43
 44    <!-- android:installLocation="auto"   BOOT_COMPLETE is sent to applications before external storage is mounted. So if application is installed to external storage it won't receive BOOT_COMPLETE broadcast message. -->
 45    <!-- <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="28" /> -->
 46    <uses-feature
-46-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:23:5-25:36
+46-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:23:5-25:36
 47        android:name="android.hardware.audio.low_latency"
-47-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:24:9-58
+47-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:24:9-58
 48        android:required="false" />
-48-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:25:9-33
+48-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:25:9-33
 49    <uses-feature
-49-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:26:5-28:36
+49-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:26:5-28:36
 50        android:name="android.hardware.audio.output"
-50-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:27:9-53
+50-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:27:9-53
 51        android:required="false" />
-51-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:28:9-33
+51-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:28:9-33
 52    <uses-feature
-52-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:29:5-31:36
+52-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:29:5-31:36
 53        android:name="android.hardware.audio.pro"
-53-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:30:9-50
+53-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:30:9-50
 54        android:required="false" />
-54-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:31:9-33
+54-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:31:9-33
 55    <uses-feature
-55-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:32:5-34:36
+55-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:32:5-34:36
 56        android:name="android.hardware.telephony"
-56-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:33:9-50
+56-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:33:9-50
 57        android:required="false" />
-57-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:34:9-33
+57-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:34:9-33
 58    <uses-feature
-58-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:35:5-37:36
+58-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:35:5-37:36
 59        android:name="android.hardware.bluetooth"
-59-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:36:9-50
+59-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:36:9-50
 60        android:required="false" />
-60-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:37:9-33
+60-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:37:9-33
 61    <uses-feature
-61-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:38:5-40:36
+61-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:38:5-40:36
 62        android:name="android.hardware.wifi"
-62-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:39:9-45
+62-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:39:9-45
 63        android:required="false" />
-63-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:40:9-33
+63-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:40:9-33
 64    <uses-feature
-64-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:44:5-46:36
+64-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:44:5-46:36
 65        android:name="android.hardware.sensor.proximity"
-65-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:45:9-57
+65-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:45:9-57
 66        android:required="false" />
-66-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:46:9-33
+66-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:46:9-33
 67    <uses-feature
-67-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:53:5-55:36
+67-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:53:5-55:36
 68        android:name="android.hardware.camera.front"
-68-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:54:9-53
+68-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:54:9-53
 69        android:required="false" />
-69-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:55:9-33
+69-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:55:9-33
 70    <uses-feature
-70-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:56:5-58:36
+70-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:56:5-58:36
 71        android:name="android.hardware.camera.any"
-71-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:57:9-51
+71-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:57:9-51
 72        android:required="false" />
-72-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:58:9-33
+72-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:58:9-33
 73    <uses-feature
-73-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:59:5-61:36
+73-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:59:5-61:36
 74        android:name="android.software.sip"
-74-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:60:9-44
+74-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:60:9-44
 75        android:required="false" />
-75-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:61:9-33
+75-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:61:9-33
 76    <uses-feature
-76-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:62:5-64:36
+76-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:62:5-64:36
 77        android:name="android.software.sip.voip"
-77-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:63:9-49
+77-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:63:9-49
 78        android:required="false" />
-78-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:64:9-33
+78-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:64:9-33
 79    <uses-feature
-79-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:65:5-67:36
+79-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:65:5-67:36
 80        android:name="android.software.webview"
-80-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:66:9-48
+80-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:66:9-48
 81        android:required="false" />
-81-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:67:9-33
+81-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:67:9-33
 82
 83    <uses-permission android:name="android.permission.BLUETOOTH" />
-83-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:73:5-68
-83-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:73:22-65
+83-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:73:5-68
+83-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:73:22-65
 84    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-84-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:74:5-79
-84-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:74:22-76
+84-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:74:5-79
+84-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:74:22-76
 85    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-85-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:75:5-76
-85-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:75:22-73
+85-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:75:5-76
+85-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:75:22-73
 86    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-86-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:76:5-75
-86-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:76:22-72
+86-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:76:5-75
+86-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:76:22-72
 87    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-87-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:77:5-80
-87-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\AJVoIP\build\.transforms\799da754f5196c473aa573f4d27d3e2a\jetified-AJVoIP\AndroidManifest.xml:77:22-77
+87-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:77:5-80
+87-->[:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:77:22-77
 88
 89    <uses-feature
 89-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
@@ -187,92 +187,92 @@
 93-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:28:22-74
 94
 95    <application
-95-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:39:5-131:19
+95-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:39:5-133:19
 96        android:allowBackup="false"
-96-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:40:9-36
+96-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:40:9-36
 97        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 97-->[androidx.core:core:1.3.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ae3468b444d41a56f261ecbb8448fe17\core-1.3.1\AndroidManifest.xml:24:18-86
 98        android:debuggable="true"
 99        android:extractNativeLibs="false"
 100        android:icon="@drawable/axs_logo"
-100-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:41:9-42
+100-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:41:9-42
 101        android:label="@string/app_name"
-101-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:42:9-41
+101-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:42:9-41
 102        android:requestLegacyExternalStorage="true"
-102-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:43:9-52
+102-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:43:9-52
 103        android:roundIcon="@drawable/axs_logo"
-103-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:44:9-47
+103-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:44:9-47
 104        android:supportsRtl="true"
-104-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:45:9-35
+104-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:45:9-35
 105        android:testOnly="true"
 106        android:theme="@style/AppTheme"
-106-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:46:9-40
+106-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:46:9-40
 107        android:usesCleartextTraffic="true" >
-107-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:47:9-44
+107-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:47:9-44
 108        <activity android:name="com.doozycod.axs.UpdateDebug.RouteMarker.MapRouteActivity" />
-108-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:48:9-87
-108-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:48:19-75
+108-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:48:9-87
+108-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:48:19-75
 109        <activity android:name="com.doozycod.axs.UpdateDebug.PhoneCallActivity" />
-109-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:49:9-67
-109-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:49:19-64
+109-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:9-67
+109-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:19-64
 110        <activity android:name="com.doozycod.axs.UpdateDebug.SelfDispatchActivity" />
-110-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:50:9-70
-110-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:50:19-67
+110-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:9-70
+110-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:19-67
 111        <activity android:name="com.doozycod.axs.UpdateDebug.MenuActivity" />
-111-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:51:9-62
-111-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:51:19-59
+111-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:9-62
+111-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:19-59
 112        <activity android:name="com.doozycod.axs.UpdateDebug.ScannerActivity" />
-112-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:52:9-65
-112-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:52:19-62
+112-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:9-65
+112-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:19-62
 113        <activity android:name="com.doozycod.axs.Activity.TaskInfoUpdateActivity" />
-113-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:53:9-69
-113-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:53:19-66
+113-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:9-69
+113-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:19-66
 114        <activity android:name="com.doozycod.axs.Activity.ShowListOfTaskGroupByLocationKeyActivity" />
-114-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:54:9-87
-114-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:54:19-84
+114-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:9-87
+114-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:19-84
 115        <activity android:name="com.doozycod.axs.Activity.ShowPackageDetailsActivity" />
-115-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:55:9-73
-115-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:55:19-70
+115-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:9-73
+115-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:19-70
 116        <activity
-116-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:56:9-58:59
+116-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:56:9-58:59
 117            android:name="com.doozycod.axs.Activity.ScreenSlidePagerActivity"
-117-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:57:13-62
+117-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:57:13-62
 118            android:theme="@style/AppTheme.NoActionBar" />
-118-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:58:13-56
+118-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:58:13-56
 119        <activity
-119-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:59:9-61:59
+119-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:59:9-61:59
 120            android:name="com.doozycod.axs.Activity.ShipmentActivity"
-120-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:60:13-54
+120-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:60:13-54
 121            android:theme="@style/AppTheme.NoActionBar" />
-121-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:61:13-56
+121-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:61:13-56
 122        <activity
-122-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:62:9-64:59
+122-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:62:9-64:59
 123            android:name="com.doozycod.axs.Activity.ChooseCompanyActivity"
-123-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:63:13-59
+123-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:63:13-59
 124            android:theme="@style/AppTheme.NoActionBar" />
-124-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:64:13-56
+124-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:64:13-56
 125        <activity android:name="com.doozycod.axs.Activity.SignatureActivity" />
-125-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:65:9-64
-125-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:65:19-61
+125-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:65:9-64
+125-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:65:19-61
 126        <activity android:name="com.doozycod.axs.Activity.GPS_StatusActivity" />
-126-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:66:9-65
-126-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:66:19-62
+126-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:66:9-65
+126-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:66:19-62
 127        <activity android:name="com.doozycod.axs.Activity.ScanPackageActivity" />
-127-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:67:9-66
-127-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:67:19-63
+127-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:9-66
+127-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:19-63
 128
 129        <service android:name="com.doozycod.axs.BackgroudService.Workers.SyncRemoteServerService" />
-129-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:69:9-85
-129-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:69:18-82
+129-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:69:9-85
+129-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:69:18-82
 130        <service android:name="com.doozycod.axs.BackgroudService.Workers.LocationService" />
-130-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:70:9-77
-130-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:70:18-74
+130-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:70:9-77
+130-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:70:18-74
 131        <service android:name="com.doozycod.axs.BackgroudService.Workers.UploadImageService" />
-131-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:71:9-80
-131-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:71:18-77
+131-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:9-80
+131-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:18-77
 132        <service android:name="com.doozycod.axs.BackgroudService.Workers.Foreground_GPS_Service" />
-132-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:72:9-84
-132-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:72:18-81
+132-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:9-84
+132-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:18-81
 133        <!--
 134             The API key for Google Maps-based APIs is defined as a string resource.
 135             (See the file "res/values/google_maps_api.xml").
@@ -282,364 +282,357 @@
 139             You can define the keys for the debug and release targets in src/debug/ and src/release/.
 140        -->
 141        <meta-data
-141-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:81:9-83:55
-142            android:name="com.google.android.geo.API_KEY"
-142-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:82:13-58
-143            android:value="@string/google_maps_key" />
-143-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:83:13-52
+141-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:81:9-83:71
+142            android:name="com.google.android.maps.v2.API_KEY"
+142-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:82:13-62
+143            android:value="AIzaSyAcbjVoNzSurPy7HAKBOnW1cuAEITkMjWM" />
+143-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:83:13-68
 144
 145        <activity android:name="com.doozycod.axs.MainActivity" >
-145-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:85:9-91:20
-145-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:85:19-47
+145-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:85:9-91:20
+145-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:85:19-47
 146            <intent-filter>
-146-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:86:13-90:29
+146-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:86:13-90:29
 147                <action android:name="android.intent.action.MAIN" />
-147-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:87:17-69
-147-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:87:25-66
+147-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:87:17-69
+147-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:87:25-66
 148
 149                <category android:name="android.intent.category.LAUNCHER" />
-149-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:89:17-77
-149-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:89:27-74
+149-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:89:17-77
+149-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:89:27-74
 150            </intent-filter>
 151        </activity>
 152        <activity android:name="com.doozycod.axs.here.turn.HereTurnNavActivity" />
-152-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:92:9-67
-152-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:92:19-64
+152-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:92:9-67
+152-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:92:19-64
 153        <activity android:name="com.doozycod.axs.here.adnav.HereAdvanceNavActivity" />
-153-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:93:9-71
-153-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:93:19-68
-154        <!--
-155Developers should put application credentials here.To obtain them, please register the application
-156         at https://developer.here.com/develop/mobile-sdks
-157        -->
-158        <!-- <meta-data -->
-159        <!-- android:name="com.here.android.maps.appid" -->
-160        <!-- android:value="CvjeJJL4RUq34uKkpxiP" /> -->
-161        <!-- <meta-data -->
-162        <!-- android:name="com.here.android.maps.apptoken" -->
-163        <!-- android:value="EX4lKdnXTfofi4ZyXrT9ww" /> -->
-164        <!-- <meta-data -->
-165        <!-- android:name="com.here.android.maps.license.key" -->
-166        <!-- android:value="UkvYc18cLZWcphRt69S/BUxLTzd1VOSnk1Jf8lbFlGsN2bIieGCFjWWC61svXaCvK3tLhC6eRY0I1bMitKdVhuhka226GHYcabEx6XWUTRIZ4xdbyvOCs6RGMwzfj2kdqgjyFBBU8xKECE+hqnldl/hdCt8TvEQSpt4W81/HnycMMpKUngKlFkRw3yEba5pS8Yb9Zl6FYhwruIur03fBOtSZr4dtB37pE9EpGUzMi3gBBJrV5tS1vDkFbd0A446DAmgLd6xARlF/SXZoLGV5nkCyy3u9k7+PPqSZzo8wJyPMMhT6EFwJpqes+hU4kiWRTm7Sp+lW8xuyBSGybeX6deO2nmA8YUGWUgRCcmhc/DzJLH6IoqjkhbPbP2EiVgpstghdZF0oR/3R4ZNq7YCxr0Dn2d5XZVUY0cZjQV6SyA2nb7/oxpxCQ6qxfzEMSZ/N52v6L/CMkKc9Oi4V/ul6z5pLUheJV4AmAEEPcFFNhQ6aMhfM5PAXxn6rTHdZ1sjBfBRccrTLEJNQnHgyc2wYg/gi8hn24DsluvQ3wH+K+n4vib7MyYlsQRLFtZ/4KNjeNXdB4TqcL65zumgiVUo9FmTCQidmSWsgYJygcLF96Ojzg4qlgI1ZSFrbcqmGRwRJpx8lMvODH/U0rqyP23nzk1Zqp+sUhli3YhBRvvF9wC8=" /> -->
-167
-168        <meta-data
-168-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:108:8-110:52
-169            android:name="com.here.android.maps.appid"
-169-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:109:13-55
-170            android:value="7MOPdv2jnUXMtG1mKtMf" />
-170-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:110:13-49
-171        <meta-data
-171-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:111:9-113:54
-172            android:name="com.here.android.maps.apptoken"
-172-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:112:13-58
-173            android:value="0iuUmi_XwVgdk4jpxB1xZQ" />
-173-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:113:13-51
-174        <meta-data
-174-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:114:9-116:716
-175            android:name="com.here.android.maps.license.key"
-175-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:115:13-61
-176            android:value="NWMe0pLEUw9js8gzAREu7AmIT+j0Vhf9wVac9DwCHedd+KTzaSnSiQgXAd+5f8LAbyr+sXeGFIk1x7fsmEGGr3Z1Lh7McYPTXW+44y8Mq9nRx5AyVLoufMzV+5csYjEr6pSzmEtabyvzUx2PhStMoiKUdY/wjW2d6VLoNCwpZ+c00+PvGynv536xv8d+/9WGQ4Oitnhg1sdOR4rWdb+937zexwjxtC7cYRyrCEaQn2kk4WQGKJgYqwWKawdla5eiBsYPZYo99SAbqoZXaMaRfLJm6w5MpSNBo4Da8J97UL1X7maXCxx0RS+4rIMDFJ7qkJasgeFt5N+sbXuzfCQ754NbYiVv/b9Z8djwklgSWp3UFofKR+pmwC7Td8PAGpUMLY8w4D61Naz71MSZ3+WAjyClgwTo6NGo9591sb0W4cskFyLUSsP0EV37bwfZX/hpd9957HgX3R88J3F5b2aN8CgItoMqE0PIRxsPIB0MNNhai+MyJhG1BZoilo8U0j2PcHdoMVbjuJTcmDN9VzBboVNDpifleEIYKerKNUkNi2aihKMUtaRgE0Ub0W6NlqORrP1LRF0X6oAOXjoPyNcCs10ovqM90QezK/JHrrg+Vej9DjCLztQE04DVPpx7cXlDpNNkWpj3UqsH1xgt3wAwwYwZDBm2nOOnHcXs2o9386g=" />
-176-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:116:13-713
-177
-178        <provider
-178-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:118:9-128:20
-179            android:name="androidx.core.content.FileProvider"
-179-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:119:13-62
-180            android:authorities="com.doozycod.axs.Utils.FileProvider"
-180-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:120:13-70
-181            android:exported="false"
-181-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:121:13-37
-182            android:grantUriPermissions="true" >
-182-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:122:13-47
-183
-184            <!-- ressource file to create -->
-185            <meta-data
-185-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:125:13-127:54
-186                android:name="android.support.FILE_PROVIDER_PATHS"
-186-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:126:17-67
-187                android:resource="@xml/file_paths" />
-187-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:127:17-51
-188        </provider>
-189
-190        <service android:name="com.doozycod.axs.here.turn.HereTurnForegroundService" />
-190-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:130:9-72
-190-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:130:18-69
-191        <service
-191-->[HERE-sdk.aar] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\595c4239535c10e9b98c7c762342f9e3\jetified-HERE-sdk\AndroidManifest.xml:12:9-14:40
-192            android:name="com.nokia.maps.MapServiceInternal"
-192-->[HERE-sdk.aar] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\595c4239535c10e9b98c7c762342f9e3\jetified-HERE-sdk\AndroidManifest.xml:13:13-61
-193            android:exported="false" />
-193-->[HERE-sdk.aar] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\595c4239535c10e9b98c7c762342f9e3\jetified-HERE-sdk\AndroidManifest.xml:14:13-37
-194
-195        <activity
-195-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:15:9-18:68
-196            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
-196-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:16:13-81
-197            android:screenOrientation="unspecified"
-197-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:17:13-52
-198            android:theme="@style/Theme.Transparent.ImagePicker" />
-198-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:18:13-65
-199        <activity
-199-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:19:9-22:72
-200            android:name="com.yalantis.ucrop.UCropActivity"
-200-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:20:13-60
-201            android:screenOrientation="portrait"
-201-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:21:13-49
-202            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-202-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:22:13-69
-203
-204        <provider
-204-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:24:9-32:20
-205            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
-205-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:25:13-85
-206            android:authorities="com.doozycod.axs.imagepicker.provider"
-206-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:26:13-72
-207            android:exported="false"
-207-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:27:13-37
-208            android:grantUriPermissions="true" >
-208-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:28:13-47
-209            <meta-data
-209-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:125:13-127:54
-210                android:name="android.support.FILE_PROVIDER_PATHS"
-210-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:126:17-67
-211                android:resource="@xml/image_picker_provider_paths" />
-211-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG\app\src\main\AndroidManifest.xml:127:17-51
-212        </provider> <!-- Needs to be explicitly declared on P+ -->
-213        <uses-library
-213-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-214            android:name="org.apache.http.legacy"
-214-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-215            android:required="false" />
-215-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-216
-217        <provider
-217-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:31:9-37:35
-218            android:name="androidx.work.impl.WorkManagerInitializer"
-218-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:32:13-69
-219            android:authorities="com.doozycod.axs.workmanager-init"
-219-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:33:13-68
-220            android:directBootAware="false"
-220-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:34:13-44
-221            android:exported="false"
-221-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:35:13-37
-222            android:multiprocess="true" />
-222-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:36:13-40
-223
-224        <service
-224-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:39:9-44:35
-225            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
-225-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:40:13-88
+153-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:93:9-71
+153-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:93:19-68
+154
+155        <!--
+156Developers should put application credentials here.To obtain them, please register the application
+157         at https://developer.here.com/develop/mobile-sdks
+158        -->
+159        <!-- <meta-data -->
+160        <!-- android:name="com.here.android.maps.appid" -->
+161        <!-- android:value="CvjeJJL4RUq34uKkpxiP" /> -->
+162        <!-- <meta-data -->
+163        <!-- android:name="com.here.android.maps.apptoken" -->
+164        <!-- android:value="EX4lKdnXTfofi4ZyXrT9ww" /> -->
+165        <!-- <meta-data -->
+166        <!-- android:name="com.here.android.maps.license.key" -->
+167        <!-- android:value="UkvYc18cLZWcphRt69S/BUxLTzd1VOSnk1Jf8lbFlGsN2bIieGCFjWWC61svXaCvK3tLhC6eRY0I1bMitKdVhuhka226GHYcabEx6XWUTRIZ4xdbyvOCs6RGMwzfj2kdqgjyFBBU8xKECE+hqnldl/hdCt8TvEQSpt4W81/HnycMMpKUngKlFkRw3yEba5pS8Yb9Zl6FYhwruIur03fBOtSZr4dtB37pE9EpGUzMi3gBBJrV5tS1vDkFbd0A446DAmgLd6xARlF/SXZoLGV5nkCyy3u9k7+PPqSZzo8wJyPMMhT6EFwJpqes+hU4kiWRTm7Sp+lW8xuyBSGybeX6deO2nmA8YUGWUgRCcmhc/DzJLH6IoqjkhbPbP2EiVgpstghdZF0oR/3R4ZNq7YCxr0Dn2d5XZVUY0cZjQV6SyA2nb7/oxpxCQ6qxfzEMSZ/N52v6L/CMkKc9Oi4V/ul6z5pLUheJV4AmAEEPcFFNhQ6aMhfM5PAXxn6rTHdZ1sjBfBRccrTLEJNQnHgyc2wYg/gi8hn24DsluvQ3wH+K+n4vib7MyYlsQRLFtZ/4KNjeNXdB4TqcL65zumgiVUo9FmTCQidmSWsgYJygcLF96Ojzg4qlgI1ZSFrbcqmGRwRJpx8lMvODH/U0rqyP23nzk1Zqp+sUhli3YhBRvvF9wC8=" /> -->
+168
+169
+170        <!-- <meta-data -->
+171        <!-- android:name="com.here.android.maps.appid" -->
+172        <!-- android:value="7MOPdv2jnUXMtG1mKtMf" /> -->
+173        <!-- <meta-data -->
+174        <!-- android:name="com.here.android.maps.apptoken" -->
+175        <!-- android:value="0iuUmi_XwVgdk4jpxB1xZQ" /> -->
+176        <!-- <meta-data -->
+177        <!-- android:name="com.here.android.maps.license.key" -->
+178        <!-- android:value="NWMe0pLEUw9js8gzAREu7AmIT+j0Vhf9wVac9DwCHedd+KTzaSnSiQgXAd+5f8LAbyr+sXeGFIk1x7fsmEGGr3Z1Lh7McYPTXW+44y8Mq9nRx5AyVLoufMzV+5csYjEr6pSzmEtabyvzUx2PhStMoiKUdY/wjW2d6VLoNCwpZ+c00+PvGynv536xv8d+/9WGQ4Oitnhg1sdOR4rWdb+937zexwjxtC7cYRyrCEaQn2kk4WQGKJgYqwWKawdla5eiBsYPZYo99SAbqoZXaMaRfLJm6w5MpSNBo4Da8J97UL1X7maXCxx0RS+4rIMDFJ7qkJasgeFt5N+sbXuzfCQ754NbYiVv/b9Z8djwklgSWp3UFofKR+pmwC7Td8PAGpUMLY8w4D61Naz71MSZ3+WAjyClgwTo6NGo9591sb0W4cskFyLUSsP0EV37bwfZX/hpd9957HgX3R88J3F5b2aN8CgItoMqE0PIRxsPIB0MNNhai+MyJhG1BZoilo8U0j2PcHdoMVbjuJTcmDN9VzBboVNDpifleEIYKerKNUkNi2aihKMUtaRgE0Ub0W6NlqORrP1LRF0X6oAOXjoPyNcCs10ovqM90QezK/JHrrg+Vej9DjCLztQE04DVPpx7cXlDpNNkWpj3UqsH1xgt3wAwwYwZDBm2nOOnHcXs2o9386g=" /> -->
+179
+180        <provider
+180-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:120:9-130:20
+181            android:name="androidx.core.content.FileProvider"
+181-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:121:13-62
+182            android:authorities="com.doozycod.axs.Utils.FileProvider"
+182-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:122:13-70
+183            android:exported="false"
+183-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:123:13-37
+184            android:grantUriPermissions="true" >
+184-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:124:13-47
+185
+186            <!-- ressource file to create -->
+187            <meta-data
+187-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:127:13-129:54
+188                android:name="android.support.FILE_PROVIDER_PATHS"
+188-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:128:17-67
+189                android:resource="@xml/file_paths" />
+189-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:129:17-51
+190        </provider>
+191
+192        <service android:name="com.doozycod.axs.here.turn.HereTurnForegroundService" />
+192-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:132:9-72
+192-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:132:18-69
+193        <service
+193-->[HERE-sdk.aar] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\595c4239535c10e9b98c7c762342f9e3\jetified-HERE-sdk\AndroidManifest.xml:12:9-14:40
+194            android:name="com.nokia.maps.MapServiceInternal"
+194-->[HERE-sdk.aar] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\595c4239535c10e9b98c7c762342f9e3\jetified-HERE-sdk\AndroidManifest.xml:13:13-61
+195            android:exported="false" />
+195-->[HERE-sdk.aar] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\595c4239535c10e9b98c7c762342f9e3\jetified-HERE-sdk\AndroidManifest.xml:14:13-37
+196
+197        <meta-data
+197-->[com.google.maps.android:android-maps-utils:0.4.3] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ce7939d3b52e6ef009c2245c227da5fa\jetified-android-maps-utils-0.4.3\AndroidManifest.xml:8:9-10:69
+198            android:name="com.google.android.gms.version"
+198-->[com.google.maps.android:android-maps-utils:0.4.3] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ce7939d3b52e6ef009c2245c227da5fa\jetified-android-maps-utils-0.4.3\AndroidManifest.xml:9:13-58
+199            android:value="@integer/google_play_services_version" />
+199-->[com.google.maps.android:android-maps-utils:0.4.3] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ce7939d3b52e6ef009c2245c227da5fa\jetified-android-maps-utils-0.4.3\AndroidManifest.xml:10:13-66
+200
+201        <activity
+201-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:15:9-18:68
+202            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+202-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:16:13-81
+203            android:screenOrientation="unspecified"
+203-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:17:13-52
+204            android:theme="@style/Theme.Transparent.ImagePicker" />
+204-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:18:13-65
+205        <activity
+205-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:19:9-22:72
+206            android:name="com.yalantis.ucrop.UCropActivity"
+206-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:20:13-60
+207            android:screenOrientation="portrait"
+207-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:21:13-49
+208            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+208-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:22:13-69
+209
+210        <provider
+210-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:24:9-32:20
+211            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
+211-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:25:13-85
+212            android:authorities="com.doozycod.axs.imagepicker.provider"
+212-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:26:13-72
+213            android:exported="false"
+213-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:27:13-37
+214            android:grantUriPermissions="true" >
+214-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:28:13-47
+215            <meta-data
+215-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:127:13-129:54
+216                android:name="android.support.FILE_PROVIDER_PATHS"
+216-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:128:17-67
+217                android:resource="@xml/image_picker_provider_paths" />
+217-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:129:17-51
+218        </provider> <!-- Needs to be explicitly declared on P+ -->
+219        <uses-library
+219-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+220            android:name="org.apache.http.legacy"
+220-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+221            android:required="false" />
+221-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+222
+223        <provider
+223-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:31:9-37:35
+224            android:name="androidx.work.impl.WorkManagerInitializer"
+224-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:32:13-69
+225            android:authorities="com.doozycod.axs.workmanager-init"
+225-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:33:13-68
 226            android:directBootAware="false"
-226-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:41:13-44
-227            android:enabled="@bool/enable_system_alarm_service_default"
-227-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:42:13-72
-228            android:exported="false" />
-228-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:43:13-37
-229        <service
-229-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:45:9-51:35
-230            android:name="androidx.work.impl.background.systemjob.SystemJobService"
-230-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:46:13-84
-231            android:directBootAware="false"
-231-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:47:13-44
-232            android:enabled="@bool/enable_system_job_service_default"
-232-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:48:13-70
-233            android:exported="true"
-233-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:49:13-36
-234            android:permission="android.permission.BIND_JOB_SERVICE" />
-234-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:50:13-69
+226-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:34:13-44
+227            android:exported="false"
+227-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:35:13-37
+228            android:multiprocess="true" />
+228-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:36:13-40
+229
+230        <service
+230-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:39:9-44:35
+231            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+231-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:40:13-88
+232            android:directBootAware="false"
+232-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:41:13-44
+233            android:enabled="@bool/enable_system_alarm_service_default"
+233-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:42:13-72
+234            android:exported="false" />
+234-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:43:13-37
 235        <service
-235-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:52:9-57:35
-236            android:name="androidx.work.impl.foreground.SystemForegroundService"
-236-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:53:13-81
+235-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:45:9-51:35
+236            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+236-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:46:13-84
 237            android:directBootAware="false"
-237-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:54:13-44
-238            android:enabled="@bool/enable_system_foreground_service_default"
-238-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:55:13-77
-239            android:exported="false" />
-239-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:56:13-37
-240
-241        <receiver
-241-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:59:9-64:35
-242            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
-242-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:60:13-88
+237-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:47:13-44
+238            android:enabled="@bool/enable_system_job_service_default"
+238-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:48:13-70
+239            android:exported="true"
+239-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:49:13-36
+240            android:permission="android.permission.BIND_JOB_SERVICE" />
+240-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:50:13-69
+241        <service
+241-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:52:9-57:35
+242            android:name="androidx.work.impl.foreground.SystemForegroundService"
+242-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:53:13-81
 243            android:directBootAware="false"
-243-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:61:13-44
-244            android:enabled="true"
-244-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:62:13-35
+243-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:54:13-44
+244            android:enabled="@bool/enable_system_foreground_service_default"
+244-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:55:13-77
 245            android:exported="false" />
-245-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:63:13-37
-246        <receiver
-246-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:65:9-75:20
-247            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
-247-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:66:13-106
-248            android:directBootAware="false"
-248-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:67:13-44
-249            android:enabled="false"
-249-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:68:13-36
-250            android:exported="false" >
-250-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:69:13-37
-251            <intent-filter>
-251-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:71:13-74:29
-252                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-252-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:72:17-87
-252-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:72:25-84
-253                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-253-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:73:17-90
-253-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:73:25-87
-254            </intent-filter>
-255        </receiver>
-256        <receiver
-256-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:76:9-86:20
-257            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
-257-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:77:13-104
-258            android:directBootAware="false"
-258-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:78:13-44
-259            android:enabled="false"
-259-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:79:13-36
-260            android:exported="false" >
-260-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:80:13-37
-261            <intent-filter>
-261-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:82:13-85:29
-262                <action android:name="android.intent.action.BATTERY_OKAY" />
-262-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:83:17-77
-262-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:83:25-74
-263                <action android:name="android.intent.action.BATTERY_LOW" />
-263-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:84:17-76
-263-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:84:25-73
-264            </intent-filter>
-265        </receiver>
-266        <receiver
-266-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:87:9-97:20
-267            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
-267-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:88:13-104
-268            android:directBootAware="false"
-268-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:89:13-44
-269            android:enabled="false"
-269-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:90:13-36
-270            android:exported="false" >
-270-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:91:13-37
-271            <intent-filter>
-271-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:93:13-96:29
-272                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
-272-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:94:17-83
-272-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:94:25-80
-273                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
-273-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:95:17-82
-273-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:95:25-79
-274            </intent-filter>
-275        </receiver>
-276        <receiver
-276-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:98:9-107:20
-277            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
-277-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:99:13-103
-278            android:directBootAware="false"
-278-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:100:13-44
-279            android:enabled="false"
-279-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:101:13-36
-280            android:exported="false" >
-280-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:102:13-37
-281            <intent-filter>
-281-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:104:13-106:29
-282                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-282-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:105:17-79
-282-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:105:25-76
-283            </intent-filter>
-284        </receiver>
-285        <receiver
-285-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:108:9-119:20
-286            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-286-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:109:13-88
-287            android:directBootAware="false"
-287-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:110:13-44
-288            android:enabled="false"
-288-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:111:13-36
-289            android:exported="false" >
-289-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:112:13-37
-290            <intent-filter>
-290-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:114:13-118:29
-291                <action android:name="android.intent.action.BOOT_COMPLETED" />
-291-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:115:17-79
-291-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:115:25-76
-292                <action android:name="android.intent.action.TIME_SET" />
-292-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:116:17-73
-292-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:116:25-70
-293                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-293-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:117:17-81
-293-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:117:25-78
-294            </intent-filter>
-295        </receiver>
-296        <receiver
-296-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:120:9-129:20
-297            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
-297-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:121:13-99
-298            android:directBootAware="false"
-298-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:122:13-44
-299            android:enabled="@bool/enable_system_alarm_service_default"
-299-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:123:13-72
-300            android:exported="false" >
-300-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:124:13-37
-301            <intent-filter>
-301-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:126:13-128:29
-302                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
-302-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:127:17-98
-302-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:127:25-95
-303            </intent-filter>
-304        </receiver>
-305        <receiver
-305-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:130:9-140:20
-306            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
-306-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:131:13-78
-307            android:directBootAware="false"
-307-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:132:13-44
-308            android:enabled="true"
-308-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:133:13-35
-309            android:exported="true"
-309-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:134:13-36
-310            android:permission="android.permission.DUMP" >
-310-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:135:13-57
-311            <intent-filter>
-311-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:137:13-139:29
-312                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
-312-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:138:17-88
-312-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:138:25-85
-313            </intent-filter>
-314        </receiver>
-315
-316        <service
-316-->[androidx.room:room-runtime:2.2.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
-317            android:name="androidx.room.MultiInstanceInvalidationService"
-317-->[androidx.room:room-runtime:2.2.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
-318            android:directBootAware="true"
-318-->[androidx.room:room-runtime:2.2.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
-319            android:exported="false" />
-319-->[androidx.room:room-runtime:2.2.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
-320
-321        <activity
-321-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-322            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-322-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-323            android:exported="false"
-323-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-324            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-324-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-325
-326        <meta-data
-326-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\294cc5ecc9001f3e94c034cd71f64fdf\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-327            android:name="com.google.android.gms.version"
-327-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\294cc5ecc9001f3e94c034cd71f64fdf\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-328            android:value="@integer/google_play_services_version" />
-328-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\294cc5ecc9001f3e94c034cd71f64fdf\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-329
-330        <provider
-330-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-331            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-331-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-332            android:authorities="com.doozycod.axs.lifecycle-process"
-332-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-333            android:exported="false"
-333-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-334            android:multiprocess="true" />
-334-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-335    </application>
-336
-337</manifest>
+245-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:56:13-37
+246
+247        <receiver
+247-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:59:9-64:35
+248            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+248-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:60:13-88
+249            android:directBootAware="false"
+249-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:61:13-44
+250            android:enabled="true"
+250-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:62:13-35
+251            android:exported="false" />
+251-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:63:13-37
+252        <receiver
+252-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:65:9-75:20
+253            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+253-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:66:13-106
+254            android:directBootAware="false"
+254-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:67:13-44
+255            android:enabled="false"
+255-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:68:13-36
+256            android:exported="false" >
+256-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:69:13-37
+257            <intent-filter>
+257-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:71:13-74:29
+258                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+258-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:72:17-87
+258-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:72:25-84
+259                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+259-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:73:17-90
+259-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:73:25-87
+260            </intent-filter>
+261        </receiver>
+262        <receiver
+262-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:76:9-86:20
+263            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+263-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:77:13-104
+264            android:directBootAware="false"
+264-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:78:13-44
+265            android:enabled="false"
+265-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:79:13-36
+266            android:exported="false" >
+266-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:80:13-37
+267            <intent-filter>
+267-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:82:13-85:29
+268                <action android:name="android.intent.action.BATTERY_OKAY" />
+268-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:83:17-77
+268-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:83:25-74
+269                <action android:name="android.intent.action.BATTERY_LOW" />
+269-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:84:17-76
+269-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:84:25-73
+270            </intent-filter>
+271        </receiver>
+272        <receiver
+272-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:87:9-97:20
+273            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+273-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:88:13-104
+274            android:directBootAware="false"
+274-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:89:13-44
+275            android:enabled="false"
+275-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:90:13-36
+276            android:exported="false" >
+276-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:91:13-37
+277            <intent-filter>
+277-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:93:13-96:29
+278                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+278-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:94:17-83
+278-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:94:25-80
+279                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+279-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:95:17-82
+279-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:95:25-79
+280            </intent-filter>
+281        </receiver>
+282        <receiver
+282-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:98:9-107:20
+283            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+283-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:99:13-103
+284            android:directBootAware="false"
+284-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:100:13-44
+285            android:enabled="false"
+285-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:101:13-36
+286            android:exported="false" >
+286-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:102:13-37
+287            <intent-filter>
+287-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:104:13-106:29
+288                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+288-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:105:17-79
+288-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:105:25-76
+289            </intent-filter>
+290        </receiver>
+291        <receiver
+291-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:108:9-119:20
+292            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+292-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:109:13-88
+293            android:directBootAware="false"
+293-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:110:13-44
+294            android:enabled="false"
+294-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:111:13-36
+295            android:exported="false" >
+295-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:112:13-37
+296            <intent-filter>
+296-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:114:13-118:29
+297                <action android:name="android.intent.action.BOOT_COMPLETED" />
+297-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:115:17-79
+297-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:115:25-76
+298                <action android:name="android.intent.action.TIME_SET" />
+298-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:116:17-73
+298-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:116:25-70
+299                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+299-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:117:17-81
+299-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:117:25-78
+300            </intent-filter>
+301        </receiver>
+302        <receiver
+302-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:120:9-129:20
+303            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+303-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:121:13-99
+304            android:directBootAware="false"
+304-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:122:13-44
+305            android:enabled="@bool/enable_system_alarm_service_default"
+305-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:123:13-72
+306            android:exported="false" >
+306-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:124:13-37
+307            <intent-filter>
+307-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:126:13-128:29
+308                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+308-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:127:17-98
+308-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:127:25-95
+309            </intent-filter>
+310        </receiver>
+311        <receiver
+311-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:130:9-140:20
+312            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+312-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:131:13-78
+313            android:directBootAware="false"
+313-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:132:13-44
+314            android:enabled="true"
+314-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:133:13-35
+315            android:exported="true"
+315-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:134:13-36
+316            android:permission="android.permission.DUMP" >
+316-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:135:13-57
+317            <intent-filter>
+317-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:137:13-139:29
+318                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+318-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:138:17-88
+318-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:138:25-85
+319            </intent-filter>
+320        </receiver>
+321
+322        <service
+322-->[androidx.room:room-runtime:2.2.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+323            android:name="androidx.room.MultiInstanceInvalidationService"
+323-->[androidx.room:room-runtime:2.2.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+324            android:directBootAware="true"
+324-->[androidx.room:room-runtime:2.2.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+325            android:exported="false" />
+325-->[androidx.room:room-runtime:2.2.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+326
+327        <activity
+327-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+328            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+328-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+329            android:exported="false"
+329-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+330            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+330-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+331
+332        <provider
+332-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+333            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+333-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+334            android:authorities="com.doozycod.axs.lifecycle-process"
+334-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+335            android:exported="false"
+335-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+336            android:multiprocess="true" />
+336-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\3af32d140be760521703c9060e27c1ae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+337    </application>
+338
+339</manifest>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
+            "outputFile": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Pranj\\.gradle\\caches\\transforms-2\\files-2.1\\294cc5ecc9001f3e94c034cd71f64fdf\\jetified-play-services-basement-17.0.0\\res\\values-ms\\values.xml",
