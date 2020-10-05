@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.doozycod.axs">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/axs_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/axs_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".UpdateDebug.RouteMarker.MapRouteActivity"></activity>
+        <activity android:name=".UpdateDebug.PhoneCallActivity" />
+        <activity android:name=".UpdateDebug.SelfDispatchActivity" />
+        <activity android:name=".UpdateDebug.MenuActivity" />
+        <activity android:name=".UpdateDebug.ScannerActivity" />
+        <activity android:name=".Activity.TaskInfoUpdateActivity" />
+        <activity android:name=".Activity.ShowListOfTaskGroupByLocationKeyActivity" />
+        <activity android:name=".Activity.ShowPackageDetailsActivity" />
+        <activity
+            android:name=".Activity.ScreenSlidePagerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.ShipmentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.ChooseCompanyActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.SignatureActivity" />
+        <activity android:name=".Activity.GPS_StatusActivity" />
+        <activity android:name=".Activity.ScanPackageActivity" />
+
+        <service android:name=".BackgroudService.Workers.SyncRemoteServerService" />
+        <service android:name=".BackgroudService.Workers.LocationService" />
+        <service android:name=".BackgroudService.Workers.UploadImageService" />
+        <service android:name=".BackgroudService.Workers.Foreground_GPS_Service" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".here.turn.HereTurnNavActivity" />
+        <activity android:name=".here.adnav.HereAdvanceNavActivity" />
+        <!--
+Developers should put application credentials here.To obtain them, please register the application
+         at https://developer.here.com/develop/mobile-sdks
+        -->
+<!--        <meta-data-->
+<!--            android:name="com.here.android.maps.appid"-->
+<!--            android:value="CvjeJJL4RUq34uKkpxiP" />-->
+<!--        <meta-data-->
+<!--            android:name="com.here.android.maps.apptoken"-->
+<!--            android:value="EX4lKdnXTfofi4ZyXrT9ww" />-->
+<!--        <meta-data-->
+<!--            android:name="com.here.android.maps.license.key"-->
+<!--            android:value="UkvYc18cLZWcphRt69S/BUxLTzd1VOSnk1Jf8lbFlGsN2bIieGCFjWWC61svXaCvK3tLhC6eRY0I1bMitKdVhuhka226GHYcabEx6XWUTRIZ4xdbyvOCs6RGMwzfj2kdqgjyFBBU8xKECE+hqnldl/hdCt8TvEQSpt4W81/HnycMMpKUngKlFkRw3yEba5pS8Yb9Zl6FYhwruIur03fBOtSZr4dtB37pE9EpGUzMi3gBBJrV5tS1vDkFbd0A446DAmgLd6xARlF/SXZoLGV5nkCyy3u9k7+PPqSZzo8wJyPMMhT6EFwJpqes+hU4kiWRTm7Sp+lW8xuyBSGybeX6deO2nmA8YUGWUgRCcmhc/DzJLH6IoqjkhbPbP2EiVgpstghdZF0oR/3R4ZNq7YCxr0Dn2d5XZVUY0cZjQV6SyA2nb7/oxpxCQ6qxfzEMSZ/N52v6L/CMkKc9Oi4V/ul6z5pLUheJV4AmAEEPcFFNhQ6aMhfM5PAXxn6rTHdZ1sjBfBRccrTLEJNQnHgyc2wYg/gi8hn24DsluvQ3wH+K+n4vib7MyYlsQRLFtZ/4KNjeNXdB4TqcL65zumgiVUo9FmTCQidmSWsgYJygcLF96Ojzg4qlgI1ZSFrbcqmGRwRJpx8lMvODH/U0rqyP23nzk1Zqp+sUhli3YhBRvvF9wC8=" />-->
+
+       <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="7MOPdv2jnUXMtG1mKtMf" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="0iuUmi_XwVgdk4jpxB1xZQ" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="NWMe0pLEUw9js8gzAREu7AmIT+j0Vhf9wVac9DwCHedd+KTzaSnSiQgXAd+5f8LAbyr+sXeGFIk1x7fsmEGGr3Z1Lh7McYPTXW+44y8Mq9nRx5AyVLoufMzV+5csYjEr6pSzmEtabyvzUx2PhStMoiKUdY/wjW2d6VLoNCwpZ+c00+PvGynv536xv8d+/9WGQ4Oitnhg1sdOR4rWdb+937zexwjxtC7cYRyrCEaQn2kk4WQGKJgYqwWKawdla5eiBsYPZYo99SAbqoZXaMaRfLJm6w5MpSNBo4Da8J97UL1X7maXCxx0RS+4rIMDFJ7qkJasgeFt5N+sbXuzfCQ754NbYiVv/b9Z8djwklgSWp3UFofKR+pmwC7Td8PAGpUMLY8w4D61Naz71MSZ3+WAjyClgwTo6NGo9591sb0W4cskFyLUSsP0EV37bwfZX/hpd9957HgX3R88J3F5b2aN8CgItoMqE0PIRxsPIB0MNNhai+MyJhG1BZoilo8U0j2PcHdoMVbjuJTcmDN9VzBboVNDpifleEIYKerKNUkNi2aihKMUtaRgE0Ub0W6NlqORrP1LRF0X6oAOXjoPyNcCs10ovqM90QezK/JHrrg+Vej9DjCLztQE04DVPpx7cXlDpNNkWpj3UqsH1xgt3wAwwYwZDBm2nOOnHcXs2o9386g=" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.doozycod.axs.Utils.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- ressource file to create -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name=".here.turn.HereTurnForegroundService" />
+    </application>
+
+</manifest>

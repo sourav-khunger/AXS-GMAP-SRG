@@ -1,0 +1,23 @@
+{
+    "status": "SUCCESS",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2Nlc3MuZ2NwaG9uZS5wd1wvYWNjZXNzYXBpXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE1OTc0MjM1NDMsIm5iZiI6MTU5NzQyMzU0MywianRpIjoicFdJbFVVRHZ6MVd1ZTBzeiIsInN1YiI6ODgwLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.Z1R-oYH3IpPi-nCqnOCwaTPGNH4AsuYzo44te0Lcrww",
+    "driverInfo": {
+        "firstName": "John",
+        "lastName": "Vargas",
+        "onDuty": 1,
+        "companyId": 31,
+        "companyName": "FOX",
+        "imei": "352475103611420",
+        "enableGPS": 1,
+        "allowedCompanies": [
+            {
+                "companyId": 20,
+                "companyName": "NTD"
+            },
+            {
+                "companyId": 28,
+                "companyName": "Tire Discounters"
+            }
+        ]
+    }
+}

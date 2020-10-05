@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#adadad" />
+
+    <TextView
+        android:id="@+id/selectedRunTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryDarkColor"
+        android:padding="15dp"
+        android:text="Selected Run"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#adadad" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listViewBtmSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--    <com.unipos.axslite.Utils.BottomSheetListView-->
+    <!--        android:id="@+id/listViewBtmSheet"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:divider="@color/secondaryLightColor"-->
+    <!--        android:dividerHeight="1dp" />-->
+</LinearLayout>

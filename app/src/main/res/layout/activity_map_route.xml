@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UpdateDebug.RouteMarker.MapRouteActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryLightColor"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="Your Routes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#fff" />
+
+    <Spinner
+        android:id="@+id/routeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/mapfragment1"
+            class="com.here.android.mpa.mapping.AndroidXMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/markerTxt" />
+
+        <TextView
+            android:id="@+id/markerTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Your Routes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000"
+            android:visibility="visible"/>
+
+
+        <ImageView
+            android:id="@+id/centerMap"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/com" />
+
+    </RelativeLayout>
+
+</LinearLayout>

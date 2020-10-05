@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="55dp"
+    android:background="#fff"
+    tools:context=".Fragments.ToDoTaskListFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emptyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="List is empty!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#000"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/confirm_dcButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/button_bg"
+            android:text="Confirm"
+            android:textColor="#fff" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/to_do_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomList"
+            android:layout_below="@id/confirm_dcButton"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/to_do_task_item2" />
+
+        <TextView
+            android:id="@+id/bottomList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/primaryDarkColor"
+            android:padding="15dp"
+            android:text="Selected"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</FrameLayout>

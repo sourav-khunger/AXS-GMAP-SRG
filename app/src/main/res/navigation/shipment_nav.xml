@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shipment_nav"
+    app:startDestination="@id/shipment_status">
+
+    <fragment
+        android:id="@+id/shipment_status"
+        android:name="com.unipos.axs.ui.shipment.ShipmentStatusFragment"
+        android:label="Shipment Status"
+        tools:layout="@layout/shipment_status_fragment" >
+        <action
+            android:id="@+id/action_shipment_status_to_shipment_recipient"
+            app:destination="@id/shipment_recipient" />
+        <action
+            android:id="@+id/action_shipment_status_to_shipment_comment"
+            app:destination="@id/shipment_comment" />
+        <action
+            android:id="@+id/action_shipment_status_to_shipment_reason"
+            app:destination="@id/shipment_reason" />
+        <action
+            android:id="@+id/action_shipment_status_to_shipment_signature"
+            app:destination="@id/shipment_signature" />
+    </fragment>
+    <fragment
+        android:id="@+id/shipment_recipient"
+        android:name="com.unipos.axs.ui.shipment.ShipmentRecipientFragment"
+        android:label="Shipment Recipient"
+        tools:layout="@layout/shipment_recipient_fragment" >
+        <action
+            android:id="@+id/action_shipment_recipient_to_shipment_delivered_to"
+            app:destination="@id/shipment_delivered_to" />
+        <action
+            android:id="@+id/action_shipment_recipient_to_shipment_comment"
+            app:destination="@id/shipment_comment" />
+        <argument
+            android:name="shipmentStatus"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_shipment_recipient_to_shipment_signature"
+            app:destination="@id/shipment_signature"
+            app:popUpTo="@id/shipment_signature"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_shipment_recipient_to_shipmentPhotoFragment"
+            app:destination="@id/shipmentPhotoFragment"
+            app:popUpTo="@id/shipmentPhotoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shipment_delivered_to"
+        android:name="com.unipos.axs.ui.shipment.ShipmentDeliveredToFragment"
+        android:label="Shipment Delivered To" />
+    <fragment
+        android:id="@+id/shipment_reason"
+        android:name="com.unipos.axs.ui.shipment.ShipmentReasonFragment"
+        android:label="Reason"
+        tools:layout="@layout/shipment_reason_fragment" >
+        <action
+            android:id="@+id/action_shipment_reason_to_shipment_recipient"
+            app:destination="@id/shipment_recipient" />
+    </fragment>
+    <fragment
+        android:id="@+id/shipment_comment"
+        android:name="com.unipos.axs.ui.shipment.ShipmentCommentFragment"
+        android:label="Shipment Comment" />
+    <fragment
+        android:id="@+id/shipment_signature"
+        android:name="com.unipos.axs.ui.shipment.ShipmentSignatureFragment"
+        android:label="Signature"
+        tools:layout="@layout/shipment_signature_fragment" >
+        <action
+            android:id="@+id/action_shipment_signature_to_shipment_recipient"
+            app:destination="@id/shipment_recipient" />
+    </fragment>
+    <fragment
+        android:id="@+id/shipmentPhotoFragment"
+        android:name="com.unipos.axs.ui.shipment.ShipmentPhotoFragment"
+        android:label="ShipmentPhotoFragment" >
+        <action
+            android:id="@+id/action_shipmentPhotoFragment_to_shipmentPhotoPreviewFragment"
+            app:destination="@id/shipmentPhotoPreviewFragment"
+            app:popUpTo="@id/shipmentPhotoPreviewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shipmentPhotoPreviewFragment"
+        android:name="com.unipos.axs.ui.shipment.ShipmentPhotoPreviewFragment"
+        android:label="ShipmentPhotoPreviewFragment" >
+        <action
+            android:id="@+id/action_shipmentPhotoPreviewFragment_to_shipment_recipient"
+            app:destination="@id/shipment_recipient"
+            app:popUpTo="@id/shipment_recipient"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_shipmentPhotoPreviewFragment_to_shipmentPhotoFragment"
+            app:destination="@id/shipmentPhotoFragment"
+            app:popUpTo="@id/shipmentPhotoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

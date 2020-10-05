@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/delivery_status_toggle_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:fontFamily="@font/roboto"
+        android:padding="16dp"
+        android:text="TextView"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_status_toggle_btn">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:text="RadioButton"
+            style="@style/DeliveryStatusRadioStyle" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryLightColor" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            style="@style/DeliveryStatusRadioStyle"
+            android:text="RadioButton" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryLightColor" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            style="@style/DeliveryStatusRadioStyle"
+            android:text="RadioButton" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryLightColor" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            style="@style/DeliveryStatusRadioStyle"
+            android:text="RadioButton" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryLightColor" />
+
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
