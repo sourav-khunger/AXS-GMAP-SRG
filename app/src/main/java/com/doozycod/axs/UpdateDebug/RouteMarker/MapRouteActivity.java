@@ -32,10 +32,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
-import com.here.android.mpa.common.GeoCoordinate;
-import com.here.android.mpa.mapping.Map;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +63,7 @@ public class MapRouteActivity extends AppCompatActivity implements OnMapReadyCal
     private TextView markerTxt;
     List<LatLng> latLngList = new ArrayList<>();
     List<LatLng> geoCoordinates = new ArrayList<>();
+    LatLngBounds.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +76,6 @@ public class MapRouteActivity extends AppCompatActivity implements OnMapReadyCal
             lat = getIntent().getDoubleExtra("dcLat", 0);
             lon = getIntent().getDoubleExtra("dcLon", 0);
 
-//            Log.e("TAG", "onCreate: " + getRouteList);
         }
 
         routeSpinner = findViewById(R.id.routeSpinner);
@@ -87,6 +86,7 @@ public class MapRouteActivity extends AppCompatActivity implements OnMapReadyCal
         supportMapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapfragment1);
         supportMapFragment.getMapAsync(this::onMapReady);
+
 
 //        add to lat long
         for (int i = 0; i < getRouteList.size(); i++) {
@@ -116,12 +116,23 @@ public class MapRouteActivity extends AppCompatActivity implements OnMapReadyCal
 //                        mMap.setZoomLevel(8.6, Map.Animation.BOW);
 //                        m_map.setCenter(new GeoCoordinate(lat, lon), Map.Animation.BOW);
                         markerTxt.setVisibility(View.GONE);
+                        LatLngBounds bounds = builder.build();
+
+//        mMap.addMarker(new MarkerOptions()
+//                .position(sydney)
+//                .title("Marker in Sydney").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+//        mMap.moveCamera(CameraUpdateFactory.newLatLng(dc));
+
+
+                        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 50);
+                        mMap.moveCamera(cu);
                     }
                     if (i == 1) {
 //                        mMap.setZoomLevel(14.3, Map.Animation.BOW);
 //                        m_map.setCenter(new GeoCoordinate(lat, lon), Map.Animation.BOW);
-                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 14));
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 16));
 
+                        Log.e("TAG", "onItemSelected: " + lat + " " + lon);
                         markerTxt.setVisibility(View.VISIBLE);
                         markerTxt.setText(dcName);
                     }
@@ -133,7 +144,7 @@ public class MapRouteActivity extends AppCompatActivity implements OnMapReadyCal
                         double longi = Double.parseDouble(taskInfoEntities.get(i).getLongitude());
 //                        m_map.setCenter(geoCoordinates.get(i)/*new GeoCoordinate(lat, longi)*/,
 //                                Map.Animation.BOW);
-                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(geoCoordinates.get(i), 14));
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(geoCoordinates.get(i), 16));
 
                         markerTxt.setText(routeSpinner.getSelectedItem().toString());
                     }
@@ -190,7 +201,7 @@ public class MapRouteActivity extends AppCompatActivity implements OnMapReadyCal
 
 //        create polyline
         drawPolyLineOnMap(latLngList);
-
+        builder = new LatLngBounds.Builder();
         mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon))
                 .title(dcName)
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
@@ -204,18 +215,22 @@ public class MapRouteActivity extends AppCompatActivity implements OnMapReadyCal
                     mMap.addMarker(new MarkerOptions().position(new LatLng(lat, longi))
                             .title(taskInfoEntities.get(i).getName())
                             .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
-//                    Log.e(TAG, "createPolyline: " + coordinates.get(i));
+                    builder.include(new LatLng(lat, longi));
 
                 }
             }
         }
+        LatLngBounds bounds = builder.build();
+
 //        mMap.addMarker(new MarkerOptions()
 //                .position(sydney)
 //                .title("Marker in Sydney").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(dc));
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(dc).zoom(9).build();
 
-        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
+        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 50);
+        mMap.moveCamera(cu);
+
     }
 
     /**
@@ -271,8 +286,8 @@ public class MapRouteActivity extends AppCompatActivity implements OnMapReadyCal
     private void setupMapFragmentView() {
         // All permission requests are being handled. Create map fragment view. Please note
         // the HERE Mobile SDK requires all permissions defined above to operate properly.
-        m_mapFragmentView = new MapFragmentView(this, getRouteList, taskInfoEntityList,
-                taskInfoEntities, lon, lat, dcName);
+//        m_mapFragmentView = new MapFragmentView(this, getRouteList, taskInfoEntityList,
+//                taskInfoEntities, lon, lat, dcName);
     }
 
 

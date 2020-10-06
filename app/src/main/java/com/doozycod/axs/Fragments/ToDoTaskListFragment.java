@@ -228,6 +228,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
             public void onResponse(Call<DriverDepartureResponse> call, Response<DriverDepartureResponse> response) {
                 if (response.body().getStatus().equals("SUCCESS")) {
                     Toast.makeText(getContext(), "" + response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    confirm_dcButton.setVisibility(View.GONE);
                 } else {
                     Toast.makeText(getContext(), "" + response.body().getMessage(), Toast.LENGTH_SHORT).show();
                 }
@@ -436,9 +437,6 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                 }
             });
 
-//         !!  BACK UP CODE !!
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -498,11 +496,16 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
 //                                    .getString(Constants.SELECTED_BATCH_ID, "");
                             String run = PreferenceManager.getDefaultSharedPreferences(activity)
                                     .getString(Constants.PREF_KEY_SELECTED_RUN, "");
-                            getTaskByLocationKeys(runInfoList.get(Integer.parseInt(run)).getBatchId());
-                            batchId = runInfoList.get(Integer.parseInt(run)).getBatchId();
-                            Log.e(TAG, "onChanged: RunInfo ");
-                            selectedRunTxt.setText("Selected Run - Run #" + runInfoList.get(Integer.parseInt(run)).getRunNo());
-                            runTaskAdapter.updatePosition(Integer.parseInt(run));
+                            if (run.equals("")) {
+                                Toast.makeText(activity, "Something went wrong please Refresh!", Toast.LENGTH_SHORT).show();
+                            } else {
+                                getTaskByLocationKeys(runInfoList.get(Integer.parseInt(run)).getBatchId());
+                                batchId = runInfoList.get(Integer.parseInt(run)).getBatchId();
+                                Log.e(TAG, "onChanged: RunInfo ");
+                                selectedRunTxt.setText("Selected Run - Run #" + runInfoList.get(Integer.parseInt(run)).getRunNo());
+                                runTaskAdapter.updatePosition(Integer.parseInt(run));
+                            }
+
 
                         }
 //                        getTaskByLocationKeys(batchId);
@@ -557,7 +560,6 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                         }
                     }
 //                    batchRoutePathAPI(batchId);
-
 
 
                     runTaskAdapter.setOnItemClickListener(new RunTaskAdapter.OnItemClickListener() {

@@ -40,22 +40,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.gson.Gson;
 import com.google.maps.android.ui.IconGenerator;
-import com.here.android.mpa.common.ApplicationContext;
-import com.here.android.mpa.common.GeoCoordinate;
-import com.here.android.mpa.common.Image;
-import com.here.android.mpa.common.MapEngine;
-import com.here.android.mpa.common.OnEngineInitListener;
-import com.here.android.mpa.common.PositioningManager;
-import com.here.android.mpa.common.ViewObject;
-import com.here.android.mpa.mapping.AndroidXMapFragment;
-import com.here.android.mpa.mapping.Map;
-import com.here.android.mpa.mapping.MapGesture;
-import com.here.android.mpa.mapping.MapLabeledMarker;
-import com.here.android.mpa.mapping.MapMarker;
-import com.here.android.mpa.mapping.MapObject;
-import com.here.android.mpa.mapping.MapRoute;
-import com.here.android.mpa.mapping.MapView;
-import com.here.android.mpa.routing.Route;
 import com.doozycod.axs.BackgroudService.Workers.LocationService;
 import com.doozycod.axs.Database.Entities.TaskInfoEntity;
 import com.doozycod.axs.Database.Repository.TaskInfoRepository;
@@ -68,11 +52,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class MapsFragment extends Fragment {
     private static final String TAG = MapsFragment.class.getSimpleName();
 
-    private AndroidXMapFragment m_mapFragment;
     private AppCompatActivity m_activity;
     private Map m_map;
     public static final String MAP_FRAGMENT_TITLE = "Map";
@@ -84,17 +68,12 @@ public class MapsFragment extends Fragment {
             Manifest.permission.ACCESS_WIFI_STATE,
             Manifest.permission.ACCESS_NETWORK_STATE
     };
-    private MapFragmentView m_mapFragmentView;
-    private Route m_route;
-    MapRoute mapRoute;
     //    private GeoCoordinate geoCoordinate;
     List<TaskInfoEntity> taskInfoEntities = new ArrayList<>();
     private TaskInfoRepository mTaskInfoRepository;
     private TextView markerTxt;
     ImageView centerMap;
-    MapView mapView;
     TaskInfoViewModel taskInfoViewModel;
-    ApplicationContext appContext;
 
 
     private GoogleMap mMap;
@@ -116,7 +95,6 @@ public class MapsFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        appContext = new ApplicationContext(m_activity.getApplicationContext());
 
         // private app's path
 //        String path = new File(m_activity.getExternalFilesDir(null), ".here-map-data")
@@ -236,102 +214,6 @@ public class MapsFragment extends Fragment {
 //        }
     }
 
-    private AndroidXMapFragment getMapFragment() {
-        return (AndroidXMapFragment) m_activity.getSupportFragmentManager().findFragmentById(R.id.mapfragment1);
-    }
-
-
-    private MapGesture.OnGestureListener onGestureListener = new MapGesture.OnGestureListener() {
-        @Override
-        public void onPanStart() {
-
-        }
-
-        @Override
-        public void onPanEnd() {
-
-        }
-
-        @Override
-        public void onMultiFingerManipulationStart() {
-
-        }
-
-        @Override
-        public void onMultiFingerManipulationEnd() {
-
-        }
-
-        @Override
-        public boolean onMapObjectsSelected(@NonNull List<ViewObject> list) {
-            for (ViewObject viewObject : list) {
-                if (viewObject.getBaseType() == ViewObject.Type.USER_OBJECT) {
-                    MapObject mapObject = (MapObject) viewObject;
-
-                    if (mapObject.getType() == MapObject.Type.MARKER) {
-
-                        MapMarker window_marker = ((MapMarker) mapObject);
-                        m_map.setCenter(window_marker.getCoordinate(), Map.Animation.BOW);
-//                        showDialog(window_marker.getTitle());
-                        Log.e("MARKER", "Title is................." + window_marker.getTitle());
-                        markerTxt.setText(window_marker.getTitle());
-                        return false;
-                    }
-                }
-            }
-            return false;
-        }
-
-        @Override
-        public boolean onTapEvent(@NonNull PointF pointF) {
-            return false;
-        }
-
-        @Override
-        public boolean onDoubleTapEvent(@NonNull PointF pointF) {
-            return false;
-        }
-
-        @Override
-        public void onPinchLocked() {
-
-        }
-
-        @Override
-        public boolean onPinchZoomEvent(float v, @NonNull PointF pointF) {
-            return false;
-        }
-
-        @Override
-        public void onRotateLocked() {
-
-        }
-
-        @Override
-        public boolean onRotateEvent(float v) {
-            return false;
-        }
-
-        @Override
-        public boolean onTiltEvent(float v) {
-            return false;
-        }
-
-        @Override
-        public boolean onLongPressEvent(@NonNull PointF pointF) {
-            return false;
-        }
-
-        @Override
-        public void onLongPressRelease() {
-
-        }
-
-        @Override
-        public boolean onTwoFingerTapEvent(@NonNull PointF pointF) {
-            return false;
-        }
-    };
 
     /**
      * create a MapCircle and add the MapCircle to active map view.
@@ -348,9 +230,9 @@ public class MapsFragment extends Fragment {
         mMap.clear();
 //        mMap.addPolyline(polyOptions);
 
-//        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
         for (int i = 0; i < taskInfoEntities.size(); i++) {
-            IconGenerator iconFactory = new IconGenerator(getContext());
+            IconGenerator iconFactory = new IconGenerator(m_activity);
             // iconFactory.setColor(Color.RED);
             iconFactory.setStyle(IconGenerator.STYLE_RED);
 
@@ -361,102 +243,16 @@ public class MapsFragment extends Fragment {
                             anchor(iconFactory.getAnchorU(), iconFactory.getAnchorV());
 
             mMap.addMarker(markerOptions);
-//            builder.include(latLng);
+            builder.include(markerOptions.getPosition());
 //            mMap.addMarker(new MarkerOptions()
 //                    .position(latLng).icon(BitmapDescriptorFactory
 //                            .defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
         }
 
-//        final LatLngBounds bounds = builder.build();
-
+        final LatLngBounds bounds = builder.build();
         //BOUND_PADDING is an int to specify padding of bound.. try 100.
-//        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 20);
-//        mMap.animateCamera(cu);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    private void createPolyline() {
-        ArrayList<GeoCoordinate> coordinates = new ArrayList<>();
-        for (int i = 0; i < taskInfoEntities.size(); i++) {
-            double longi = Double.parseDouble(taskInfoEntities.get(i).getLongitude());
-            double lat = Double.parseDouble(taskInfoEntities.get(i).getLatitude());
-            coordinates.add(new GeoCoordinate(lat, longi));
-//            Log.e(TAG, "createPolyline: " + coordinates.get(i));
-        }
-//        coordinates.add(new GeoCoordinate(29.9753092, 77.571972));
-//        coordinates.add(new GeoCoordinate(29.9685473, 77.5644495));
-//        coordinates.add(new GeoCoordinate(29.9623858, 77.5483282));
-//        coordinates.add(new GeoCoordinate(29.9701266, 77.5698228));
-
-        /* Initialize a CoreRouter */
-        /*CoreRouter coreRouter = new CoreRouter();
-
-         *//* Initialize a RoutePlan *//*
-        RoutePlan routePlan = new RoutePlan();
-        RouteOptions routeOptions = new RouteOptions();
-        *//* Other transport modes are also available e.g Pedestrian */
-        /*
-        routeOptions.setTransportMode(RouteOptions.TransportMode.CAR);
-        */
-        /* Disable highway in this route. *//*
-        routeOptions.setHighwaysAllowed(false);
-        */
-        /* Calculate the shortest route available. *//*
-        routeOptions.setRouteType(RouteOptions.Type.SHORTEST);
-        */
-        /* Calculate 1 route. *//*
-        routeOptions.setRouteCount(1);
-        */
-        /* Finally set the route option */
-
-        /*routePlan.setRouteOptions(routeOptions);*/
-
-//The following is needed because of image acceleration in some devices such as samsung
-//        Image image = new Image();
-//        try {
-//            image.setImageResource(R.drawable.pin);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        Image image = new Image();
-        try {
-
-            image.setImageResource(R.drawable.pin);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-//        List<RouteWaypoint> routeWaypoints = new ArrayList<>();
-        for (int i = 0; i < coordinates.size(); i++) {
-//            SVG svg = SVGParser.getSVGFromString();
-
-
-            Log.e(TAG, "createPolyline: " + coordinates.get(i));
-            MapLabeledMarker defaultMarker = new MapLabeledMarker(coordinates.get(i), image);
-            defaultMarker.setLabelText("eng", "" + (i + 1));
-            defaultMarker.setFontScalingFactor(4f);
-            defaultMarker.setAnchorPoint(new PointF(image.getWidth() / 2, image.getHeight()));
-//            defaultMarker.setCoordinate(coordinates.get(i));
-            defaultMarker.setTitle(taskInfoEntities.get(i).getName());
-            defaultMarker.setVisible(true);
-            m_map.addMapObject(defaultMarker);
-        }
-
-//        coreRouter.calculateRoute(coordinates, routeOptions, new Router.Listener<List<RouteResult>, RoutingError>() {
-//            @Override
-//            public void onProgress(int i) {
-//
-//            }
-//
-//            @Override
-//            public void onCalculateRouteFinished(@Nullable List<RouteResult> routeResults, @NonNull RoutingError routingError) {
-//                if (routingError == RoutingError.NONE) {
-////                    m_route = routeResults.get(0).getRoute();
-////                    mapRoute = new MapRoute(m_route);
-////                    m_map.addMapObject(mapRoute);
-//                }
-//            }
-//        });
+        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 50);
+        mMap.animateCamera(cu);
     }
 
 
@@ -545,8 +341,6 @@ public class MapsFragment extends Fragment {
                             }).create().show();
         }
     }*/
-
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

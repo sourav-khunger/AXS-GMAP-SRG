@@ -31,8 +31,10 @@ import com.doozycod.axs.R;
 import com.doozycod.axs.Utils.Constants;
 import com.doozycod.axs.Utils.CustomProgressBar;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -146,9 +148,15 @@ public class RouteFragment extends Fragment {
         String selectedDate = PreferenceManager.getDefaultSharedPreferences(getActivity()).getString(Constants.PREF_KEY_SELECTED_DATE, curDate);
        */
         String compId = "" + loginResponse.getDriverInfo().getCompanyId();
+        String date = "" + PreferenceManager.getDefaultSharedPreferences(getActivity())
+                .getString(Constants.PREF_KEY_SELECTED_DATE, "");
         // compId = "34";
-
-        apiService.getTaskList(compId, PreferenceManager.getDefaultSharedPreferences(getActivity()).getString(Constants.PREF_KEY_SELECTED_DATE, ""), Constants.AUTHORIZATION_TOKEN + token).enqueue(new Callback<TaskInfoResponse>() {
+        if (date.equals("") || date == null) {
+//            Date date = new Date();
+            date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        }
+        apiService.getTaskList(compId, date
+                , Constants.AUTHORIZATION_TOKEN + token).enqueue(new Callback<TaskInfoResponse>() {
             @Override
             public void onResponse(Call<TaskInfoResponse> call, Response<TaskInfoResponse> response) {
                 if (response.code() == 200) {
@@ -164,7 +172,11 @@ public class RouteFragment extends Fragment {
                     String run = PreferenceManager.getDefaultSharedPreferences(getActivity())
                             .getString(Constants.PREF_KEY_SELECTED_RUN, "");
                     routeSpinner.setAdapter(arrayAdapter);
-                    routeSpinner.setSelection(Integer.parseInt(run));
+                    if (run.equals("")) {
+
+                    } else {
+                        routeSpinner.setSelection(Integer.parseInt(run));
+                    }
 
 //                    getTasks();
                 } else {

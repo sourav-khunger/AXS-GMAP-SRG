@@ -2087,6 +2087,7 @@ id chip_group
 id chronometer
 id circle_center
 id circular
+id cityTxt
 id clear_button
 id clear_signature_btn
 id clear_text
@@ -2210,6 +2211,7 @@ id highest
 id home
 id homeAsUp
 id honorRequest
+id hoursET
 id hybrid
 id icon
 id icon_group
@@ -2261,6 +2263,8 @@ id lytCameraPick
 id lytGalleryPick
 id makethisStopButton
 id map
+id mapWithAddress
+id mapWithLatLon
 id mapfragment
 id mapfragment1
 id markerName
@@ -2296,6 +2300,7 @@ id message
 id messageTxt
 id middle
 id mini
+id minuteET
 id mmButton
 id mobileTV
 id month_grid
@@ -2432,6 +2437,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id selectTimeTxt
 id select_dialog_listview
 id selected
 id selectedRunTxt
@@ -2501,6 +2507,7 @@ id staticPostLayout
 id status_bar_latest_event_content
 id still
 id stop
+id streetTxt
 id stretch
 id strict
 id submenuarrow
@@ -2678,6 +2685,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_arrival_time_map_type
 layout activity_camkit
 layout activity_choose_company
 layout activity_delivery_recipient

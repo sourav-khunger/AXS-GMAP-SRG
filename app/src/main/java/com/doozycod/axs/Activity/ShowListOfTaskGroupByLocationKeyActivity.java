@@ -17,12 +17,14 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
-import com.here.android.mpa.common.GeoCoordinate;
-import com.here.android.mpa.common.OnEngineInitListener;
-import com.here.android.mpa.mapping.AndroidXMapFragment;
-import com.here.android.mpa.mapping.Map;
-import com.here.android.mpa.mapping.MapMarker;
 import com.doozycod.axs.Adapter.TaskInfoGroupByListViewAdapter;
 import com.doozycod.axs.Database.Entities.TaskInfoEntity;
 import com.doozycod.axs.Database.ViewModel.TaskInfoViewModel;
@@ -34,13 +36,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity {
+public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     // map embedded in the map fragment
-    private Map map = null;
+    private GoogleMap map = null;
 
-    // map fragment embedded in this activity
-    private AndroidXMapFragment mapFragment = null;
 
     private TaskInfoViewModel taskInfoViewModel;
     private List<TaskInfoEntity> taskInfoEntityList;
@@ -52,6 +52,7 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
     Button continue_btn;
     int LAUNCH_SECOND_ACTIVITY = 1;
     private Button scanPackageBtn;
+    private SupportMapFragment supportMapFragment;
 
     //    private Button scanPackageBtn;
     @Override
@@ -111,6 +112,7 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
 //        });
         taskInfoGroupByLocationKey = new Gson().fromJson(taskInfoGroupByLocation, TaskInfoGroupByLocationKey.class);
         String locationKey = taskInfoGroupByLocationKey.getLocationKey();
+        supportMapFragment.getMapAsync(this::onMapReady);
 
 
         try {
@@ -160,38 +162,22 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
     private void initialize() {
         taskInfoViewModel = new ViewModelProvider(this).get(TaskInfoViewModel.class);
         taskInfoEntityList = new ArrayList<TaskInfoEntity>();
-
-        mapFragment = (AndroidXMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapfragment);
-
-        // Set up disk map cache path for this application
-        // Use path under your application folder for storing the disk cache
-        com.here.android.mpa.common.MapSettings.setDiskCacheRootPath(
-                getApplicationContext().getExternalFilesDir(null) + File.separator + ".here-maps");
+        supportMapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.mapfragment);
 
 
-        mapFragment.init(new OnEngineInitListener() {
-            @Override
-            public void onEngineInitializationCompleted(Error error) {
-                if (error == Error.NONE) {
-                    // retrieve a reference of the map from the map fragment
-                    map = mapFragment.getMap();
+    }
 
-                    double lat = Double.parseDouble(taskInfoGroupByLocationKey.getLatitude());
-                    double lon = Double.parseDouble(taskInfoGroupByLocationKey.getLongitude());
-                    // Set the map center to the Vancouver region (no animation)
-                    map.setCenter(new GeoCoordinate(lat, lon, 0.0),
-                            Map.Animation.NONE);
-                    // Set the zoom level to the average between min and max
-                    map.setZoomLevel(16);
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        map = googleMap;
 
-                    MapMarker defaultMarker = new MapMarker();
-                    defaultMarker.setCoordinate(new GeoCoordinate(lat, lon, 0.0));
-                    map.addMapObject(defaultMarker);
+        double lat = Double.parseDouble(taskInfoGroupByLocationKey.getLatitude());
+        double lon = Double.parseDouble(taskInfoGroupByLocationKey.getLongitude());
+        map.addMarker(new MarkerOptions().position(new LatLng(lat, lon))
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(lat, lon)));
+        map.animateCamera(CameraUpdateFactory.zoomTo(16));
 
-                } else {
-                    System.out.println("ERROR: Cannot initialize Map Fragment");
-                }
-            }
-        });
     }
 }

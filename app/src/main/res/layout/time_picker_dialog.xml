@@ -7,7 +7,7 @@
     android:minWidth="300dp"
     android:orientation="vertical">
 
-    <com.unipos.axs.Utils.TimePicker24Hours
+    <com.doozycod.axs.Utils.TimePicker24Hours
         android:id="@+id/timePicker24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

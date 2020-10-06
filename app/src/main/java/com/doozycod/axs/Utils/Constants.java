@@ -12,6 +12,7 @@ public class Constants {
     public static final String COMPLETED_CHECK_RECVER = "com.unipos.axslite.completedcheckrecvr";
 
     public static final String TAG_SYNC_DATA = "TAG_SYNC_DATA";
+    public static final String PREF_DELIVERY_COMPLETEDTIME = "com.doozycod.deliveryCompletedTime";
     public static final String SYNC_DATA_WORK_NAME = "sync_data_work_name";
 
 

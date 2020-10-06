@@ -12,7 +12,7 @@ public class DriverDepartureResponse {
     @SerializedName("batchId")
     @Expose
     private String batchId;
-    @SerializedName(" message")
+    @SerializedName("message")
     @Expose
     private String message;
 

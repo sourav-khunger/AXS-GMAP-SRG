@@ -59,9 +59,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+<!--        <fragment-->
+<!--            android:id="@+id/mapfragment"-->
+<!--            class="com.here.android.mpa.mapping.AndroidXMapFragment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_above="@id/footer"-->
+<!--            android:layout_below="@id/header" />-->
+
         <fragment
             android:id="@+id/mapfragment"
-            class="com.here.android.mpa.mapping.AndroidXMapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/footer"
@@ -74,7 +82,8 @@
             android:layout_below="@id/header"
             android:layout_alignParentRight="true"
             android:layout_margin="10dp"
-            android:src="@drawable/north" />
+            android:src="@drawable/north"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:id="@+id/header"

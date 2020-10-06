@@ -36,7 +36,7 @@ public class ShipmentActivity extends AppCompatActivity {
             Date date = new Date();
             String curDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
 
-            selectedTask.setArrivalTime(curDate);
+//            selectedTask.setArrivalTime(curDate);
         }
 
     }

@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.doozycod.axs.Activity.ArrivalTimeMapTypeActivity;
 import com.doozycod.axs.Activity.ShipmentActivity;
 import com.doozycod.axs.Database.Entities.ReasonEntity;
 import com.doozycod.axs.Database.Entities.StatusEntity;
@@ -100,6 +101,8 @@ public class ShipmentDeliveredToFragment extends Fragment {
         } else {
             ShipmentActivity.selectedTask.setWorkStatus(status);
         }
+        /*curDateTime = PreferenceManager.getDefaultSharedPreferences(getActivity())
+                .getString(Constants.PREF_DELIVERY_COMPLETEDTIME, "");*/
         ShipmentActivity.selectedTask.setCod(0);
         ShipmentActivity.selectedTask.setCompleteTime(curDateTime);
         ShipmentActivity.selectedTask.setRecordStatus(2);

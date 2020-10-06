@@ -4,24 +4,7 @@
             "outputFile": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Pranj\\.gradle\\caches\\transforms-2\\files-2.1\\294cc5ecc9001f3e94c034cd71f64fdf\\jetified-play-services-basement-17.0.0\\res\\values-be\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "204",
-                        "endOffsets": "451"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3997",
-                        "endColumns": "204",
-                        "endOffsets": "4197"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Pranj\\.gradle\\caches\\transforms-2\\files-2.1\\a1794986c7a3c4986f9feb2359005476\\jetified-play-services-base-17.0.0\\res\\values-be\\values.xml",
+                    "source": "C:\\Users\\Pranj\\.gradle\\caches\\transforms-2\\files-2.1\\9ac439bf5eb3c3d7c06d876bf15b5959\\jetified-play-services-base-17.3.0\\res\\values-be\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "5873",
                         "endColumns": "100",
                         "endOffsets": "5969"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Pranj\\.gradle\\caches\\transforms-2\\files-2.1\\e3f6df6a2f405844b8008c633f7822ac\\jetified-play-services-basement-17.3.0\\res\\values-be\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3997",
+                        "endColumns": "204",
+                        "endOffsets": "4197"
                     }
                 },
                 {

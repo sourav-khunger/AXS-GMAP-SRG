@@ -187,8 +187,9 @@ public class SyncRemoteServerService extends Service {
 
     @Override
     public void onDestroy() {
-
-        mHandler.removeCallbacks(runnableService);
+        if (mHandler != null) {
+            mHandler.removeCallbacks(runnableService);
+        }
 
         // TODO Auto-generated method stub
         Log.d("Destroying ", " Destroying NNotifyService. ");
