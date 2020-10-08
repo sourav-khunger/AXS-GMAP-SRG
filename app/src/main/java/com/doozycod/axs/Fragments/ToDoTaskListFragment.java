@@ -82,6 +82,8 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
     RunTaskEntityAdapter runTaskEntityAdapter;
     private TextView bottomList;
     int positionOfRun = 0;
+    int isRouteStarted = 0;
+
     boolean isPending = false;
     Button confirm_dcButton;
     private String batchId = "";
@@ -148,7 +150,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
         selectedRunTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.e(TAG, "onClick: " + sheetBehavior.getState());
+//                Log.e(TAG, "onClick: " + sheetBehavior.getState());
                 if (sheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
                     sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
                 }
@@ -197,7 +199,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                     }
                     break;
                     case BottomSheetBehavior.STATE_COLLAPSED: {
-                        Log.e(TAG, "Expand: ");
+//                        Log.e(TAG, "Expand: ");
                     }
                     break;
                     case BottomSheetBehavior.STATE_DRAGGING:
@@ -260,28 +262,33 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
         adapter.setOnItemClickListener(new ToDoTaskListAdapter.OnItemLongClickListener() {
             @Override
             public void onItemClick(View itemView, int position) {
-                TaskInfoGroupByLocationKey taskInfoGroupByLocationKey = listOfTaskInfoGroupByLocationKeys.get(position);
-                String taskInfoString = new Gson().toJson(taskInfoGroupByLocationKey);
-                TaskInfoEntity taskInfo = listOfTaskInfo.get(position);
-                String taskInfoStr = new Gson().toJson(taskInfo);
-                Log.e(TAG, "taskInfo: " + taskInfoStr);
-                PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
-                        .putString(Constants.SELECTED_LOCATION, taskInfoString)
-                        .apply();
+                if (isRouteStarted == 1) {
+
+
+                    TaskInfoGroupByLocationKey taskInfoGroupByLocationKey = listOfTaskInfoGroupByLocationKeys.get(position);
+                    String taskInfoString = new Gson().toJson(taskInfoGroupByLocationKey);
+                    TaskInfoEntity taskInfo = listOfTaskInfo.get(position);
+                    String taskInfoStr = new Gson().toJson(taskInfo);
+                    Log.e(TAG, "taskInfo: " + taskInfoStr);
+                    PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
+                            .putString(Constants.SELECTED_LOCATION, taskInfoString)
+                            .apply();
                 /*PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
                         .putString(Constants.SELECTED_TASK, taskInfoString)
                         .apply();*/
 
-                if (taskInfoGroupByLocationKey.getArrivalTime() == null || taskInfoGroupByLocationKey.getArrivalTime().equals("")) {
-                    Intent intent = new Intent(getActivity(), ShowPackageDetailsActivity.class);
-                    intent.putExtra("task", taskInfoStr);
+                    if (taskInfoGroupByLocationKey.getArrivalTime() == null || taskInfoGroupByLocationKey.getArrivalTime().equals("")) {
+                        Intent intent = new Intent(getActivity(), ShowPackageDetailsActivity.class);
+                        intent.putExtra("task", taskInfoStr);
 //                    intent.putExtra("task", taskInfoStr);
-                    startActivity(intent);
+                        startActivity(intent);
 
-                } else {
-                    Intent intent = new Intent(getActivity(), ShowListOfTaskGroupByLocationKeyActivity.class);
-                    startActivity(intent);
-                }
+                    } else {
+                        Intent intent = new Intent(getActivity(), ShowListOfTaskGroupByLocationKeyActivity.class);
+                        startActivity(intent);
+                    }
+                } else
+                    Toast.makeText(activity, "Confirm your departure for selected run!", Toast.LENGTH_SHORT).show();
             }
         });
         recyclerView.setAdapter(adapter);
@@ -311,8 +318,8 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                     if (runInfoEntities.size() == 0) {
                         Log.e(TAG, "onChanged: TRY Again!");
                         selectedRunTxt.setText("Selected Run");
-
                         confirm_dcButton.setVisibility(View.GONE);
+
                         runTaskEntityAdapter = new RunTaskEntityAdapter(runInfoEntities, getContext(), 0);
                         runTaskEntityAdapter.notifyDataSetChanged();
                         if (runTaskAdapter != null) {
@@ -320,6 +327,16 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                             runTaskAdapter.notifyDataSetChanged();
                         }
                     } else {
+                        if (runInfoEntities.get(0).getRouteStarted() == 0) {
+                            isRouteStarted = 0;
+                            confirm_dcButton.setVisibility(View.VISIBLE);
+
+                        }
+                        if (runInfoEntities.get(0).getRouteStarted() == 1) {
+                            isRouteStarted = 1;
+                            confirm_dcButton.setVisibility(View.GONE);
+
+                        }
                         runTaskEntityAdapter = new RunTaskEntityAdapter(runInfoEntities, getContext(), 0);
                         if (PreferenceManager.getDefaultSharedPreferences(activity)
                                 .getString(Constants.PREF_KEY_SELECTED_RUN, "") == null ||
@@ -331,17 +348,35 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                             PreferenceManager.getDefaultSharedPreferences(activity).edit()
                                     .putString(Constants.SELECTED_BATCH_ID, runInfoEntities.get(0).getBatchId())
                                     .apply();
+                            if (runInfoEntities.get(0).getRouteStarted() == 0) {
+                                isRouteStarted = 0;
+                                confirm_dcButton.setVisibility(View.VISIBLE);
+
+                            }
+                            if (runInfoEntities.get(0).getRouteStarted() == 1) {
+                                isRouteStarted = 1;
+                                confirm_dcButton.setVisibility(View.GONE);
+
+                            }
                         } else {
                             String run = PreferenceManager.getDefaultSharedPreferences(activity)
                                     .getString(Constants.SELECTED_BATCH_ID, "");
                             getTaskByLocationKeys(run);
                             Log.e(TAG, "onChanged: RunEntity");
+
                         }
 
 //                        batchRoutePathAPI(runInfoEntities.get(0).getBatchId());
                         String run = PreferenceManager.getDefaultSharedPreferences(activity)
                                 .getString(Constants.PREF_KEY_SELECTED_RUN, "");
-
+                        if (listOfRunInfo.get(Integer.parseInt(run)).getRouteStarted() == 0) {
+                            confirm_dcButton.setVisibility(View.VISIBLE);
+                            isRouteStarted = 0;
+                        }
+                        if (listOfRunInfo.get(Integer.parseInt(run)).getRouteStarted() == 1) {
+                            isRouteStarted = 1;
+                            confirm_dcButton.setVisibility(View.GONE);
+                        }
                         selectedRunTxt.setText("Selected Run - Run #" + listOfRunInfo.get(Integer.parseInt(run)).getRunNo());
                         runTaskEntityAdapter.updatePosition(Integer.parseInt(run));
                         batchId = PreferenceManager.getDefaultSharedPreferences(activity)
@@ -356,7 +391,14 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                                         .putString(Constants.SELECTED_BATCH_ID, runInfoEntities.get(position).getBatchId())
                                         .apply();
                                 Log.e(TAG, "onChanged: RunEntity Position");
-
+                                if (listOfRunInfo.get(Integer.parseInt(run)).getRouteStarted() == 0) {
+                                    confirm_dcButton.setVisibility(View.VISIBLE);
+                                    isRouteStarted = 0;
+                                }
+                                if (listOfRunInfo.get(Integer.parseInt(run)).getRouteStarted() == 1) {
+                                    confirm_dcButton.setVisibility(View.GONE);
+                                    isRouteStarted = 1;
+                                }
                                 selectedRunTxt.setText("Selected Run - Run #" + runInfoEntities.get(position).getRunNo());
                                 sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
                                 runTaskEntityAdapter.updatePosition(position);
@@ -365,7 +407,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
 
                                 if (runInfoEntities.get(position).getRouteStarted() == 0) {
                                     confirm_dcButton.setVisibility(View.VISIBLE);
-
+                                    isRouteStarted = 0;
                                     for (int i = 0; i < taskInfoEntities.size(); i++) {
                                         if (!taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
                                             isPending = false;
@@ -376,6 +418,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                                 }
                                 if (runInfoEntities.get(position).getRouteStarted() == 1) {
                                     confirm_dcButton.setVisibility(View.GONE);
+                                    isRouteStarted = 1;
                                     if (taskInfoEntities != null)
                                         for (int i = 0; i < taskInfoEntities.size(); i++) {
                                             if (taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
@@ -387,10 +430,8 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                                                 isPending = false;
                                                 batchId = runInfoEntities.get(position).getBatchId();
                                             }
-
                                         }
                                 }
-
                             }
                         });
 
@@ -446,7 +487,6 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
 
     private void pullData() {
         //mTaskInfoRepository.deleteAll();
-
         String jsonLoginResponse = PreferenceManager.getDefaultSharedPreferences(activity).getString(Constants.PREF_KEY_LOGIN_RESPONSE, "");
         LoginResponse loginResponse = new Gson().fromJson(jsonLoginResponse, LoginResponse.class);
         String token = loginResponse.getToken();
@@ -455,10 +495,13 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
         String selectedDate = PreferenceManager.getDefaultSharedPreferences(getActivity()).getString(Constants.PREF_KEY_SELECTED_DATE, curDate);
        */
         String selectedDate = PreferenceManager.getDefaultSharedPreferences(activity).getString(Constants.PREF_KEY_SELECTED_DATE, "");
-
         String compId = "" + loginResponse.getDriverInfo().getCompanyId();
         // compId = "34";
+        if (selectedDate.equals("") || selectedDate == null) {
+            String curDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+            selectedDate = PreferenceManager.getDefaultSharedPreferences(activity).getString(Constants.PREF_KEY_SELECTED_DATE, curDate);
 
+        }
         apiService.getTaskList(compId, selectedDate, Constants.AUTHORIZATION_TOKEN + token).enqueue(new Callback<TaskInfoResponse>() {
             @Override
             public void onResponse(Call<TaskInfoResponse> call, Response<TaskInfoResponse> response) {
@@ -470,6 +513,8 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
 
                     if (runInfoList.size() > 0) {
                         runTaskAdapter = new RunTaskAdapter(runInfoList, getContext(), 0);
+                        selectedRunTxt.setText("Selected Run - Run #" + runInfoList.get(0).getRunNo());
+                        getTaskByLocationKeys(runInfoList.get(0).getBatchId());
 
                         if (PreferenceManager.getDefaultSharedPreferences(activity)
                                 .getString(Constants.PREF_KEY_SELECTED_RUN, "") == null /*||
@@ -489,6 +534,14 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
 
                             getTaskByLocationKeys(batchId);
                             Log.e(TAG, "onChanged: RunInfo ");
+                            if (runInfoList.get(0).getRouteStarted() == 0) {
+                                confirm_dcButton.setVisibility(View.VISIBLE);
+                                isRouteStarted = 0;
+                            }
+                            if (runInfoList.get(0).getRouteStarted() == 1) {
+                                confirm_dcButton.setVisibility(View.GONE);
+                                isRouteStarted = 1;
+                            }
 
 //                            batchRoutePathAPI(batchId);
                         } else {
@@ -497,13 +550,28 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                             String run = PreferenceManager.getDefaultSharedPreferences(activity)
                                     .getString(Constants.PREF_KEY_SELECTED_RUN, "");
                             if (run.equals("")) {
-                                Toast.makeText(activity, "Something went wrong please Refresh!", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(activity, "Something went wrong please Refresh!", Toast.LENGTH_SHORT).show();
                             } else {
                                 getTaskByLocationKeys(runInfoList.get(Integer.parseInt(run)).getBatchId());
                                 batchId = runInfoList.get(Integer.parseInt(run)).getBatchId();
                                 Log.e(TAG, "onChanged: RunInfo ");
+                                if (runInfoList.get(Integer.parseInt(run)).getRouteStarted() == 0) {
+                                    confirm_dcButton.setVisibility(View.VISIBLE);
+                                    isRouteStarted = 0;
+                                }
+                                if (runInfoList.get(Integer.parseInt(run)).getRouteStarted() == 1) {
+                                    confirm_dcButton.setVisibility(View.GONE);
+                                    isRouteStarted = 1;
+                                }
                                 selectedRunTxt.setText("Selected Run - Run #" + runInfoList.get(Integer.parseInt(run)).getRunNo());
                                 runTaskAdapter.updatePosition(Integer.parseInt(run));
+                               /* if (runInfoList.get(Integer.parseInt(run)).getRouteStarted() == 0) {
+                                    confirm_dcButton.setVisibility(View.VISIBLE);
+                                    isRouteStarted = 0;
+                                } else {
+                                    confirm_dcButton.setVisibility(View.GONE);
+                                    isRouteStarted = 1;
+                                }*/
                             }
 
 
@@ -511,6 +579,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
 //                        getTaskByLocationKeys(batchId);
 
                         if (runInfoList.get(0).getRouteStarted() == 0) {
+                            isRouteStarted = 0;
                             confirm_dcButton.setVisibility(View.VISIBLE);
                             for (int i = 0; i < taskInfoEntities.size(); i++) {
                                 if (!taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
@@ -523,6 +592,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                         }
                         if (runInfoList.get(0).getRouteStarted() == 1) {
                             confirm_dcButton.setVisibility(View.GONE);
+                            isRouteStarted = 1;
                             for (int i = 0; i < taskInfoEntities.size(); i++) {
                                 if (taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
                                     isPending = true;
@@ -533,80 +603,83 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
 
                             }
                         }
-                    }
-                    for (int index = 0; index < runInfoList.size(); index++) {
-                        if (runInfoList.get(index).getRouteStarted() == 0) {
-                            confirm_dcButton.setVisibility(View.VISIBLE);
 
-                            for (int i = 0; i < taskInfoEntities.size(); i++) {
-                                if (!taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
-                                    isPending = false;
-                                    batchId = runInfoList.get(0).getBatchId();
-
-                                    break;
-                                }
-                            }
-                        }
-                        if (runInfoList.get(index).getRouteStarted() == 1) {
-                            confirm_dcButton.setVisibility(View.GONE);
-                            for (int i = 0; i < taskInfoEntities.size(); i++) {
-                                if (taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
-                                    isPending = true;
-                                    batchId = runInfoList.get(0).getBatchId();
-                                    break;
-                                }
-
-                            }
-                        }
-                    }
-//                    batchRoutePathAPI(batchId);
-
-
-                    runTaskAdapter.setOnItemClickListener(new RunTaskAdapter.OnItemClickListener() {
-                        @Override
-                        public void onGetRunPosition(int position) {
-                            Log.e(TAG, "onChanged: RunInfo Position");
-
-                            PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                                    .putString(Constants.PREF_KEY_SELECTED_RUN, "" + position)
-                                    .apply();
-                            int run = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(activity)
-                                    .getString(Constants.PREF_KEY_SELECTED_RUN, ""));
-                            selectedRunTxt.setText("Selected Run - Run #" + runInfoList.get(run).getRunNo());
-                            sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                            runTaskAdapter.updatePosition(run);
-                            runTaskAdapter.notifyDataSetChanged();
-                            getTaskByLocationKeys(runInfoList.get(run).getBatchId());
-                            PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                                    .putString(Constants.SELECTED_BATCH_ID, "" + runInfoList.get(position).getBatchId())
-                                    .apply();
-                            if (runInfoList.get(position).getRouteStarted() == 0) {
+                        for (int index = 0; index < runInfoList.size(); index++) {
+                            if (runInfoList.get(index).getRouteStarted() == 0) {
                                 confirm_dcButton.setVisibility(View.VISIBLE);
-
+                                isRouteStarted = 0;
                                 for (int i = 0; i < taskInfoEntities.size(); i++) {
                                     if (!taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
                                         isPending = false;
-                                        batchId = runInfoList.get(position).getBatchId();
-
+                                        batchId = runInfoList.get(0).getBatchId();
                                         break;
                                     }
                                 }
+                                break;
                             }
-                            if (runInfoList.get(position).getRouteStarted() == 1) {
+                            if (runInfoList.get(index).getRouteStarted() == 1) {
                                 confirm_dcButton.setVisibility(View.GONE);
+                                isRouteStarted = 1;
                                 for (int i = 0; i < taskInfoEntities.size(); i++) {
                                     if (taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
                                         isPending = true;
-                                        batchId = runInfoList.get(position).getBatchId();
+                                        batchId = runInfoList.get(0).getBatchId();
                                         break;
                                     }
-                                    if (!taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
-                                        isPending = false;
-                                        batchId = runInfoList.get(position).getBatchId();
-                                    }
-
                                 }
+                                break;
                             }
+                        }
+//                    batchRoutePathAPI(batchId);
+
+
+                        runTaskAdapter.setOnItemClickListener(new RunTaskAdapter.OnItemClickListener() {
+                            @Override
+                            public void onGetRunPosition(int position) {
+                                Log.e(TAG, "onChanged: RunInfo Position");
+
+                                PreferenceManager.getDefaultSharedPreferences(activity).edit()
+                                        .putString(Constants.PREF_KEY_SELECTED_RUN, "" + position)
+                                        .apply();
+                                int run = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(activity)
+                                        .getString(Constants.PREF_KEY_SELECTED_RUN, ""));
+                                selectedRunTxt.setText("Selected Run - Run #" + runInfoList.get(run).getRunNo());
+                                sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                                runTaskAdapter.updatePosition(run);
+                                runTaskAdapter.notifyDataSetChanged();
+                                getTaskByLocationKeys(runInfoList.get(run).getBatchId());
+                                PreferenceManager.getDefaultSharedPreferences(activity).edit()
+                                        .putString(Constants.SELECTED_BATCH_ID, "" + runInfoList.get(position).getBatchId())
+                                        .apply();
+                                if (runInfoList.get(position).getRouteStarted() == 0) {
+                                    confirm_dcButton.setVisibility(View.VISIBLE);
+                                    isRouteStarted = 0;
+                                    for (int i = 0; i < taskInfoEntities.size(); i++) {
+                                        if (taskInfoEntities.get(position).getRunNo() == runInfoList.get(position).getRunNo()) {
+                                            if (taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
+                                                isPending = true;
+                                                batchId = runInfoList.get(position).getBatchId();
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                                if (runInfoList.get(position).getRouteStarted() == 1) {
+                                    confirm_dcButton.setVisibility(View.GONE);
+                                    isRouteStarted = 1;
+                                    for (int i = 0; i < taskInfoEntities.size(); i++) {
+                                        if (taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
+                                            isPending = true;
+                                            batchId = runInfoList.get(position).getBatchId();
+                                            break;
+                                        }
+                                        if (!taskInfoEntities.get(i).getWorkStatus().equals("pending")) {
+                                            isPending = false;
+                                            batchId = runInfoList.get(position).getBatchId();
+                                        }
+
+                                    }
+                                }
 
 //                            Back up code
 //                            taskInfoViewModel.getTaskInfoGroupByBatchId(runInfoList.get(position).getBatchId()).observe(getActivity(), new Observer<List<TaskInfoGroupByLocationKey>>() {
@@ -627,8 +700,9 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
 //                            });
 //                            batchRoutePathAPI(batchId);
 
-                        }
-                    });
+                            }
+                        });
+                    }
 
                     listViewBtmSheet.setAdapter(runTaskAdapter);
 //                    getTasks();

@@ -109,6 +109,7 @@ public class SyncRemoteServerService extends Service {
             String selectedDate = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString(Constants.PREF_KEY_SELECTED_DATE, curDate);
             String compId = "" + loginResponse.getDriverInfo().getCompanyId();
             // compId = "34";
+            Log.e(TAG, "pullData: SERVICE " + selectedDate);
 
             apiService.getTaskList(compId, selectedDate, Constants.AUTHORIZATION_TOKEN + token).enqueue(new Callback<TaskInfoResponse>() {
                 @Override

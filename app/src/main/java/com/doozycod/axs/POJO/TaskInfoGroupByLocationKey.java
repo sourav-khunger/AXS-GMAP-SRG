@@ -28,6 +28,28 @@ public class TaskInfoGroupByLocationKey {
     @ColumnInfo(name = "arrivalTime")
     private String arrivalTime;
 
+    @ColumnInfo(name = "workStatus")
+    private String workStatus;
+    @ColumnInfo(name = "recordStatus")
+    private int recordStatus;
+
+    public int getRecordStatus() {
+        return recordStatus;
+    }
+
+    public void setRecordStatus(int recordStatus) {
+        this.recordStatus = recordStatus;
+    }
+
+    public String getWorkStatus() {
+        return workStatus;
+    }
+
+    public void setWorkStatus(String workStatus) {
+        this.workStatus = workStatus;
+    }
+
+
     public int getGroupCount() {
         return groupCount;
     }

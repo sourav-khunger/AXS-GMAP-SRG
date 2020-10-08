@@ -187,7 +187,7 @@
 93-->[androidx.work:work-runtime:2.4.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\627c73c63f7931943fddb6f59e49c80f\work-runtime-2.4.0\AndroidManifest.xml:28:22-74
 94
 95    <application
-95-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:39:5-129:19
+95-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:39:5-130:19
 96        android:allowBackup="false"
 96-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:40:9-36
 97        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -209,72 +209,72 @@
 106        android:usesCleartextTraffic="true" >
 106-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:47:9-44
 107        <activity android:name="com.doozycod.axs.Activity.ArrivalTimeMapTypeActivity" />
-107-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:48:9-82
-107-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:48:19-70
+107-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:9-82
+107-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:19-70
 108        <activity android:name="com.doozycod.axs.UpdateDebug.RouteMarker.MapRouteActivity" />
-108-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:9-78
-108-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:19-75
+108-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:9-78
+108-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:19-75
 109        <activity android:name="com.doozycod.axs.UpdateDebug.PhoneCallActivity" />
-109-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:9-67
-109-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:19-64
+109-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:9-67
+109-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:19-64
 110        <activity android:name="com.doozycod.axs.UpdateDebug.SelfDispatchActivity" />
-110-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:9-70
-110-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:19-67
+110-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:9-70
+110-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:19-67
 111        <activity android:name="com.doozycod.axs.UpdateDebug.MenuActivity" />
-111-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:9-62
-111-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:19-59
+111-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:9-62
+111-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:19-59
 112        <activity android:name="com.doozycod.axs.UpdateDebug.ScannerActivity" />
-112-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:9-65
-112-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:19-62
+112-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:9-65
+112-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:19-62
 113        <activity android:name="com.doozycod.axs.Activity.TaskInfoUpdateActivity" />
-113-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:9-69
-113-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:19-66
+113-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:9-69
+113-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:19-66
 114        <activity android:name="com.doozycod.axs.Activity.ShowListOfTaskGroupByLocationKeyActivity" />
-114-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:9-87
-114-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:19-84
+114-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:56:9-87
+114-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:56:19-84
 115        <activity android:name="com.doozycod.axs.Activity.ShowPackageDetailsActivity" />
-115-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:56:9-73
-115-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:56:19-70
+115-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:57:9-73
+115-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:57:19-70
 116        <activity
-116-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:57:9-59:59
+116-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:58:9-60:59
 117            android:name="com.doozycod.axs.Activity.ScreenSlidePagerActivity"
-117-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:58:13-62
+117-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:59:13-62
 118            android:theme="@style/AppTheme.NoActionBar" />
-118-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:59:13-56
+118-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:60:13-56
 119        <activity
-119-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:60:9-62:59
+119-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:61:9-63:59
 120            android:name="com.doozycod.axs.Activity.ShipmentActivity"
-120-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:61:13-54
+120-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:62:13-54
 121            android:theme="@style/AppTheme.NoActionBar" />
-121-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:62:13-56
+121-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:63:13-56
 122        <activity
-122-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:63:9-65:59
+122-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:64:9-66:59
 123            android:name="com.doozycod.axs.Activity.ChooseCompanyActivity"
-123-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:64:13-59
+123-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:65:13-59
 124            android:theme="@style/AppTheme.NoActionBar" />
-124-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:65:13-56
+124-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:66:13-56
 125        <activity android:name="com.doozycod.axs.Activity.SignatureActivity" />
-125-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:66:9-64
-125-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:66:19-61
+125-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:9-64
+125-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:19-61
 126        <activity android:name="com.doozycod.axs.Activity.GPS_StatusActivity" />
-126-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:9-65
-126-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:19-62
+126-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:68:9-65
+126-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:68:19-62
 127        <activity android:name="com.doozycod.axs.Activity.ScanPackageActivity" />
-127-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:68:9-66
-127-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:68:19-63
+127-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:69:9-66
+127-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:69:19-63
 128
 129        <service android:name="com.doozycod.axs.BackgroudService.Workers.SyncRemoteServerService" />
-129-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:70:9-85
-129-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:70:18-82
+129-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:9-85
+129-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:18-82
 130        <service android:name="com.doozycod.axs.BackgroudService.Workers.LocationService" />
-130-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:9-77
-130-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:18-74
+130-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:9-77
+130-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:18-74
 131        <service android:name="com.doozycod.axs.BackgroudService.Workers.UploadImageService" />
-131-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:9-80
-131-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:18-77
+131-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:73:9-80
+131-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:73:18-77
 132        <service android:name="com.doozycod.axs.BackgroudService.Workers.Foreground_GPS_Service" />
-132-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:73:9-84
-132-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:73:18-81
+132-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:74:9-84
+132-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:74:18-81
 133        <!--
 134             The API key for Google Maps-based APIs is defined as a string resource.
 135             (See the file "res/values/google_maps_api.xml").
@@ -284,29 +284,29 @@
 139             You can define the keys for the debug and release targets in src/debug/ and src/release/.
 140        -->
 141        <meta-data
-141-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:82:9-84:71
+141-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:83:9-85:71
 142            android:name="com.google.android.maps.v2.API_KEY"
-142-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:83:13-62
+142-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:84:13-62
 143            android:value="AIzaSyAcbjVoNzSurPy7HAKBOnW1cuAEITkMjWM" />
-143-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:84:13-68
+143-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:85:13-68
 144
 145        <activity android:name="com.doozycod.axs.MainActivity" >
-145-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:86:9-92:20
-145-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:86:19-47
+145-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:87:9-93:20
+145-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:87:19-47
 146            <intent-filter>
-146-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:87:13-91:29
+146-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:88:13-92:29
 147                <action android:name="android.intent.action.MAIN" />
-147-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:88:17-69
-147-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:88:25-66
+147-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:89:17-69
+147-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:89:25-66
 148
 149                <category android:name="android.intent.category.LAUNCHER" />
-149-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:90:17-77
-149-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:90:27-74
+149-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:91:17-77
+149-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:91:27-74
 150            </intent-filter>
 151        </activity>
 152        <activity android:name="com.doozycod.axs.gmap.turn.GmapTurnNavActivity" />
-152-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:93:9-67
-152-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:93:19-64
+152-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:94:9-67
+152-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:94:19-64
 153        <!--
 154Developers should put application credentials here.To obtain them, please register the application
 155         at https://developer.here.com/develop/mobile-sdks
@@ -330,28 +330,28 @@
 173        <!-- android:name="com.here.android.maps.license.key" -->
 174        <!-- android:value="NWMe0pLEUw9js8gzAREu7AmIT+j0Vhf9wVac9DwCHedd+KTzaSnSiQgXAd+5f8LAbyr+sXeGFIk1x7fsmEGGr3Z1Lh7McYPTXW+44y8Mq9nRx5AyVLoufMzV+5csYjEr6pSzmEtabyvzUx2PhStMoiKUdY/wjW2d6VLoNCwpZ+c00+PvGynv536xv8d+/9WGQ4Oitnhg1sdOR4rWdb+937zexwjxtC7cYRyrCEaQn2kk4WQGKJgYqwWKawdla5eiBsYPZYo99SAbqoZXaMaRfLJm6w5MpSNBo4Da8J97UL1X7maXCxx0RS+4rIMDFJ7qkJasgeFt5N+sbXuzfCQ754NbYiVv/b9Z8djwklgSWp3UFofKR+pmwC7Td8PAGpUMLY8w4D61Naz71MSZ3+WAjyClgwTo6NGo9591sb0W4cskFyLUSsP0EV37bwfZX/hpd9957HgX3R88J3F5b2aN8CgItoMqE0PIRxsPIB0MNNhai+MyJhG1BZoilo8U0j2PcHdoMVbjuJTcmDN9VzBboVNDpifleEIYKerKNUkNi2aihKMUtaRgE0Ub0W6NlqORrP1LRF0X6oAOXjoPyNcCs10ovqM90QezK/JHrrg+Vej9DjCLztQE04DVPpx7cXlDpNNkWpj3UqsH1xgt3wAwwYwZDBm2nOOnHcXs2o9386g=" /> -->
 175        <provider
-175-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:116:9-126:20
+175-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:117:9-127:20
 176            android:name="androidx.core.content.FileProvider"
-176-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:117:13-62
+176-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:118:13-62
 177            android:authorities="com.doozycod.axs.Utils.FileProvider"
-177-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:118:13-70
+177-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:119:13-70
 178            android:exported="false"
-178-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:119:13-37
+178-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:120:13-37
 179            android:grantUriPermissions="true" >
-179-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:120:13-47
+179-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:121:13-47
 180
 181            <!-- ressource file to create -->
 182            <meta-data
-182-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:123:13-125:54
+182-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:124:13-126:54
 183                android:name="android.support.FILE_PROVIDER_PATHS"
-183-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:124:17-67
+183-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:125:17-67
 184                android:resource="@xml/file_paths" />
-184-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:125:17-51
+184-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:126:17-51
 185        </provider>
 186
 187        <service android:name="com.doozycod.axs.gmap.turn.HereTurnForegroundService" />
-187-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:128:9-72
-187-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:128:18-69
+187-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:129:9-72
+187-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:129:18-69
 188
 189        <meta-data
 189-->[com.google.maps.android:android-maps-utils:0.4.3] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ce7939d3b52e6ef009c2245c227da5fa\jetified-android-maps-utils-0.4.3\AndroidManifest.xml:8:9-10:69
@@ -388,11 +388,11 @@
 206            android:grantUriPermissions="true" >
 206-->[com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:28:13-47
 207            <meta-data
-207-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:123:13-125:54
+207-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:124:13-126:54
 208                android:name="android.support.FILE_PROVIDER_PATHS"
-208-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:124:17-67
+208-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:125:17-67
 209                android:resource="@xml/image_picker_provider_paths" />
-209-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:125:17-51
+209-->C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:126:17-51
 210        </provider> <!-- Needs to be explicitly declared on P+ -->
 211        <uses-library
 211-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40

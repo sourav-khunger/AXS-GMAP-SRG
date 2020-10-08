@@ -97,6 +97,9 @@ public class ArrivalTimeMapTypeActivity extends AppCompatActivity {
                 TaskInfoRepository mTaskInfoRepository = new TaskInfoRepository((Application) getApplicationContext());
                 String curDateTime = getCurrentTimeDate() + " " + hoursET.getText().toString() + ":" + minuteET.getText().toString() + ":" + "00";
                 mTaskInfoRepository.updateLocation(taskInfoGroupByLocationKey.getLocationKey(), curDateTime);
+                selectedTask.setRecordStatus(Constants.PARTIAL_MODIFIED);
+                mTaskInfoRepository.update(selectedTask);
+
 
                 Intent intent = new Intent(ArrivalTimeMapTypeActivity.this,
                         ShowListOfTaskGroupByLocationKeyActivity.class);

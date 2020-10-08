@@ -82,7 +82,7 @@ public class ShipmentDeliveredToFragment extends Fragment {
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                save();
+                    save();
             }
         });
     }
@@ -97,7 +97,6 @@ public class ShipmentDeliveredToFragment extends Fragment {
                 .getString(Constants.DELIVERY_STATUS, "");
         if (status.equals("")) {
             ShipmentActivity.selectedTask.setWorkStatus("pending");
-
         } else {
             ShipmentActivity.selectedTask.setWorkStatus(status);
         }

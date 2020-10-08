@@ -4,23 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <ToggleButton
+    <!-- <ToggleButton
+         android:id="@+id/delivery_status_toggle_btn"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:background="@color/primaryLightColor"
+         android:fontFamily="@font/roboto"
+         android:padding="16dp"
+         android:text="Status"
+         android:textColor="@color/primaryTextColor"
+         android:textOff="Unuccessful"
+         android:textOn="Successful"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />-->
+    <belka.us.androidtoggleswitch.widgets.ToggleSwitch
         android:id="@+id/delivery_status_toggle_btn"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/primaryLightColor"
         android:fontFamily="@font/roboto"
-        android:padding="16dp"
+        android:gravity="center"
+        android:padding="15dp"
         android:text="Status"
+        android:textAlignment="center"
         android:textColor="@color/primaryTextColor"
-        android:textOff="Unuccessful"
-        android:textOn="Successful"
+        android:textSize="14sp"
+        app:activeBgColor="@color/primaryColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:textToggleLeft="Successful"
+        app:textToggleRight="Unuccessful"
+        app:toggleWidth="110dp" />
 
     <ScrollView
         android:layout_width="fill_parent"

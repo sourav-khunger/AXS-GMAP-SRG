@@ -112,18 +112,25 @@ public class RouteFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (routeSelectionList.size() > 0) {
-                    Intent intent = new Intent(getContext(), MapRouteActivity.class);
-                    intent.putExtra("list", routeSpinner.getSelectedItem().toString().replaceAll("Run #", ""));
-                    intent.putStringArrayListExtra("list", routeSelectionList);
-                    intent.putStringArrayListExtra("routeList", routeList);
-                    intent.putExtra("dcName", DC);
-                    intent.putExtra("dcLat", lat);
-                    intent.putExtra("dcLon", lon);
+                    if (routeList != null) {
 
-                    Log.e(TAG, "onClick: " + routeSpinner.getSelectedItem().toString().replaceAll("Run #", ""));
-                    startActivity(intent);
+                        Intent intent = new Intent(getContext(), MapRouteActivity.class);
+                        intent.putExtra("list", routeSpinner.getSelectedItem().toString().replaceAll("Run #", ""));
+                        intent.putStringArrayListExtra("list", routeSelectionList);
+                        intent.putStringArrayListExtra("routeList", routeList);
+                        intent.putExtra("dcName", DC);
+                        intent.putExtra("dcLat", lat);
+                        intent.putExtra("dcLon", lon);
+
+//                        Log.e(TAG, "onClick: " + routeSpinner.getSelectedItem().toString().replaceAll("Run #", ""));
+
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(getContext(), "Routes not found!", Toast.LENGTH_SHORT).show();
+                    }
+
                 } else {
-                    Toast.makeText(getContext(), "you have no deliveries ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "you have no deliveries", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -203,13 +210,15 @@ public class RouteFragment extends Fragment {
                 customProgressBar.hideProgress();
 
                 if (response.code() == 200) {
-                    List<String> routes = Arrays.asList(response.body().getRoute().split("\\|"));
-                    routeList = new ArrayList<>();
-                    routeList.addAll(routes);
-                    DC = response.body().getDcName();
-                    lat = response.body().getDcLat();
-                    lon = response.body().getDcLon();
-                    Log.e(TAG, "onResponse: Size" + routes.size());
+                    if (response.body().getRoute() != null) {
+                        List<String> routes = Arrays.asList(response.body().getRoute().split("\\|"));
+                        routeList = new ArrayList<>();
+                        routeList.addAll(routes);
+                        DC = response.body().getDcName();
+                        lat = response.body().getDcLat();
+                        lon = response.body().getDcLon();
+                        Log.e(TAG, "onResponse: Size" + routes.size());
+                    }
                 }
 
             }

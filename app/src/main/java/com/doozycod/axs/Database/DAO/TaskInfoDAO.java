@@ -30,7 +30,7 @@ public interface TaskInfoDAO {
     @Query("Select * from taskInfoTable where taskId= :taskId")
     TaskInfoEntity getTaskInfo(String taskId);
 
-    @Query("Select address, postalCode, city, locationKey, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable where batchId= :batchId GROUP BY locationKey ORDER BY seqNo ")
+    @Query("Select address, postalCode, city, locationKey, workStatus,recordStatus, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable where batchId= :batchId GROUP BY locationKey ORDER BY seqNo ")
 //    @Query("Select * from taskInfoTable where )
     LiveData<List<TaskInfoGroupByLocationKey>> getTaskInfoByBatchId(String batchId);
 
@@ -40,10 +40,10 @@ public interface TaskInfoDAO {
     @Update
     void updateTaskInfo(TaskInfoEntity... taskInfoEntitis);
 
-    @Query("Select address, postalCode, city, locationKey, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable GROUP BY locationKey ORDER BY seqNo ")
+    @Query("Select address, postalCode, city, locationKey,workStatus,recordStatus, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable GROUP BY locationKey ORDER BY seqNo ")
     LiveData<List<TaskInfoGroupByLocationKey>> getTaskInfoGroupByLocationKeys();
 
-    @Query("Select address, postalCode, city, locationKey, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime from taskInfoTable where workStatus= :workStatus GROUP BY locationKey")
+    @Query("Select address, postalCode, city, locationKey,recordStatus, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime from taskInfoTable where workStatus= :workStatus GROUP BY locationKey")
     LiveData<List<TaskInfoGroupByLocationKey>> getTaskInfoSearchByWorkStatusGroupByLocationKeys(String workStatus);
 
     @Query("Select * from taskInfoTable where locationKey= :locationKey")
@@ -54,6 +54,7 @@ public interface TaskInfoDAO {
 
     @Query("Select * from taskInfoTable where locationKey= :locationKey AND workStatus= :workStatus")
     List<TaskInfoEntity> getTaskInfoCompleted(String locationKey, String workStatus);
+
 
     @Query("Select * from taskInfoTable limit 1")
     List<TaskInfoEntity> getTaskInfoLimit1();

@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ import com.doozycod.axs.Database.Entities.TaskInfoEntity;
 import com.doozycod.axs.Database.Repository.ShipmentStatusRepository;
 import com.doozycod.axs.R;
 import com.doozycod.axs.ui.shipment.ViewModel.ShipmentRecipientViewModel;
+import com.google.gson.Gson;
 
 public class ShipmentRecipientFragment extends Fragment {
 
@@ -35,6 +37,7 @@ public class ShipmentRecipientFragment extends Fragment {
     private StatusEntity status;
 
     private Button sigLinkBtn, camLinkBtn;
+    String statusType = "", reasonType = "";
 
     public static ShipmentRecipientFragment newInstance() {
         return new ShipmentRecipientFragment();
@@ -57,31 +60,58 @@ public class ShipmentRecipientFragment extends Fragment {
         sigLinkBtn = view.findViewById(R.id.sigLinkBtn);
         camLinkBtn = view.findViewById(R.id.camLinkBtn);
 
+//        fetch task details
+
+        TaskInfoEntity theTask = ShipmentActivity.selectedTask;
+
+        ShipmentStatusRepository shipmentStatusRepository = new ShipmentStatusRepository(getActivity().getApplication());
+
+        status = shipmentStatusRepository.getStatus(theTask.getStatusId());
+        reason = shipmentStatusRepository.getReason(theTask.getReasonId());
+        String tempStatus = new Gson().toJson(status);
+        String tempReason = new Gson().toJson(reason);
+        Log.e("TAGTAG", "onCreateView: REASON " + tempReason);
+        Log.e("TAGTAG", "onCreateView: STATUS " + tempStatus);
+
+        if (status != null) statusType = status.getStatusRule();
+
+        if (reason != null) reasonType = reason.getReasonRule();
+//            Log.e("TAGTAG", "onCreateView: " + reason.getReasonRule());
+
 
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(quantity.getText().toString().trim().equals("")) {
+                if (quantity.getText().toString().trim().equals("")) {
                     Toast.makeText(getActivity(), "Quantity is required", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if(status.getStatusRule().equals("S") && signatureName.equals("")) {
+                if (statusType.equals("S") && signatureName.equals("")) {
                     Toast.makeText(getActivity(), "Recipient Name is required", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if(status.getStatusRule().equals("S")
+                if (statusType.equals("S")
                         && (ShipmentActivity.selectedTask.getSignature() == null
-                            || ShipmentActivity.selectedTask.getSignature().equals(""))) {
+                        || ShipmentActivity.selectedTask.getSignature().equals(""))) {
                     Toast.makeText(getActivity(), "Recipient Signature is required", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if(((status != null && status.getStatusRule().equals("C"))
-                        || (reason != null && reason.getReasonRule().equals("C"))) && comment.equals("")) {
-                    Toast.makeText(getActivity(), "Recipient is required", Toast.LENGTH_SHORT).show();
+                if ((status != null && statusType.equals("C"))) {
+                    Toast.makeText(getActivity(), "Comment is required", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if ((reason != null && reasonType.equals("C")) && comment.getText().toString().equals("")) {
+                    Toast.makeText(getActivity(), "Comment is required", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if ((status != null && statusType.equals("P")) &&
+                        ShipmentActivity.selectedTask.getImageTaken() == 0 || (reason != null && reasonType.equals("P")) &&
+                        ShipmentActivity.selectedTask.getImageTaken() == 0) {
+                    Toast.makeText(getActivity(), "Photo is required", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -113,29 +143,23 @@ public class ShipmentRecipientFragment extends Fragment {
             }
         });
 
-        if(ShipmentActivity.selectedTask.getSignature() != null
-                    && !ShipmentActivity.selectedTask.getSignature().equals("")) {
+        if (ShipmentActivity.selectedTask.getSignature() != null
+                && !ShipmentActivity.selectedTask.getSignature().equals("")) {
             sigLinkBtn.setText("Signature Taken. Retake");
         }
 
-        if(ShipmentActivity.selectedTask.getImageTaken() == 1) {
+        if (ShipmentActivity.selectedTask.getImageTaken() == 1) {
             camLinkBtn.setText("Image Taken. Take More");
         }
 
-        TaskInfoEntity theTask = ShipmentActivity.selectedTask;
-
-        ShipmentStatusRepository shipmentStatusRepository = new ShipmentStatusRepository(getActivity().getApplication());
-
-        status = shipmentStatusRepository.getStatus(theTask.getStatusId());
-        reason = shipmentStatusRepository.getReason(theTask.getReasonId());
 
         String shAllInfo = theTask.getBarcode();
-        if(status != null) shAllInfo +=  "\n" + status.getStatusName();
-        if(reason != null) shAllInfo +=  "\n" + reason.getReasonName();
+        if (status != null) shAllInfo += "\n" + status.getStatusName();
+        if (reason != null) shAllInfo += "\n" + reason.getReasonName();
 
         shipInfo.setText(shAllInfo);
         reff.setText(theTask.getReffNo());
-        if(theTask.getQtyEntered() > 0) quantity.setText("" + theTask.getQtyEntered());
+        if (theTask.getQtyEntered() > 0) quantity.setText("" + theTask.getQtyEntered());
 
         comment.setText(theTask.getDriverComment());
         signatureName.setText(theTask.getSignatureName());
@@ -152,7 +176,7 @@ public class ShipmentRecipientFragment extends Fragment {
     }
 
     public void saveDataEntered() {
-        if(!quantity.getText().toString().trim().equals("")) {
+        if (!quantity.getText().toString().trim().equals("")) {
             int qtyEnterbed = Integer.parseInt(quantity.getText().toString());
             ShipmentActivity.selectedTask.setQtyEntered(qtyEnterbed);
         }

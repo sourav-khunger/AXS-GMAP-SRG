@@ -1122,7 +1122,7 @@ public final class TaskInfoDAO_Impl implements TaskInfoDAO {
 
   @Override
   public LiveData<List<TaskInfoGroupByLocationKey>> getTaskInfoByBatchId(final String batchId) {
-    final String _sql = "Select address, postalCode, city, locationKey, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable where batchId= ? GROUP BY locationKey ORDER BY seqNo ";
+    final String _sql = "Select address, postalCode, city, locationKey, workStatus,recordStatus, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable where batchId= ? GROUP BY locationKey ORDER BY seqNo ";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (batchId == null) {
@@ -1139,6 +1139,8 @@ public final class TaskInfoDAO_Impl implements TaskInfoDAO {
           final int _cursorIndexOfPostalCode = CursorUtil.getColumnIndexOrThrow(_cursor, "postalCode");
           final int _cursorIndexOfCity = CursorUtil.getColumnIndexOrThrow(_cursor, "city");
           final int _cursorIndexOfLocationKey = CursorUtil.getColumnIndexOrThrow(_cursor, "locationKey");
+          final int _cursorIndexOfWorkStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "workStatus");
+          final int _cursorIndexOfRecordStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "recordStatus");
           final int _cursorIndexOfGroupCount = CursorUtil.getColumnIndexOrThrow(_cursor, "groupCount");
           final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
           final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
@@ -1153,6 +1155,12 @@ public final class TaskInfoDAO_Impl implements TaskInfoDAO {
             final String _tmpLocationKey;
             _tmpLocationKey = _cursor.getString(_cursorIndexOfLocationKey);
             _item.setLocationKey(_tmpLocationKey);
+            final String _tmpWorkStatus;
+            _tmpWorkStatus = _cursor.getString(_cursorIndexOfWorkStatus);
+            _item.setWorkStatus(_tmpWorkStatus);
+            final int _tmpRecordStatus;
+            _tmpRecordStatus = _cursor.getInt(_cursorIndexOfRecordStatus);
+            _item.setRecordStatus(_tmpRecordStatus);
             _item.groupCount = _cursor.getInt(_cursorIndexOfGroupCount);
             final String _tmpLatitude;
             _tmpLatitude = _cursor.getString(_cursorIndexOfLatitude);
@@ -1180,7 +1188,7 @@ public final class TaskInfoDAO_Impl implements TaskInfoDAO {
 
   @Override
   public LiveData<List<TaskInfoGroupByLocationKey>> getTaskInfoGroupByLocationKeys() {
-    final String _sql = "Select address, postalCode, city, locationKey, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable GROUP BY locationKey ORDER BY seqNo ";
+    final String _sql = "Select address, postalCode, city, locationKey,workStatus,recordStatus, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable GROUP BY locationKey ORDER BY seqNo ";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     return __db.getInvalidationTracker().createLiveData(new String[]{"taskInfoTable"}, false, new Callable<List<TaskInfoGroupByLocationKey>>() {
       @Override
@@ -1191,6 +1199,8 @@ public final class TaskInfoDAO_Impl implements TaskInfoDAO {
           final int _cursorIndexOfPostalCode = CursorUtil.getColumnIndexOrThrow(_cursor, "postalCode");
           final int _cursorIndexOfCity = CursorUtil.getColumnIndexOrThrow(_cursor, "city");
           final int _cursorIndexOfLocationKey = CursorUtil.getColumnIndexOrThrow(_cursor, "locationKey");
+          final int _cursorIndexOfWorkStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "workStatus");
+          final int _cursorIndexOfRecordStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "recordStatus");
           final int _cursorIndexOfGroupCount = CursorUtil.getColumnIndexOrThrow(_cursor, "groupCount");
           final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
           final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
@@ -1205,6 +1215,12 @@ public final class TaskInfoDAO_Impl implements TaskInfoDAO {
             final String _tmpLocationKey;
             _tmpLocationKey = _cursor.getString(_cursorIndexOfLocationKey);
             _item.setLocationKey(_tmpLocationKey);
+            final String _tmpWorkStatus;
+            _tmpWorkStatus = _cursor.getString(_cursorIndexOfWorkStatus);
+            _item.setWorkStatus(_tmpWorkStatus);
+            final int _tmpRecordStatus;
+            _tmpRecordStatus = _cursor.getInt(_cursorIndexOfRecordStatus);
+            _item.setRecordStatus(_tmpRecordStatus);
             _item.groupCount = _cursor.getInt(_cursorIndexOfGroupCount);
             final String _tmpLatitude;
             _tmpLatitude = _cursor.getString(_cursorIndexOfLatitude);
@@ -1232,7 +1248,7 @@ public final class TaskInfoDAO_Impl implements TaskInfoDAO {
 
   @Override
   public LiveData<List<TaskInfoGroupByLocationKey>> getTaskInfoSearchByWorkStatusGroupByLocationKeys(final String workStatus) {
-    final String _sql = "Select address, postalCode, city, locationKey, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime from taskInfoTable where workStatus= ? GROUP BY locationKey";
+    final String _sql = "Select address, postalCode, city, locationKey,recordStatus, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime from taskInfoTable where workStatus= ? GROUP BY locationKey";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (workStatus == null) {
@@ -1249,6 +1265,7 @@ public final class TaskInfoDAO_Impl implements TaskInfoDAO {
           final int _cursorIndexOfPostalCode = CursorUtil.getColumnIndexOrThrow(_cursor, "postalCode");
           final int _cursorIndexOfCity = CursorUtil.getColumnIndexOrThrow(_cursor, "city");
           final int _cursorIndexOfLocationKey = CursorUtil.getColumnIndexOrThrow(_cursor, "locationKey");
+          final int _cursorIndexOfRecordStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "recordStatus");
           final int _cursorIndexOfGroupCount = CursorUtil.getColumnIndexOrThrow(_cursor, "groupCount");
           final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
           final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
@@ -1263,6 +1280,9 @@ public final class TaskInfoDAO_Impl implements TaskInfoDAO {
             final String _tmpLocationKey;
             _tmpLocationKey = _cursor.getString(_cursorIndexOfLocationKey);
             _item.setLocationKey(_tmpLocationKey);
+            final int _tmpRecordStatus;
+            _tmpRecordStatus = _cursor.getInt(_cursorIndexOfRecordStatus);
+            _item.setRecordStatus(_tmpRecordStatus);
             _item.groupCount = _cursor.getInt(_cursorIndexOfGroupCount);
             final String _tmpLatitude;
             _tmpLatitude = _cursor.getString(_cursorIndexOfLatitude);

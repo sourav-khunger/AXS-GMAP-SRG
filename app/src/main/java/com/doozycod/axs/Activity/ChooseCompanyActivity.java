@@ -1,5 +1,6 @@
 package com.doozycod.axs.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.doozycod.axs.MainActivity;
 import com.google.gson.Gson;
 import com.doozycod.axs.ApiService.ApiService;
 import com.doozycod.axs.ApiService.ApiUtils;
@@ -174,7 +176,8 @@ public class ChooseCompanyActivity extends AppCompatActivity implements View.OnC
                                         .apply();
                                 Log.e(TAG, "onResponse: " + responseString);
                                 Toast.makeText(ChooseCompanyActivity.this, "You're off duty now!", Toast.LENGTH_SHORT).show();
-                                finish();
+                                startActivity(new Intent(ChooseCompanyActivity.this, ScreenSlidePagerActivity.class));
+                                finishAffinity();
 
                             } catch (Exception e) {
                                 e.printStackTrace();
@@ -227,9 +230,9 @@ public class ChooseCompanyActivity extends AppCompatActivity implements View.OnC
 
                         saveShipmentStatusListToLocalDB(statusReasonResponse);
 
-                        //startActivity(new Intent(MainActivity.this, ShipmentActivity.class));
+                        startActivity(new Intent(ChooseCompanyActivity.this, ScreenSlidePagerActivity.class));
 
-                        finish();
+                        finishAffinity();
 
                     } catch (Exception e) {
                         e.printStackTrace();

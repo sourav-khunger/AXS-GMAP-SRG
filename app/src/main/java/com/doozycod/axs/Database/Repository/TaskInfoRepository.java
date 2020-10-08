@@ -128,8 +128,8 @@ public class TaskInfoRepository {
         return taskInfoDAO.getTaskInfoByRecordStatus(recordStatus);
     }
 
-    public List<TaskInfoEntity> getTaskInfoCompleted(String locationKey) {
-        return taskInfoDAO.getTaskInfoCompleted(locationKey, Constants.TASK_INFO_WORK_STATUS_COMPLETED);
+    public List<TaskInfoEntity> getTaskInfoCompleted(String locationKey,String workStatus) {
+        return taskInfoDAO.getTaskInfoCompleted(locationKey, workStatus);
     }
 
     public boolean isEmptyTask() {

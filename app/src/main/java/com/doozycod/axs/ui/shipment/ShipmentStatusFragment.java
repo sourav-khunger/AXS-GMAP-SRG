@@ -31,14 +31,19 @@ import com.doozycod.axs.Utils.Constants;
 
 import java.util.List;
 
+import belka.us.androidtoggleswitch.widgets.ToggleSwitch;
+
 public class ShipmentStatusFragment extends Fragment {
 
     private View root;
     private RadioGroup shipmentStatusRadioGroup;
     private ShipmentStatusViewModel viewModel;
-    private ToggleButton statusToggleBtn;
+    //    private ToggleButton statusToggleBtn;
+    private ToggleSwitch statusToggleBtn;
 
-//    private int isException = 0;
+    int isSuccessful = 0;
+    //    private int isException = 0;
+    String state = "";
 
     public static ShipmentStatusFragment newInstance() {
         return new ShipmentStatusFragment();
@@ -52,6 +57,13 @@ public class ShipmentStatusFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(ShipmentStatusViewModel.class);
         shipmentStatusRadioGroup = root.findViewById(R.id.shipment_status_radio_group);
         statusToggleBtn = root.findViewById(R.id.delivery_status_toggle_btn);
+        state = PreferenceManager.getDefaultSharedPreferences(getContext()).getString(Constants.SYNC_STATE, "");
+        if (state.equals("") || state == null) {
+            PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
+                    .putString(Constants.SYNC_STATE, "0")
+                    .apply();
+        }
+
 
         return root;
     }
@@ -60,28 +72,66 @@ public class ShipmentStatusFragment extends Fragment {
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        statusToggleBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        statusToggleBtn.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener() {
+
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if (isChecked) {
+            public void onToggleSwitchChangeListener(int position, boolean isChecked) {
+
+                if (position == 0) {
                     PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
                             .putString(Constants.DELIVERY_STATUS, "completed")
                             .apply();
+                    PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
+                            .putString(Constants.SYNC_STATE, "0")
+                            .apply();
                     Log.e("TAG", "onCheckedChanged: Successful");
+                    isSuccessful = 1;
                     shipmentStatusRadioGroup.removeAllViews();
                     addShipmentStatus(view, 0);
-                } else {
+                }
+                if (position == 1) {
+                    isSuccessful = 0;
                     Log.e("TAG", "onCheckedChanged: Unsuccessful");
                     PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
                             .putString(Constants.DELIVERY_STATUS, "problem")
+                            .apply();
+                    PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
+                            .putString(Constants.SYNC_STATE, "1")
                             .apply();
                     shipmentStatusRadioGroup.removeAllViews();
                     addShipmentStatus(view, 1);
                 }
             }
         });
+//        statusToggleBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+//                if (isChecked) {
+//                    PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
+//                            .putString(Constants.DELIVERY_STATUS, "completed")
+//                            .apply();
+//                    Log.e("TAG", "onCheckedChanged: Successful");
+//                    isSuccessful = 1;
+//
+//                    shipmentStatusRadioGroup.removeAllViews();
+//                    addShipmentStatus(view, 0);
+//                } else {
+//                    isSuccessful = 0;
+//                    Log.e("TAG", "onCheckedChanged: Unsuccessful");
+//                    PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
+//                            .putString(Constants.DELIVERY_STATUS, "problem")
+//                            .apply();
+//                    shipmentStatusRadioGroup.removeAllViews();
+//                    addShipmentStatus(view, 1);
+//                }
+//            }
+//        });
+        if (state.equals("") || state == null) {
+            statusToggleBtn.setCheckedTogglePosition(0);
+        } else {
+            statusToggleBtn.setCheckedTogglePosition(Integer.parseInt(state));
+        }
 
-        statusToggleBtn.setChecked(true);
     }
 
     private void addShipmentStatus(final View view, int isException) {
@@ -89,22 +139,41 @@ public class ShipmentStatusFragment extends Fragment {
         this.viewModel.getStatusList(ShipmentActivity.selectedTask.getTaskType(), isException).observe(getActivity(), new Observer<List<StatusEntity>>() {
             @Override
             public void onChanged(List<StatusEntity> shipmentStatuses) {
-
+                shipmentStatusRadioGroup.removeAllViews();
                 for (StatusEntity status : shipmentStatuses) {
-                    RadioButton radio = new RadioButton(getActivity());
-                    radio.setId(View.generateViewId());
-                    radio.setText(status.getStatusName());
-                    radio.setTag(status);
+                    if (status.getIsException() == 0) {
+                        RadioButton radio = new RadioButton(getActivity());
+                        radio.setId(View.generateViewId());
+                        radio.setText(status.getStatusName());
+                        radio.setTag(status);
 
-                    RadioGroup.LayoutParams params = new RadioGroup.LayoutParams(getContext(), null);
-                    params.width = RadioGroup.LayoutParams.MATCH_PARENT;
-                    params.setMargins(16, 16, 16, 16);
-                    radio.setLayoutParams(params);
+                        RadioGroup.LayoutParams params = new RadioGroup.LayoutParams(getContext(), null);
+                        params.width = RadioGroup.LayoutParams.MATCH_PARENT;
+                        params.setMargins(16, 16, 16, 16);
+                        radio.setLayoutParams(params);
 
-                    radio.setPadding(16, 16, 16, 16);
-                    radio.setTextColor(Color.parseColor("#000000"));
+                        radio.setPadding(16, 16, 16, 16);
+                        radio.setTextColor(Color.parseColor("#000000"));
 
-                    shipmentStatusRadioGroup.addView(radio);
+                        shipmentStatusRadioGroup.addView(radio);
+                    } else {
+                        RadioButton radio = new RadioButton(getActivity());
+                        radio.setId(View.generateViewId());
+                        radio.setText(status.getStatusName());
+                        radio.setTag(status);
+
+                        RadioGroup.LayoutParams params = new RadioGroup.LayoutParams(getContext(), null);
+                        params.width = RadioGroup.LayoutParams.MATCH_PARENT;
+                        params.setMargins(16, 16, 16, 16);
+                        radio.setLayoutParams(params);
+
+                        radio.setPadding(16, 16, 16, 16);
+                        radio.setTextColor(Color.parseColor("#000000"));
+
+                        shipmentStatusRadioGroup.addView(radio);
+                    }
+
+
                 }
             }
         });

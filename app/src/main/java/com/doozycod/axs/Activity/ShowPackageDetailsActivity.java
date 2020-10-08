@@ -97,7 +97,7 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
 
         String taskINfo = getIntent().getStringExtra("task");
 
-         taskInfoGroupByLocation = PreferenceManager.getDefaultSharedPreferences(this).getString(Constants.SELECTED_LOCATION, "");
+        taskInfoGroupByLocation = PreferenceManager.getDefaultSharedPreferences(this).getString(Constants.SELECTED_LOCATION, "");
 
         supportMapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapfragment);
@@ -183,6 +183,7 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
 //                        intent.putExtra("bylocation", taskInfoGroupByLocation);
                         intent.putExtra("current", latitude + "," + longitude);
                         startActivity(intent);
+                        finish();
                     }
                 }
             }

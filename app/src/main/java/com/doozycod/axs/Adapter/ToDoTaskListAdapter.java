@@ -14,6 +14,7 @@ import com.doozycod.axs.Database.Entities.TaskInfoEntity;
 import com.doozycod.axs.Database.Repository.TaskInfoRepository;
 import com.doozycod.axs.POJO.TaskInfoGroupByLocationKey;
 import com.doozycod.axs.R;
+import com.doozycod.axs.Utils.Constants;
 
 import java.util.List;
 
@@ -55,12 +56,25 @@ public class ToDoTaskListAdapter extends RecyclerView.Adapter<ToDoTaskListAdapte
         final String postalCode = listOfTaskInfoGroupByLocationKeys.get(position).getCity() + ", " + listOfTaskInfoGroupByLocationKeys.get(position).getPostalCode();
         int counts = listOfTaskInfoGroupByLocationKeys.get(position).getGroupCount();
 
-        if (listOfTaskInfoGroupByLocationKeys.get(position).getArrivalTime() == null ||
+       /* if (listOfTaskInfoGroupByLocationKeys.get(position).getArrivalTime() == null ||
                 listOfTaskInfoGroupByLocationKeys.get(position).getArrivalTime().equals("")) {
-            holder.itemView.setBackgroundColor(Color.parseColor("#ffffff"));
-        } else {
+            holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        } else {*/
+        List<TaskInfoEntity> completedTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey(), Constants.TASK_INFO_WORK_STATUS_COMPLETED);
+        List<TaskInfoEntity> pendingTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey(), Constants.TASK_INFO_WORK_STATUS_PENDING);
+
+        if (listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 0
+                && listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED)) {
             holder.itemView.setBackgroundColor(Color.parseColor("#BDE1E5"));
         }
+        if (listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus().equals("pending")
+                && listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 0) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        }
+        if (listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 2) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#ADADAD"));
+        }
+//        }
 
         holder.tvTaskAddress.setText(address);
         holder.tvPostalCode.setText(postalCode);
@@ -70,13 +84,17 @@ public class ToDoTaskListAdapter extends RecyclerView.Adapter<ToDoTaskListAdapte
         }*/
 
 
-        List<TaskInfoEntity> completedTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey());
 //        List<TaskInfoEntity> completedTasks = mTaskInfoRepository.getTaskInfoByLocationKey(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey());
         int completedCounts = completedTasks.size();
         int i = position + 1;
         holder.position.setText("" + i);
         holder.tvQuantity1.setText("Quantity - " + counts);
         holder.tvQuantity.setText(completedCounts + " / " + counts + " Shipments ");
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
     }
 
     @Override

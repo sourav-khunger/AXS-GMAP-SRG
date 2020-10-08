@@ -1,5 +1,6 @@
 package com.doozycod.axs.Activity;
 
+import android.app.Application;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.doozycod.axs.Database.Repository.TaskInfoRepository;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -74,7 +76,6 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
             @Override
             public void onClick(View view) {
 
-
                 Intent i = new Intent(ShowListOfTaskGroupByLocationKeyActivity.this, ScanPackageActivity.class);
                 startActivityForResult(i, LAUNCH_SECOND_ACTIVITY);
 
@@ -87,15 +88,20 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
                 TaskInfoEntity taskInfoEntity = taskInfoEntityList.get(position);
 
-                if (taskInfoEntity.getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED))
+                if (taskInfoEntity.getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED)) {
+                    scanPackageBtn.setEnabled(false);
                     return false;
+                }
+
 
                 String taskInfoEntityJsonString = new Gson().toJson(taskInfoEntity);
 
                 PreferenceManager.getDefaultSharedPreferences(ShowListOfTaskGroupByLocationKeyActivity.this).edit()
                         .putString(Constants.SELECTED_TASK, taskInfoEntityJsonString)
                         .apply();
-
+                TaskInfoRepository mTaskInfoRepository = new TaskInfoRepository((Application) getApplicationContext());
+                taskInfoEntity.setRecordStatus(Constants.PARTIAL_MODIFIED);
+                mTaskInfoRepository.update(taskInfoEntity);
                 Intent intent = new Intent(ShowListOfTaskGroupByLocationKeyActivity.this, ShipmentActivity.class);
                 startActivity(intent);
                 return true;
@@ -177,7 +183,7 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
         map.addMarker(new MarkerOptions().position(new LatLng(lat, lon))
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
         map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(lat, lon)));
-        map.animateCamera(CameraUpdateFactory.zoomTo(16));
+        map.animateCamera(CameraUpdateFactory.zoomTo(15));
 
     }
 }

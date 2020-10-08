@@ -95,6 +95,8 @@ public class ScreenSlidePagerActivity extends AppCompatActivity implements Navig
 //        viewPager.setAdapter(pagerAdapter);
         mTaskInfoRepository = new TaskInfoRepository((Application) getApplicationContext());
 //        mTaskInfoRepository.deleteAll();
+        tabLayout.setupWithViewPager(viewPager);
+        viewPager.setAdapter(pagerAdapter);
 
         init();
         if (PreferenceManager.getDefaultSharedPreferences(this)
@@ -144,8 +146,7 @@ public class ScreenSlidePagerActivity extends AppCompatActivity implements Navig
     protected void onResume() {
         super.onResume();
 
-        tabLayout.setupWithViewPager(viewPager);
-        viewPager.setAdapter(pagerAdapter);
+
         addDetailToNavDrawer();
     }
 

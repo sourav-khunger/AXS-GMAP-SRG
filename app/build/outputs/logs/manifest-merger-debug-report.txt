@@ -1,10 +1,11 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-131:12
-INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-131:12
-INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-131:12
-INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-131:12
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-132:12
+INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-132:12
+INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-132:12
+INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-132:12
 MERGED from [:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:2:1-81:12
+MERGED from [us.belka:androidtoggleswitch:1.2.2] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\187eac9a2adb5975b21c3303e2fbbd86\jetified-androidtoggleswitch-1.2.2\AndroidManifest.xml:2:1-16:12
 MERGED from [com.google.maps.android:android-maps-utils:0.4.3] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ce7939d3b52e6ef009c2245c227da5fa\jetified-android-maps-utils-0.4.3\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.ranaparamveer:customSeekbarAndroid:1.0.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\8989ab3e31bf3303287527066e47ac7d\jetified-customSeekbarAndroid-1.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.skydoves:powerspinner:1.0.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6b2e4d41c73d67c17c763440f875de7b\jetified-powerspinner-1.0.1\AndroidManifest.xml:2:1-11:12
@@ -13,14 +14,14 @@ MERGED from [me.dm7.barcodescanner:zbar:1.9.13] C:\Users\Pranj\.gradle\caches\tr
 MERGED from [me.dm7.barcodescanner:core:1.9.13] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\5b3a88a116d6ea966889939008a05b1c\jetified-core-1.9.13\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\be0f08ddbc7b2ceb9beb29e6b731c207\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.3.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\d0f92c0b26fabb47a28488bab3cc8456\navigation-ui-2.3.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.material:material:1.3.0-alpha02] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\2ee309b52321766dad6c8970877907f3\material-1.3.0-alpha02\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\e13d5284dee38561a14d3ffa3e8234dc\material-1.3.0-alpha03\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\86e1e5d883ec66c1063a0d9a82a27792\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.wonderkiln:camerakit:0.12.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\1d9ccbd45c1f8b42ce2524f468be1e77\jetified-camerakit-0.12.0\AndroidManifest.xml:2:1-27:12
 MERGED from [com.github.dhaval2404:imagepicker:1.7.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6040ddc469e7c682cbad227ca7e88310\jetified-imagepicker-1.7.5\AndroidManifest.xml:2:1-35:12
 MERGED from [com.github.yalantis:ucrop:2.2.5] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\31598702325c9e5fcab98c94d89354ff\jetified-ucrop-2.2.5\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\bf96d2b5a86ecd602a621e7e96856420\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:17:1-38:12
-MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0-rc02] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\eb5eebeddcd46d98553230826418a378\recyclerview-selection-1.1.0-rc02\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0-rc03] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\fe5280914f4929e836a5ffd7cfd14166\recyclerview-selection-1.1.0-rc03\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\65b26ec11e574f5d68d3fe93c8217bcb\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6e57c04e98c372fcd8878b95a3d5645d\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\f5ec57ec49d0a3e9add695de66a9078c\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -80,22 +81,22 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Pranj\.gradl
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\bcf856ddfeb04b3b73ed182739910d39\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:viewbinding:4.0.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\5dd45fc0af2ed6a6165fc80ea1f24b08\jetified-viewbinding-4.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\1e0614212b25f4ae67724a3587ed8129\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-131:12
-INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-131:12
-INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-132:12
+INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-132:12
+INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-132:12
 	package
 		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:4:5-31
 		INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-131:12
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-132:12
 		INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-131:12
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:1-132:12
 		INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:2:11-69
@@ -222,7 +223,9 @@ MERGED from [com.wonderkiln:camerakit:0.12.0] C:\Users\Pranj\.gradle\caches\tran
 	android:name
 		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:37:19-67
 application
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:39:5-129:19
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:39:5-130:19
+MERGED from [us.belka:androidtoggleswitch:1.2.2] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\187eac9a2adb5975b21c3303e2fbbd86\jetified-androidtoggleswitch-1.2.2\AndroidManifest.xml:11:5-14:19
+MERGED from [us.belka:androidtoggleswitch:1.2.2] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\187eac9a2adb5975b21c3303e2fbbd86\jetified-androidtoggleswitch-1.2.2\AndroidManifest.xml:11:5-14:19
 MERGED from [com.google.maps.android:android-maps-utils:0.4.3] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ce7939d3b52e6ef009c2245c227da5fa\jetified-android-maps-utils-0.4.3\AndroidManifest.xml:7:5-11:19
 MERGED from [com.google.maps.android:android-maps-utils:0.4.3] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ce7939d3b52e6ef009c2245c227da5fa\jetified-android-maps-utils-0.4.3\AndroidManifest.xml:7:5-11:19
 MERGED from [me.dm7.barcodescanner:zxing:1.9.13] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\426dccc59eb88cf5b4d757c88562401a\jetified-zxing-1.9.13\AndroidManifest.xml:11:5-20
@@ -231,8 +234,8 @@ MERGED from [me.dm7.barcodescanner:zbar:1.9.13] C:\Users\Pranj\.gradle\caches\tr
 MERGED from [me.dm7.barcodescanner:zbar:1.9.13] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\de3e19018d697c5673967cb3e8402e80\jetified-zbar-1.9.13\AndroidManifest.xml:11:5-20
 MERGED from [me.dm7.barcodescanner:core:1.9.13] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\5b3a88a116d6ea966889939008a05b1c\jetified-core-1.9.13\AndroidManifest.xml:11:5-20
 MERGED from [me.dm7.barcodescanner:core:1.9.13] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\5b3a88a116d6ea966889939008a05b1c\jetified-core-1.9.13\AndroidManifest.xml:11:5-20
-MERGED from [com.google.android.material:material:1.3.0-alpha02] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\2ee309b52321766dad6c8970877907f3\material-1.3.0-alpha02\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.3.0-alpha02] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\2ee309b52321766dad6c8970877907f3\material-1.3.0-alpha02\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\e13d5284dee38561a14d3ffa3e8234dc\material-1.3.0-alpha03\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\e13d5284dee38561a14d3ffa3e8234dc\material-1.3.0-alpha03\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\86e1e5d883ec66c1063a0d9a82a27792\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\86e1e5d883ec66c1063a0d9a82a27792\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [com.wonderkiln:camerakit:0.12.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\1d9ccbd45c1f8b42ce2524f468be1e77\jetified-camerakit-0.12.0\AndroidManifest.xml:25:5-20
@@ -283,142 +286,147 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Pranj\.gradle\
 		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:41:9-42
 	android:allowBackup
 		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:40:9-36
+		REJECTED from [us.belka:androidtoggleswitch:1.2.2] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\187eac9a2adb5975b21c3303e2fbbd86\jetified-androidtoggleswitch-1.2.2\AndroidManifest.xml:12:9-35
 	android:theme
 		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:46:9-40
+	tools:replace
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:48:9-44
 	android:usesCleartextTraffic
 		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:47:9-44
 activity#com.doozycod.axs.Activity.ArrivalTimeMapTypeActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:48:9-82
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:9-82
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:48:19-70
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:19-70
 activity#com.doozycod.axs.UpdateDebug.RouteMarker.MapRouteActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:9-78
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:9-78
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:49:19-75
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:19-75
 activity#com.doozycod.axs.UpdateDebug.PhoneCallActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:9-67
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:9-67
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:50:19-64
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:19-64
 activity#com.doozycod.axs.UpdateDebug.SelfDispatchActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:9-70
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:9-70
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:51:19-67
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:19-67
 activity#com.doozycod.axs.UpdateDebug.MenuActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:9-62
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:9-62
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:52:19-59
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:19-59
 activity#com.doozycod.axs.UpdateDebug.ScannerActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:9-65
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:9-65
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:53:19-62
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:19-62
 activity#com.doozycod.axs.Activity.TaskInfoUpdateActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:9-69
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:9-69
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:54:19-66
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:19-66
 activity#com.doozycod.axs.Activity.ShowListOfTaskGroupByLocationKeyActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:9-87
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:56:9-87
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:55:19-84
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:56:19-84
 activity#com.doozycod.axs.Activity.ShowPackageDetailsActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:56:9-73
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:57:9-73
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:56:19-70
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:57:19-70
 activity#com.doozycod.axs.Activity.ScreenSlidePagerActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:57:9-59:59
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:58:9-60:59
 	android:theme
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:59:13-56
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:60:13-56
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:58:13-62
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:59:13-62
 activity#com.doozycod.axs.Activity.ShipmentActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:60:9-62:59
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:61:9-63:59
 	android:theme
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:62:13-56
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:63:13-56
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:61:13-54
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:62:13-54
 activity#com.doozycod.axs.Activity.ChooseCompanyActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:63:9-65:59
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:64:9-66:59
 	android:theme
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:65:13-56
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:66:13-56
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:64:13-59
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:65:13-59
 activity#com.doozycod.axs.Activity.SignatureActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:66:9-64
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:9-64
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:66:19-61
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:19-61
 activity#com.doozycod.axs.Activity.GPS_StatusActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:9-65
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:68:9-65
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:67:19-62
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:68:19-62
 activity#com.doozycod.axs.Activity.ScanPackageActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:68:9-66
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:69:9-66
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:68:19-63
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:69:19-63
 service#com.doozycod.axs.BackgroudService.Workers.SyncRemoteServerService
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:70:9-85
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:9-85
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:70:18-82
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:18-82
 service#com.doozycod.axs.BackgroudService.Workers.LocationService
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:9-77
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:9-77
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:71:18-74
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:18-74
 service#com.doozycod.axs.BackgroudService.Workers.UploadImageService
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:9-80
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:73:9-80
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:72:18-77
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:73:18-77
 service#com.doozycod.axs.BackgroudService.Workers.Foreground_GPS_Service
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:73:9-84
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:74:9-84
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:73:18-81
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:74:18-81
 meta-data#com.google.android.maps.v2.API_KEY
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:82:9-84:71
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:83:9-85:71
 	android:value
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:84:13-68
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:85:13-68
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:83:13-62
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:84:13-62
 activity#com.doozycod.axs.MainActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:86:9-92:20
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:87:9-93:20
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:86:19-47
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:87:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:87:13-91:29
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:88:13-92:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:88:17-69
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:89:17-69
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:88:25-66
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:89:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:90:17-77
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:91:17-77
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:90:27-74
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:91:27-74
 activity#com.doozycod.axs.gmap.turn.GmapTurnNavActivity
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:93:9-67
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:94:9-67
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:93:19-64
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:94:19-64
 provider#androidx.core.content.FileProvider
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:116:9-126:20
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:117:9-127:20
 	android:grantUriPermissions
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:120:13-47
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:121:13-47
 	android:authorities
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:118:13-70
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:119:13-70
 	android:exported
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:119:13-37
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:120:13-37
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:117:13-62
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:118:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:123:13-125:54
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:124:13-126:54
 	android:resource
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:125:17-51
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:126:17-51
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:124:17-67
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:125:17-67
 service#com.doozycod.axs.gmap.turn.HereTurnForegroundService
-ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:128:9-72
+ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:129:9-72
 	android:name
-		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:128:18-69
+		ADDED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml:129:18-69
 uses-sdk
 INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\app\src\main\AndroidManifest.xml
 MERGED from [:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:14:5-16:41
 MERGED from [:AJVoIP] C:\Users\Pranj\Documents\GitHub\AXS-GMAP-SRG_android\AJVoIP\build\.transforms\cd8ae70dbd97b85b53d7ae58f189231d\jetified-AJVoIP\AndroidManifest.xml:14:5-16:41
+MERGED from [us.belka:androidtoggleswitch:1.2.2] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\187eac9a2adb5975b21c3303e2fbbd86\jetified-androidtoggleswitch-1.2.2\AndroidManifest.xml:7:5-9:41
+MERGED from [us.belka:androidtoggleswitch:1.2.2] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\187eac9a2adb5975b21c3303e2fbbd86\jetified-androidtoggleswitch-1.2.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.maps.android:android-maps-utils:0.4.3] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ce7939d3b52e6ef009c2245c227da5fa\jetified-android-maps-utils-0.4.3\AndroidManifest.xml:5:5-43
 MERGED from [com.google.maps.android:android-maps-utils:0.4.3] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\ce7939d3b52e6ef009c2245c227da5fa\jetified-android-maps-utils-0.4.3\AndroidManifest.xml:5:5-43
 MERGED from [com.github.ranaparamveer:customSeekbarAndroid:1.0.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\8989ab3e31bf3303287527066e47ac7d\jetified-customSeekbarAndroid-1.0.1\AndroidManifest.xml:7:5-9:41
@@ -435,8 +443,8 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Pranj\.gradle\cac
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\be0f08ddbc7b2ceb9beb29e6b731c207\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-ui:2.3.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\d0f92c0b26fabb47a28488bab3cc8456\navigation-ui-2.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.3.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\d0f92c0b26fabb47a28488bab3cc8456\navigation-ui-2.3.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.material:material:1.3.0-alpha02] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\2ee309b52321766dad6c8970877907f3\material-1.3.0-alpha02\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.3.0-alpha02] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\2ee309b52321766dad6c8970877907f3\material-1.3.0-alpha02\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\e13d5284dee38561a14d3ffa3e8234dc\material-1.3.0-alpha03\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\e13d5284dee38561a14d3ffa3e8234dc\material-1.3.0-alpha03\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\86e1e5d883ec66c1063a0d9a82a27792\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\86e1e5d883ec66c1063a0d9a82a27792\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.wonderkiln:camerakit:0.12.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\1d9ccbd45c1f8b42ce2524f468be1e77\jetified-camerakit-0.12.0\AndroidManifest.xml:6:5-8:41
@@ -449,8 +457,8 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Pranj\.gradle\caches\t
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\bf96d2b5a86ecd602a621e7e96856420\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0-rc02] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\eb5eebeddcd46d98553230826418a378\recyclerview-selection-1.1.0-rc02\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0-rc02] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\eb5eebeddcd46d98553230826418a378\recyclerview-selection-1.1.0-rc02\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0-rc03] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\fe5280914f4929e836a5ffd7cfd14166\recyclerview-selection-1.1.0-rc03\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0-rc03] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\fe5280914f4929e836a5ffd7cfd14166\recyclerview-selection-1.1.0-rc03\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\65b26ec11e574f5d68d3fe93c8217bcb\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\65b26ec11e574f5d68d3fe93c8217bcb\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Pranj\.gradle\caches\transforms-2\files-2.1\6e57c04e98c372fcd8878b95a3d5645d\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
