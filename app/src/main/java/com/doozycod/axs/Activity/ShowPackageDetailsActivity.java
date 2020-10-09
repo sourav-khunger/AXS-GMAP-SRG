@@ -121,8 +121,15 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
         navigationStartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (batchId != null && !batchId.equals("")) {
+                    confirmNextStopAPI(taskINfo, batchId, locationKey);
 
-                confirmNextStopAPI(taskINfo, selectedTask.getBatchId(), locationKey);
+                }
+                if (!selectedTask.getBatchId().equals("") || selectedTask.getBatchId() != null) {
+                    confirmNextStopAPI(taskINfo, selectedTask.getBatchId(), locationKey);
+
+                }
+
 
             }
         });

@@ -58,6 +58,7 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
     private SupportMapFragment supportMapFragment;
     int completedDelivery = 0;
     List<TaskInfoEntity> completedTasks;
+    List<TaskInfoEntity> problemTasks;
     TaskInfoRepository mTaskInfoRepository;
     int FLAG = 0;
 
@@ -78,6 +79,7 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
         String locationKey = taskInfoGroupByLocationKey.getLocationKey();
         mTaskInfoRepository = new TaskInfoRepository((Application) getApplicationContext());
         completedTasks = mTaskInfoRepository.getTaskInfoCompleted(locationKey, Constants.TASK_INFO_WORK_STATUS_COMPLETED);
+        problemTasks = mTaskInfoRepository.getTaskInfoCompleted(locationKey, Constants.TASK_INFO_WORK_STATUS_PROBLEM);
         Log.e(TAG, "onCreate: " + taskInfoGroupByLocationKey.getWorkStatus());
 
         scanPackageBtn = findViewById(R.id.scan_package_btn);
@@ -179,16 +181,17 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
     protected void onResume() {
         super.onResume();
         completedTasks = mTaskInfoRepository.getTaskInfoCompleted(taskInfoGroupByLocationKey.getLocationKey(), Constants.TASK_INFO_WORK_STATUS_COMPLETED);
+        problemTasks = mTaskInfoRepository.getTaskInfoCompleted(taskInfoGroupByLocationKey.getLocationKey(), Constants.TASK_INFO_WORK_STATUS_PROBLEM);
         Log.e(TAG, "onResume: " + taskInfoGroupByLocationKey.getGroupCount() + "  " + completedTasks.size());
 
         if (FLAG == 1) {
 
-            if (taskInfoGroupByLocationKey.getGroupCount() == completedTasks.size()) {
+            if (taskInfoGroupByLocationKey.getGroupCount() == (completedTasks.size() + problemTasks.size())) {
                 finish();
             }
         }
         if (FLAG == 0) {
-            if (taskInfoGroupByLocationKey.getGroupCount() == completedTasks.size()) {
+            if (taskInfoGroupByLocationKey.getGroupCount() == (completedTasks.size() + problemTasks.size())) {
                 Log.e(TAG, "onResume: on FLAG " + taskInfoGroupByLocationKey.getGroupCount() + "  " + completedTasks.size());
             }
             FLAG = 1;

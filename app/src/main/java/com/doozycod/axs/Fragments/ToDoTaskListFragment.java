@@ -520,13 +520,14 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                             emptyTxt.setVisibility(View.GONE);
                         }
                         runTaskAdapter = new RunTaskAdapter(runInfoList, getContext(), 0);
+
                         selectedRunTxt.setText("Selected Run - Run #" + runInfoList.get(0).getRunNo());
                         getTaskByLocationKeys(runInfoList.get(0).getBatchId());
 
                         if (PreferenceManager.getDefaultSharedPreferences(activity)
-                                .getString(Constants.PREF_KEY_SELECTED_RUN, "") == null /*||
+                                .getString(Constants.PREF_KEY_SELECTED_RUN, "") == null ||
                                 !PreferenceManager.getDefaultSharedPreferences(activity)
-                                        .getString(Constants.PREF_KEY_SELECTED_RUN, "").equals("")*/) {
+                                        .getString(Constants.PREF_KEY_SELECTED_RUN, "").equals("")) {
                             PreferenceManager.getDefaultSharedPreferences(activity).edit()
                                     .putString(Constants.PREF_KEY_SELECTED_RUN, "0")
                                     .apply();
@@ -554,6 +555,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                         } else {
 //                            batchId = PreferenceManager.getDefaultSharedPreferences(activity)
 //                                    .getString(Constants.SELECTED_BATCH_ID, "");
+
                             String run = PreferenceManager.getDefaultSharedPreferences(activity)
                                     .getString(Constants.PREF_KEY_SELECTED_RUN, "");
                             if (run.equals("")) {
@@ -561,6 +563,9 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                             } else {
                                 getTaskByLocationKeys(runInfoList.get(Integer.parseInt(run)).getBatchId());
                                 batchId = runInfoList.get(Integer.parseInt(run)).getBatchId();
+                                PreferenceManager.getDefaultSharedPreferences(activity).edit()
+                                        .putString(Constants.SELECTED_BATCH_ID, batchId)
+                                        .apply();
                                 Log.e(TAG, "onChanged: RunInfo ");
                                 if (runInfoList.get(Integer.parseInt(run)).getRouteStarted() == 0) {
                                     confirm_dcButton.setVisibility(View.VISIBLE);
