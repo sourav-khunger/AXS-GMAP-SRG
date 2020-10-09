@@ -18,6 +18,7 @@ public class Constants {
 
 
     public static final String TASK_INFO_WORK_STATUS_PENDING = "pending";
+    public static final String TASK_INFO_WORK_STATUS_PROBLEM = "problem";
     public static final String TASK_INFO_WORK_STATUS_COMPLETED = "completed";
     public static final String DATE_TIME_FORMAT = "yyyy-MM-dd hh:mm:ss";
     public static final String AUTHORIZATION_TOKEN = "Bearer ";

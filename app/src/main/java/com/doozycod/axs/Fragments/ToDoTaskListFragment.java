@@ -269,7 +269,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                     String taskInfoString = new Gson().toJson(taskInfoGroupByLocationKey);
                     TaskInfoEntity taskInfo = listOfTaskInfo.get(position);
                     String taskInfoStr = new Gson().toJson(taskInfo);
-                    Log.e(TAG, "taskInfo: " + taskInfoStr);
+
                     PreferenceManager.getDefaultSharedPreferences(getActivity()).edit()
                             .putString(Constants.SELECTED_LOCATION, taskInfoString)
                             .apply();
@@ -284,6 +284,8 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                         startActivity(intent);
 
                     } else {
+                         taskInfo = listOfTaskInfo.get(position);
+                        Log.e(TAG, "onItemClick: "+new Gson().toJson(taskInfo) );
                         Intent intent = new Intent(getActivity(), ShowListOfTaskGroupByLocationKeyActivity.class);
                         startActivity(intent);
                     }
@@ -451,7 +453,6 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                         confirm_dcButton.setVisibility(View.GONE);
                     } else {
                         emptyTxt.setVisibility(View.GONE);
-
                     }
                     pullData();
 //                    listOfTaskInfoGroupByLocationKeys.addAll(taskInfoViewModel.getTaskInfoGroupByLocationKeys().getValue().);
@@ -464,7 +465,8 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                 public void onChanged(List<TaskInfoEntity> taskInfoEntities) {
                     listOfTaskInfo.clear();
                     listOfTaskInfo.addAll(taskInfoEntities);
-                    Collections.sort(listOfTaskInfo, new Comparator<TaskInfoEntity>() {
+
+                   /* Collections.sort(listOfTaskInfo, new Comparator<TaskInfoEntity>() {
                         public int compare(TaskInfoEntity obj1, TaskInfoEntity obj2) {
                             // ## Ascending order
                             return Integer.valueOf(obj1.getSeqNo()).compareTo(obj2.getSeqNo());// To compare string values
@@ -474,7 +476,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                             // return obj2.firstName.compareToIgnoreCase(obj1.firstName); // To compare string values
                             // return Integer.valueOf(obj2.empId).compareTo(Integer.valueOf(obj1.empId)); // To compare integer values
                         }
-                    });
+                    });*/
                 }
             });
 
@@ -512,6 +514,11 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                     runInfoList = response.body().getListOfRunList();
 
                     if (runInfoList.size() > 0) {
+                        if (taskInfoEntities.size() == 0) {
+                            emptyTxt.setVisibility(View.VISIBLE);
+                        } else {
+                            emptyTxt.setVisibility(View.GONE);
+                        }
                         runTaskAdapter = new RunTaskAdapter(runInfoList, getContext(), 0);
                         selectedRunTxt.setText("Selected Run - Run #" + runInfoList.get(0).getRunNo());
                         getTaskByLocationKeys(runInfoList.get(0).getBatchId());
@@ -756,7 +763,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                 if (listOfTaskInfoGroupByLocationKeys.size() == 0) {
                     emptyTxt.setVisibility(View.VISIBLE);
                 } else {
-                    emptyTxt.setVisibility(View.VISIBLE);
+                    emptyTxt.setVisibility(View.GONE);
                 }
 //                    listOfTaskInfoGroupByLocationKeys.addAll(taskInfoViewModel.getTaskInfoGroupByLocationKeys().getValue().);
 //                    Log.d(TAG, "onChanged: " + taskInfoViewModel.getTaskInfoGroupByLocationKeys().getValue().size());

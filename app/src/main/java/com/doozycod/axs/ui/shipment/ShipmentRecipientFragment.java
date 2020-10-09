@@ -129,7 +129,6 @@ public class ShipmentRecipientFragment extends Fragment {
         sigLinkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 saveDataEntered();
                 Navigation.findNavController(view).navigate(R.id.action_shipment_recipient_to_shipment_signature);
             }

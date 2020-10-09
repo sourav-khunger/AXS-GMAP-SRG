@@ -57,6 +57,7 @@ public class UpdateRemoteDatabaseWorker extends Worker {
                     public void onResponse(Call<TaskInfoUpdateResponse> call, Response<TaskInfoUpdateResponse> response) {
                         TaskInfoUpdateResponse mTaskInfoUpdateResponse = response.body();
                         Log.d(TAG, "onResponse: " + response.body());
+                        Log.d(TAG, "onResponse: " + mTaskInfoUpdateResponse.getTaskId());
                         TaskInfoEntity mTaskInfoEntity = mTaskInfoRepository.getTaskInfoWithId(Long.toString(mTaskInfoUpdateResponse.getTaskId()));
                         mTaskInfoEntity.setRecordStatus(Constants.NOT_MODIFIED);
                         mTaskInfoEntity.setDataId(mTaskInfoUpdateResponse.getDataId());

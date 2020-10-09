@@ -122,7 +122,7 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
             @Override
             public void onClick(View view) {
 
-                confirmNextStopAPI(taskINfo, batchId, locationKey);
+                confirmNextStopAPI(taskINfo, selectedTask.getBatchId(), locationKey);
 
             }
         });

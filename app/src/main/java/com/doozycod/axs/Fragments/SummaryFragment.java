@@ -148,7 +148,6 @@ public class SummaryFragment extends Fragment {
     }
 
     void getSummaryData(int index, int problem, int pending) {
-        Log.e("TAG", "getSummaryData: " + index + problem + pending);
         ArrayList<ProgressSegment> progressSegments = new ArrayList<>();
         int[] colors = {Color.GRAY, Color.RED, Color.WHITE};
         for (int i = 0; i < 3; i++) {

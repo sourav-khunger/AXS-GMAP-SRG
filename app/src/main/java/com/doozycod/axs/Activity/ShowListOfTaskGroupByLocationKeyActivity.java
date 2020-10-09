@@ -24,6 +24,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
@@ -55,6 +56,10 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
     int LAUNCH_SECOND_ACTIVITY = 1;
     private Button scanPackageBtn;
     private SupportMapFragment supportMapFragment;
+    int completedDelivery = 0;
+    List<TaskInfoEntity> completedTasks;
+    TaskInfoRepository mTaskInfoRepository;
+    int FLAG = 0;
 
     //    private Button scanPackageBtn;
     @Override
@@ -65,11 +70,15 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
 
         listView = findViewById(R.id.taskInfoGroupListView);
         continue_btn = findViewById(R.id.continue_btn);
-        Log.e(TAG, "onCreate: " + taskInfoEntityList.size());
         listViewAdapter = new TaskInfoGroupByListViewAdapter(ShowListOfTaskGroupByLocationKeyActivity.this, taskInfoEntityList, getApplication());
         listView.setAdapter(listViewAdapter);
         String taskInfoGroupByLocation = PreferenceManager.getDefaultSharedPreferences(this).getString(Constants.SELECTED_LOCATION, "");
-        Log.e(TAG, "onCreate: " + taskInfoGroupByLocation);
+
+        taskInfoGroupByLocationKey = new Gson().fromJson(taskInfoGroupByLocation, TaskInfoGroupByLocationKey.class);
+        String locationKey = taskInfoGroupByLocationKey.getLocationKey();
+        mTaskInfoRepository = new TaskInfoRepository((Application) getApplicationContext());
+        completedTasks = mTaskInfoRepository.getTaskInfoCompleted(locationKey, Constants.TASK_INFO_WORK_STATUS_COMPLETED);
+        Log.e(TAG, "onCreate: " + taskInfoGroupByLocationKey.getWorkStatus());
 
         scanPackageBtn = findViewById(R.id.scan_package_btn);
         scanPackageBtn.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +97,7 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
                 TaskInfoEntity taskInfoEntity = taskInfoEntityList.get(position);
 
-                if (taskInfoEntity.getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED)) {
+                if (taskInfoEntity.getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED) || taskInfoEntity.getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_PROBLEM)) {
                     scanPackageBtn.setEnabled(false);
                     return false;
                 }
@@ -99,7 +108,6 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
                 PreferenceManager.getDefaultSharedPreferences(ShowListOfTaskGroupByLocationKeyActivity.this).edit()
                         .putString(Constants.SELECTED_TASK, taskInfoEntityJsonString)
                         .apply();
-                TaskInfoRepository mTaskInfoRepository = new TaskInfoRepository((Application) getApplicationContext());
                 taskInfoEntity.setRecordStatus(Constants.PARTIAL_MODIFIED);
                 mTaskInfoRepository.update(taskInfoEntity);
                 Intent intent = new Intent(ShowListOfTaskGroupByLocationKeyActivity.this, ShipmentActivity.class);
@@ -112,15 +120,15 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
 //            @Override
 //            public void onClick(View view) {
 //                Intent intent = new Intent(ShowListOfTaskGroupByLocationKeyActivity.this, ScannerActivity.class);
-//
 //                startActivity(intent);
 //            }
 //        });
-        taskInfoGroupByLocationKey = new Gson().fromJson(taskInfoGroupByLocation, TaskInfoGroupByLocationKey.class);
-        String locationKey = taskInfoGroupByLocationKey.getLocationKey();
-        supportMapFragment.getMapAsync(this::onMapReady);
 
+        supportMapFragment.getMapAsync(ShowListOfTaskGroupByLocationKeyActivity.this::onMapReady);
 
+        Log.e(TAG, "onCreate: " + taskInfoGroupByLocationKey.getGroupCount());
+        completedDelivery = taskInfoGroupByLocationKey.getGroupCount();
+//        Log.e(TAG, "onCreate: completed" + completedTasks.size());
         try {
             taskInfoViewModel.getTaskInfoByLocationKey(locationKey).observe(this, new Observer<List<TaskInfoEntity>>() {
                 @Override
@@ -128,7 +136,14 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
                     taskInfoEntityList.clear();
                     taskInfoEntityList.addAll(taskInfoEntities);
                     listViewAdapter.notifyDataSetChanged();
-                    Log.e(TAG, "onChanged: " + taskInfoEntityList.toString());
+                    double lat = Double.parseDouble(taskInfoEntityList.get(0).getLatitude());
+                    double lon = Double.parseDouble(taskInfoEntityList.get(0).getLongitude());
+                    map.addMarker(new MarkerOptions().position(new LatLng(lat, lon))
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+                    CameraPosition cameraPosition = new CameraPosition(new LatLng(lat, lon), 15, 0, 0);
+                    map.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                    map.moveCamera(CameraUpdateFactory.zoomTo(15));
+
                 }
             });
         } catch (Exception e) {
@@ -154,7 +169,7 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
                 }
             }
 
-            if (completed.size() == 0) {
+            if (completed.size() == completedDelivery) {
                 finish();
             }
         }
@@ -163,6 +178,25 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
     @Override
     protected void onResume() {
         super.onResume();
+        completedTasks = mTaskInfoRepository.getTaskInfoCompleted(taskInfoGroupByLocationKey.getLocationKey(), Constants.TASK_INFO_WORK_STATUS_COMPLETED);
+        Log.e(TAG, "onResume: " + taskInfoGroupByLocationKey.getGroupCount() + "  " + completedTasks.size());
+
+        if (FLAG == 1) {
+
+            if (taskInfoGroupByLocationKey.getGroupCount() == completedTasks.size()) {
+                finish();
+            }
+        }
+        if (FLAG == 0) {
+            if (taskInfoGroupByLocationKey.getGroupCount() == completedTasks.size()) {
+                Log.e(TAG, "onResume: on FLAG " + taskInfoGroupByLocationKey.getGroupCount() + "  " + completedTasks.size());
+            }
+            FLAG = 1;
+        } else {
+
+        }
+
+
     }
 
     private void initialize() {
@@ -177,13 +211,6 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-
-        double lat = Double.parseDouble(taskInfoGroupByLocationKey.getLatitude());
-        double lon = Double.parseDouble(taskInfoGroupByLocationKey.getLongitude());
-        map.addMarker(new MarkerOptions().position(new LatLng(lat, lon))
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(lat, lon)));
-        map.animateCamera(CameraUpdateFactory.zoomTo(15));
 
     }
 }

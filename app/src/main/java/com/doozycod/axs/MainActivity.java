@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner {
         } else {
             PreferenceManager.getDefaultSharedPreferences(this).edit().remove(Constants.SELECTED_BATCH_ID).apply();
             PreferenceManager.getDefaultSharedPreferences(this).edit().remove(Constants.PREF_KEY_SELECTED_RUN).apply();
+            PreferenceManager.getDefaultSharedPreferences(this).edit().remove(Constants.DELIVERY_STATUS).apply();
+            PreferenceManager.getDefaultSharedPreferences(this).edit().remove(Constants.SYNC_STATE).apply();
 //            IMEI = "866946038948979";
             IMEI = ServiceChecker.getUniqueIMEIId(getApplicationContext());
             login();

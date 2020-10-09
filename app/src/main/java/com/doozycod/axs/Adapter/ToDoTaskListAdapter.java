@@ -2,6 +2,7 @@ package com.doozycod.axs.Adapter;
 
 import android.app.Application;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,10 +62,15 @@ public class ToDoTaskListAdapter extends RecyclerView.Adapter<ToDoTaskListAdapte
             holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
         } else {*/
         List<TaskInfoEntity> completedTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey(), Constants.TASK_INFO_WORK_STATUS_COMPLETED);
-        List<TaskInfoEntity> pendingTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey(), Constants.TASK_INFO_WORK_STATUS_PENDING);
-
+        List<TaskInfoEntity> pendingTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey(), Constants.TASK_INFO_WORK_STATUS_PROBLEM);
+        Log.e(TAG, "onBindViewHolder: " + position + "  " + pendingTasks.size());
         if (listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 0
-                && listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED)) {
+                && listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus()
+                .equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED)
+                || listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 0
+                && listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus()
+                .equals(Constants.TASK_INFO_WORK_STATUS_PROBLEM)
+        ) {
             holder.itemView.setBackgroundColor(Color.parseColor("#BDE1E5"));
         }
         if (listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus().equals("pending")
@@ -85,7 +91,7 @@ public class ToDoTaskListAdapter extends RecyclerView.Adapter<ToDoTaskListAdapte
 
 
 //        List<TaskInfoEntity> completedTasks = mTaskInfoRepository.getTaskInfoByLocationKey(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey());
-        int completedCounts = completedTasks.size();
+        int completedCounts = completedTasks.size() + pendingTasks.size();
         int i = position + 1;
         holder.position.setText("" + i);
         holder.tvQuantity1.setText("Quantity - " + counts);
