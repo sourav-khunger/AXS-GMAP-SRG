@@ -648,7 +648,8 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                         runTaskAdapter.setOnItemClickListener(new RunTaskAdapter.OnItemClickListener() {
                             @Override
                             public void onGetRunPosition(int position) {
-                                Log.e(TAG, "onChanged: RunInfo Position");
+
+//                                Log.e(TAG, "onChanged: RunInfo Position");
 
                                 PreferenceManager.getDefaultSharedPreferences(activity).edit()
                                         .putString(Constants.PREF_KEY_SELECTED_RUN, "" + position)

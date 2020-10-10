@@ -102,6 +102,7 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/axs_logo"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity android:name="com.doozycod.axs.Activity.ArrivalTimeMapTypeActivity" />

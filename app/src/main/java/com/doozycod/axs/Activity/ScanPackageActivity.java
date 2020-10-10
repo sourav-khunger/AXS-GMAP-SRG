@@ -26,7 +26,6 @@ public class ScanPackageActivity extends AppCompatActivity implements ZXingScann
     @Override
     protected void onResume() {
         super.onResume();
-
         mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.
         mScannerView.startCamera();
     }

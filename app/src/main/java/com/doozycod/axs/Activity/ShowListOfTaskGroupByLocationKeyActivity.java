@@ -137,6 +137,11 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
                 public void onChanged(List<TaskInfoEntity> taskInfoEntities) {
                     taskInfoEntityList.clear();
                     taskInfoEntityList.addAll(taskInfoEntities);
+                    String batchId = taskInfoEntities.get(0).getBatchId();
+
+                    PreferenceManager.getDefaultSharedPreferences(ShowListOfTaskGroupByLocationKeyActivity.this).edit()
+                            .putString(Constants.SELECTED_BATCH_ID, batchId)
+                            .apply();
                     listViewAdapter.notifyDataSetChanged();
                     double lat = Double.parseDouble(taskInfoEntityList.get(0).getLatitude());
                     double lon = Double.parseDouble(taskInfoEntityList.get(0).getLongitude());

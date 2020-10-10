@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.doozycod.axs.UpdateDebug.PhoneCallActivity;
 import com.doozycod.axs.Database.Entities.StatusEntity;
 import com.doozycod.axs.Database.Entities.TaskInfoEntity;
@@ -76,7 +77,12 @@ public class TaskInfoGroupByListViewAdapter extends BaseAdapter {
         });
 
         tvStatus.setText("");
-        if (taskInfoEntityList.get(position).getWorkStatus() != null && taskInfoEntityList.get(position).getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED)) {
+        if (taskInfoEntityList.get(position).getWorkStatus() != null
+                && taskInfoEntityList.get(position).getWorkStatus()
+                .equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED) ||
+                taskInfoEntityList.get(position).getWorkStatus() != null
+                        && taskInfoEntityList.get(position).getWorkStatus()
+                        .equals(Constants.TASK_INFO_WORK_STATUS_PROBLEM)) {
 
             StatusEntity status = shipmentStatusRepository.getStatus(taskInfoEntityList.get(position).getStatusId());
             tvStatus.setText(status.getStatusName());

@@ -74,6 +74,7 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
     private double latitude;
     Intent intent;
     public static TaskInfoEntity selectedTask;
+    String batchId = "";
 
     //    private Button scanPackageBtn;
     @Override
@@ -103,7 +104,7 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
                 .findFragmentById(R.id.mapfragment);
 //        TaskInfoGroupByLocationKey locationKey = new Gson().fromJson(taskInfoGroupByLocation, TaskInfoGroupByLocationKey.class);
 
-        String batchId = PreferenceManager.getDefaultSharedPreferences(this)
+        batchId = PreferenceManager.getDefaultSharedPreferences(this)
                 .getString(Constants.SELECTED_BATCH_ID, "");
         Log.e(TAG, "onCreate: " + taskInfoGroupByLocation);
 
@@ -125,10 +126,10 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
                     confirmNextStopAPI(taskINfo, batchId, locationKey);
 
                 }
-                if (!selectedTask.getBatchId().equals("") || selectedTask.getBatchId() != null) {
+                /*if (!selectedTask.getBatchId().equals("") || selectedTask != null) {
                     confirmNextStopAPI(taskINfo, selectedTask.getBatchId(), locationKey);
 
-                }
+                }*/
 
 
             }
@@ -140,6 +141,10 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
                 public void onChanged(List<TaskInfoEntity> taskInfoEntities) {
                     taskInfoEntityList.clear();
                     taskInfoEntityList.addAll(taskInfoEntities);
+                    batchId = taskInfoEntities.get(0).getBatchId();
+                    PreferenceManager.getDefaultSharedPreferences(ShowPackageDetailsActivity.this).edit()
+                            .putString(Constants.SELECTED_BATCH_ID, batchId)
+                            .apply();
                     listViewAdapter.notifyDataSetChanged();
                     Log.e(TAG, "onChanged: " + taskInfoEntityList.toString());
                 }
