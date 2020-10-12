@@ -111,7 +111,10 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
                         .putString(Constants.SELECTED_TASK, taskInfoEntityJsonString)
                         .apply();
                 taskInfoEntity.setRecordStatus(Constants.PARTIAL_MODIFIED);
+                String curDate = getIntent().getStringExtra("curDate");
+                taskInfoEntity.setArrivalTime(curDate);
                 mTaskInfoRepository.update(taskInfoEntity);
+                Log.e(TAG, "onItemLongClick: Updated to 1");
                 Intent intent = new Intent(ShowListOfTaskGroupByLocationKeyActivity.this, ShipmentActivity.class);
                 startActivity(intent);
                 return true;

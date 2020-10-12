@@ -73,6 +73,10 @@ public class ToDoTaskListAdapter extends RecyclerView.Adapter<ToDoTaskListAdapte
             holder.itemView.setBackgroundColor(Color.parseColor("#BDE1E5"));
         }
         if (listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus().equals("pending")
+                && listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 1) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        }
+        if (listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus().equals("pending")
                 && listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 0) {
             holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
         }

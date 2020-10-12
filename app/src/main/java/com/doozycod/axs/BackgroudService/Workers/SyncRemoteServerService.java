@@ -90,7 +90,7 @@ public class SyncRemoteServerService extends Service {
 //            recordStatus=2
             pushData();
 //          recordStatus=1
-            pushData1();
+//            pushData1();
         } catch (Throwable throwable) {
             Log.d(TAG, "doWork: " + throwable.getMessage());
         }
