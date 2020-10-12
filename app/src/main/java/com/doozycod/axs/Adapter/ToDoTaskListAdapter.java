@@ -63,7 +63,6 @@ public class ToDoTaskListAdapter extends RecyclerView.Adapter<ToDoTaskListAdapte
         } else {*/
         List<TaskInfoEntity> completedTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey(), Constants.TASK_INFO_WORK_STATUS_COMPLETED);
         List<TaskInfoEntity> pendingTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey(), Constants.TASK_INFO_WORK_STATUS_PROBLEM);
-        Log.e(TAG, "onBindViewHolder: " + position + "  " + pendingTasks.size());
         if (listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 0
                 && listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus()
                 .equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED)

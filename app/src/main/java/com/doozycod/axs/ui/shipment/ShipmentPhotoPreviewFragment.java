@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,8 +93,8 @@ public class ShipmentPhotoPreviewFragment extends Fragment {
         String root = Environment.getExternalStorageDirectory().toString();
         File myDir = new File(root + "/AXSLITE");
         myDir.mkdirs();
-        String curDate= new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-        String curDateTime= new SimpleDateFormat("yyyyMMddHHmmss.mmm").format(new Date());
+        String curDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        String curDateTime = new SimpleDateFormat("yyyyMMddHHmmss.mmm").format(new Date());
 
 
         String localpath = root + "/AXSLITE/";
@@ -103,10 +104,9 @@ public class ShipmentPhotoPreviewFragment extends Fragment {
         //DriverInfoRepository driverInfoRepository = new DriverInfoRepository(getActivity().getApplication());
         //List<DriverInfoEntity> driverInfoEntities = driverInfoRepository.getDriverInfo();
         String remoteImgDir = Constants.REMOTE_IMG_ROOT_DIR + "problems" + "/" + curDate + "/";
-        if(!IMEI.equals("")) {
+        if (!IMEI.equals("")) {
             remoteImgDir = Constants.REMOTE_IMG_ROOT_DIR + IMEI + "/" + curDate + "/";
         }
-
 
 
         try {
@@ -123,7 +123,7 @@ public class ShipmentPhotoPreviewFragment extends Fragment {
                 imgFileName = imgPrefix + curDateTime + ".jpg";
 
             } else {
-                String imgPrefix = "TASKERKIT_" + loginResponse.getDriverInfo().getImei() + "_" ;
+                String imgPrefix = "TASKERKIT_" + loginResponse.getDriverInfo().getImei() + "_";
                 imgFileName = imgPrefix + curDateTime + ".jpg";
             }
 
@@ -154,21 +154,15 @@ public class ShipmentPhotoPreviewFragment extends Fragment {
 
             String imgs = ShipmentActivity.selectedTask.getImagePath();
 
-            if(imgs != null && !imgs.equals("")) {
-                imgs +=  remoteImgDir + imgFileName;
+            if (imgs != null && !imgs.equals("")) {
+                imgs += remoteImgDir + imgFileName;
             } else {
                 imgs = remoteImgDir + imgFileName;
             }
+            Log.e("TAG", "saveImage: " + imgs);
 
             ShipmentActivity.selectedTask.setImagePath(imgs);
-        }
-        catch (FileNotFoundException e) {
-            e.printStackTrace();
-
-        } catch (IOException e)  {
-            e.printStackTrace();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

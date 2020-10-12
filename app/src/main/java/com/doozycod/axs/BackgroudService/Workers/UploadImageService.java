@@ -35,17 +35,18 @@ public class UploadImageService extends Service {
 
     final static int RQS_STOP_SERVICE = 1;
 
-    Handler mHandler=new Handler();
-    public static boolean servicestarted=false;
+    Handler mHandler = new Handler();
+    public static boolean servicestarted = false;
 
     SharedPreferences prefs;
-    String mImagePath,sNickname,sPassword;
+    String mImagePath, sNickname, sPassword;
     public String path, subPath, IMEI;
 
 
-    String  mCImageName, mCImageDate, mCNewcoID, mCBarcode;
+    String mCImageName, mCImageDate, mCNewcoID, mCBarcode;
 
-    public static boolean imageupload=false, uploadStarted=false;
+    public static boolean imageupload = false, uploadStarted = false;
+
     @Override
     public void onCreate() {
         // TODO Auto-generated method stub
@@ -73,7 +74,7 @@ public class UploadImageService extends Service {
     @Override
     public void onDestroy() {
         // TODO Auto-generated method stub
-        servicestarted=false;
+        servicestarted = false;
 
         super.onDestroy();
     }
@@ -84,28 +85,29 @@ public class UploadImageService extends Service {
         return null;
     }
 
-    public class NotifyServiceReceiver extends BroadcastReceiver{
+    public class NotifyServiceReceiver extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context arg0, Intent arg1) {
             // TODO Auto-generated method stub
             int rqs = arg1.getIntExtra("RQS", 0);
-            if (rqs == RQS_STOP_SERVICE){
+            if (rqs == RQS_STOP_SERVICE) {
                 stopSelf();
             }
         }
     }
-    public void runa() throws Exception{
-        mHandler.post(new Runnable(){
-            public void run(){
 
-                if(!uploadStarted) {
+    public void runa() throws Exception {
+        mHandler.post(new Runnable() {
+            public void run() {
+
+                if (!uploadStarted) {
                     try {
                         String path = Environment.getExternalStorageDirectory().toString() + "/AXSLITE/";
-                        Log.d("Files", "Path: " + path);
+//                        Log.d("Files", "Path: " + path);
                         File directory = new File(path);
                         File[] files = directory.listFiles();
-                        Log.d("Files", "Size: " + files.length);
+//                        Log.d("Files", "Size: " + files.length);
 
                         if (files.length > 0) {
                             File file = files[0];
@@ -121,7 +123,7 @@ public class UploadImageService extends Service {
                             }
 
                             String remoteImgDir = Constants.REMOTE_IMG_ROOT_DIR + "problems" + "/" + fileDate + "/";
-                            if(!IMEI.equals("")) {
+                            if (!IMEI.equals("")) {
                                 remoteImgDir = Constants.REMOTE_IMG_ROOT_DIR + IMEI + "/" + fileDate + "/";
                             }
 
@@ -142,35 +144,32 @@ public class UploadImageService extends Service {
     }
 
 
-
-
-
     /******************************** Class to execute GetTaskList webservice  ***********************************/
     class UploadImage extends AsyncTask<String, Void, String> {
-        StringBuilder sb=null;
+        StringBuilder sb = null;
         int GetTaskListCheckResponse;
 
         @Override
         protected void onPreExecute() {
 
-            uploadStarted=true;
+            uploadStarted = true;
         }
 
         @Override
-        protected String  doInBackground(String... params) {
+        protected String doInBackground(String... params) {
             /***************** sftp code******************************/
             File uploadFilePath;
-            Session session ;
+            Session session;
             Channel channel = null;
             ChannelSftp sftp = null;
 
-            sNickname="gtask";
-            sPassword="gtask911";
+            sNickname = "gtask";
+            sPassword = "gtask911";
 
             JSch ssh = new JSch();
             try {
                 //session =ssh.getSession("ekaterina", "69.159.198.21");
-                session =ssh.getSession(sNickname, "image.gcphone.pw");
+                session = ssh.getSession(sNickname, "image.gcphone.pw");
 
                 session.setPassword(sPassword);
 
@@ -182,24 +181,23 @@ public class UploadImageService extends Service {
                 session.connect();
                 channel = session.openChannel("sftp");
                 channel.connect();
-                sftp= (ChannelSftp)channel;
+                sftp = (ChannelSftp) channel;
 
-                path= subPath;
-                Log.d("path is ",path);
+                path = subPath;
+                Log.d("path is ", path);
 
 
-                String[] folders = path.split( "/" );
-                sftp.cd( "/" );
-                for ( String folder : folders ) {
-                    if ( folder.length() > 0 ) {
+                String[] folders = path.split("/");
+                sftp.cd("/");
+                for (String folder : folders) {
+                    if (folder.length() > 0) {
                         try {
-                            sftp.cd( folder );
+                            sftp.cd(folder);
                             //Log.d("ppp ",folder);
 
-                        }
-                        catch ( SftpException e ) {
-                            sftp.mkdir( folder );
-                            sftp.cd( folder );
+                        } catch (SftpException e) {
+                            sftp.mkdir(folder);
+                            sftp.cd(folder);
                             //Log.d("ppp2 ",folder);
                         }
                     }
@@ -207,19 +205,18 @@ public class UploadImageService extends Service {
 
                 try {
                     Log.d("pwd...", sftp.pwd());
-                }catch (SftpException e){
+                } catch (SftpException e) {
                     Log.d("EX1", e.getMessage());
                 }
 
-            }
-            catch(Exception e){
-                Log.d("the sesson here",e.toString());
+            } catch (Exception e) {
+                Log.d("the sesson here", e.toString());
             }
             //uploadFilePath=new File(Environment.getExternalStorageDirectory()
             //	+"/completed.png");
 
-            Log.d("the imagenamepath",mImagePath);
-            uploadFilePath=new File(mImagePath);
+            Log.d("the imagenamepath", mImagePath);
+            uploadFilePath = new File(mImagePath);
 
             byte[] bufr = new byte[(int) uploadFilePath.length()];
             FileInputStream fis = null;
@@ -241,24 +238,23 @@ public class UploadImageService extends Service {
             try {
                 sftp.put(in, uploadFilePath.getName(), null);
                 in.close();
-                if (sftp.getExitStatus()==-1) {
+                if (sftp.getExitStatus() == -1) {
                     Log.v("upload result", "succeeded");
 
-                    GetTaskListCheckResponse=1;
+                    GetTaskListCheckResponse = 1;
 
                 } else {
                     Log.v("upload faild ", "faild");
 
-                    GetTaskListCheckResponse=2;
+                    GetTaskListCheckResponse = 2;
                 }
             } catch (SftpException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-                GetTaskListCheckResponse=2;
-            }
-            catch (Exception e) {
+                GetTaskListCheckResponse = 2;
+            } catch (Exception e) {
                 // TODO: handle exception
-                GetTaskListCheckResponse=2;
+                GetTaskListCheckResponse = 2;
             }
 
             /***************** sftp code******************************/
@@ -268,11 +264,10 @@ public class UploadImageService extends Service {
 
         protected void onPostExecute(String result) {
 
-            uploadStarted=false;
-            switch(GetTaskListCheckResponse)
-            {
+            uploadStarted = false;
+            switch (GetTaskListCheckResponse) {
                 case 1:
-                    imageupload=true;
+                    imageupload = true;
                     try {
                         File file = new File(mImagePath);
                         boolean deleted = file.delete();
@@ -284,7 +279,7 @@ public class UploadImageService extends Service {
                     }
                     break;
                 default:
-                    imageupload=false;
+                    imageupload = false;
                     break;
             }
         }

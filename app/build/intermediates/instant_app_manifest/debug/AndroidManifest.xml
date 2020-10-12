@@ -174,13 +174,12 @@ Developers should put application credentials here.To obtain them, please regist
         <!-- <meta-data -->
         <!-- android:name="com.here.android.maps.license.key" -->
         <!-- android:value="NWMe0pLEUw9js8gzAREu7AmIT+j0Vhf9wVac9DwCHedd+KTzaSnSiQgXAd+5f8LAbyr+sXeGFIk1x7fsmEGGr3Z1Lh7McYPTXW+44y8Mq9nRx5AyVLoufMzV+5csYjEr6pSzmEtabyvzUx2PhStMoiKUdY/wjW2d6VLoNCwpZ+c00+PvGynv536xv8d+/9WGQ4Oitnhg1sdOR4rWdb+937zexwjxtC7cYRyrCEaQn2kk4WQGKJgYqwWKawdla5eiBsYPZYo99SAbqoZXaMaRfLJm6w5MpSNBo4Da8J97UL1X7maXCxx0RS+4rIMDFJ7qkJasgeFt5N+sbXuzfCQ754NbYiVv/b9Z8djwklgSWp3UFofKR+pmwC7Td8PAGpUMLY8w4D61Naz71MSZ3+WAjyClgwTo6NGo9591sb0W4cskFyLUSsP0EV37bwfZX/hpd9957HgX3R88J3F5b2aN8CgItoMqE0PIRxsPIB0MNNhai+MyJhG1BZoilo8U0j2PcHdoMVbjuJTcmDN9VzBboVNDpifleEIYKerKNUkNi2aihKMUtaRgE0Ub0W6NlqORrP1LRF0X6oAOXjoPyNcCs10ovqM90QezK/JHrrg+Vej9DjCLztQE04DVPpx7cXlDpNNkWpj3UqsH1xgt3wAwwYwZDBm2nOOnHcXs2o9386g=" /> -->
+
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.doozycod.axs.Utils.FileProvider"
+            android:authorities="com.doozycod.axs.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
-
-            <!-- ressource file to create -->
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />

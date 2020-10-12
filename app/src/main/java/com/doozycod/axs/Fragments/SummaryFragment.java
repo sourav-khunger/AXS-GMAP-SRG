@@ -121,7 +121,7 @@ public class SummaryFragment extends Fragment {
             public void onChanged(List<TaskInfoEntity> taskInfoEntities) {
                 listOfTaskInfo.clear();
                 listOfTaskInfo.addAll(taskInfoEntities);
-                Log.e("TAG", "onChanged: ");
+//                Log.e("TAG", "onChanged: ");
                 for (int i = 0; i < listOfTaskInfo.size(); i++) {
                     if (batchId.equals(listOfTaskInfo.get(i).getBatchId())) {
                         if (listOfTaskInfo.get(i).getWorkStatus().equals("completed")) {

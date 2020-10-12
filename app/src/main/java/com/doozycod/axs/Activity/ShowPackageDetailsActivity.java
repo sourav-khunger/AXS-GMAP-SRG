@@ -146,7 +146,7 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
                             .putString(Constants.SELECTED_BATCH_ID, batchId)
                             .apply();
                     listViewAdapter.notifyDataSetChanged();
-                    Log.e(TAG, "onChanged: " + taskInfoEntityList.toString());
+//                    Log.e(TAG, "onChanged: " + taskInfoEntityList.toString());
                 }
             });
         } catch (Exception e) {

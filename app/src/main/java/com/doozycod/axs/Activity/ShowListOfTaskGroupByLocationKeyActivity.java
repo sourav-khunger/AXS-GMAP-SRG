@@ -139,6 +139,7 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
                     taskInfoEntityList.addAll(taskInfoEntities);
                     String batchId = taskInfoEntities.get(0).getBatchId();
 
+//                    Log.e(TAG, "onChanged: "+taskInfoEntities );
                     PreferenceManager.getDefaultSharedPreferences(ShowListOfTaskGroupByLocationKeyActivity.this).edit()
                             .putString(Constants.SELECTED_BATCH_ID, batchId)
                             .apply();

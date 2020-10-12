@@ -52,12 +52,12 @@ public class UpdateRemoteDatabaseWorker extends Worker {
             String token = loginResponse.getToken();
             for (int i = 0; i < mTaskInfoEntityList.size(); i++) {
                 String mTaskInfoJosnString = new Gson().toJson(mTaskInfoEntityList.get(i));
-                apiService.updateTaskInfo(mTaskInfoEntityList.get(i), token).enqueue(new Callback<TaskInfoUpdateResponse>() {
+                apiService.updateTaskInfo(mTaskInfoEntityList.get(i), Constants.AUTHORIZATION_TOKEN + token).enqueue(new Callback<TaskInfoUpdateResponse>() {
                     @Override
                     public void onResponse(Call<TaskInfoUpdateResponse> call, Response<TaskInfoUpdateResponse> response) {
                         TaskInfoUpdateResponse mTaskInfoUpdateResponse = response.body();
                         Log.d(TAG, "onResponse: " + response.body());
-                        Log.d(TAG, "onResponse: " + mTaskInfoUpdateResponse.getTaskId());
+//                        Log.d(TAG, "onResponse: " + mTaskInfoUpdateResponse.getTaskId());
                         TaskInfoEntity mTaskInfoEntity = mTaskInfoRepository.getTaskInfoWithId(Long.toString(mTaskInfoUpdateResponse.getTaskId()));
                         mTaskInfoEntity.setRecordStatus(Constants.NOT_MODIFIED);
                         mTaskInfoEntity.setDataId(mTaskInfoUpdateResponse.getDataId());

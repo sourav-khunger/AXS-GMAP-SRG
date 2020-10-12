@@ -155,7 +155,7 @@ public class MapsFragment extends Fragment {
         taskInfoViewModel.getTaskInfoList().observe(m_activity, new Observer<List<TaskInfoEntity>>() {
             @Override
             public void onChanged(List<TaskInfoEntity> taskInfoEnt) {
-                Log.e(TAG, "onChanged: " + taskInfoEnt.size());
+//                Log.e(TAG, "onChanged: " + taskInfoEnt.size());
                 taskInfoEntities.clear();
                 taskInfoEntities.addAll(taskInfoEnt);
                 for (int i = 0; i < taskInfoEntities.size(); i++) {
