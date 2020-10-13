@@ -3,6 +3,7 @@ package com.doozycod.axs.Adapter;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.doozycod.axs.Database.Entities.ReasonEntity;
 import com.doozycod.axs.UpdateDebug.PhoneCallActivity;
 import com.doozycod.axs.Database.Entities.StatusEntity;
 import com.doozycod.axs.Database.Entities.TaskInfoEntity;
@@ -81,12 +83,18 @@ public class TaskInfoGroupByListViewAdapter extends BaseAdapter {
                 && taskInfoEntityList.get(position).getWorkStatus()
                 .equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED) ||
                 taskInfoEntityList.get(position).getWorkStatus() != null
-                        && taskInfoEntityList.get(position).getWorkStatus()
-                        .equals(Constants.TASK_INFO_WORK_STATUS_PROBLEM)) {
-
+                && taskInfoEntityList.get(position).getWorkStatus()
+                .equals(Constants.TASK_INFO_WORK_STATUS_PROBLEM)) {
+            /* if (taskInfoEntityList.get(position).getReasonId() == 0) {*/
             StatusEntity status = shipmentStatusRepository.getStatus(taskInfoEntityList.get(position).getStatusId());
             tvStatus.setText(status.getStatusName());
+            /*} else {
+                ReasonEntity reason = shipmentStatusRepository.getReason(taskInfoEntityList.get(position).getReasonId());
+                tvStatus.setText(reason.getReasonName());
+            }*/
         }
+
+
         return convertView;
     }
 }

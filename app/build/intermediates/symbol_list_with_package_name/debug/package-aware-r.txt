@@ -2805,7 +2805,6 @@ layout layout_body
 layout layout_focus_marker
 layout login_check_dialog
 layout map_marker_lay
-layout marker_dialog
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2864,6 +2863,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout parcel_error_dialog
 layout progressbar
 layout run_list_view
 layout scanned_package_list

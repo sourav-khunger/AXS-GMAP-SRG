@@ -30,15 +30,16 @@ public interface TaskInfoDAO {
     @Query("Select * from taskInfoTable where taskId= :taskId")
     TaskInfoEntity getTaskInfo(String taskId);
 
-    @Query("Select address, postalCode, city, locationKey, workStatus,recordStatus, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable where batchId= :batchId GROUP BY locationKey ORDER BY seqNo ")
-//    @Query("Select * from taskInfoTable where )
-    LiveData<List<TaskInfoGroupByLocationKey>> getTaskInfoByBatchId(String batchId);
 
     @Delete
     void deleteTaskInfos(TaskInfoEntity... taskInfoEntities);
 
     @Update
     void updateTaskInfo(TaskInfoEntity... taskInfoEntitis);
+
+    @Query("Select address, postalCode, city, locationKey, workStatus,recordStatus, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable where batchId= :batchId GROUP BY locationKey ORDER BY seqNo ")
+//    @Query("Select * from taskInfoTable where )
+    LiveData<List<TaskInfoGroupByLocationKey>> getTaskInfoByBatchId(String batchId);
 
     @Query("Select address, postalCode, city, locationKey,workStatus,recordStatus, COUNT(*) as groupCount, latitude, longitude, MAX(arrivalTime) as arrivalTime  from taskInfoTable GROUP BY locationKey ORDER BY seqNo ")
     LiveData<List<TaskInfoGroupByLocationKey>> getTaskInfoGroupByLocationKeys();

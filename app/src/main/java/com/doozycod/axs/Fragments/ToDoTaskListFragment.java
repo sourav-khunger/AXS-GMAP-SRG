@@ -231,6 +231,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
                 if (response.body().getStatus().equals("SUCCESS")) {
                     Toast.makeText(getContext(), "" + response.body().getMessage(), Toast.LENGTH_SHORT).show();
                     confirm_dcButton.setVisibility(View.GONE);
+                    isRouteStarted=1;
                 } else {
                     Toast.makeText(getContext(), "" + response.body().getMessage(), Toast.LENGTH_SHORT).show();
                 }
@@ -263,7 +264,6 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
             @Override
             public void onItemClick(View itemView, int position) {
                 if (isRouteStarted == 1) {
-
 
                     TaskInfoGroupByLocationKey taskInfoGroupByLocationKey = listOfTaskInfoGroupByLocationKeys.get(position);
                     String taskInfoString = new Gson().toJson(taskInfoGroupByLocationKey);
@@ -728,7 +728,7 @@ public class ToDoTaskListFragment extends Fragment implements ActionBottomSheetD
             @Override
             public void onFailure(Call<TaskInfoResponse> call, Throwable t) {
                 Log.d(TAG, "onFailure: " + t.getMessage());
-                Toast.makeText(getContext(), "" + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, "" + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

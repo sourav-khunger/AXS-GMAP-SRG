@@ -97,7 +97,7 @@ public class ArrivalTimeMapTypeActivity extends AppCompatActivity {
                 TaskInfoRepository mTaskInfoRepository = new TaskInfoRepository((Application) getApplicationContext());
                 String curDateTime = getCurrentTimeDate() + " " + hoursET.getText().toString() + ":" + minuteET.getText().toString() + ":" + "00";
 
-                Log.e("TAG", "onClick: " + curDateTime);
+                Log.e("TAG", "onClick: " + selectedTask.getBarcode());
 
                 selectedTask.setRecordStatus(Constants.PARTIAL_MODIFIED);
                 selectedTask.setArrivalTime(curDateTime);

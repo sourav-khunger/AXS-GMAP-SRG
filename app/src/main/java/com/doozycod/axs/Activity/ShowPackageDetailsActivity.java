@@ -270,7 +270,7 @@ public class ShowPackageDetailsActivity extends AppCompatActivity implements OnM
 //                            Map.Animation.NONE);
 //                    // Set the zoom level to the average between min and max
 //                    map.setZoomLevel(16);
-//
+
 //                    MapMarker defaultMarker = new MapMarker();
 //                    defaultMarker.setCoordinate(new GeoCoordinate(lat, lon, 0.0));
 //                    map.addMapObject(defaultMarker);

@@ -1,6 +1,7 @@
 package com.doozycod.axs.Activity;
 
 import android.app.Application;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -100,11 +101,12 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
                 TaskInfoEntity taskInfoEntity = taskInfoEntityList.get(position);
 
                 if (taskInfoEntity.getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED) || taskInfoEntity.getWorkStatus().equals(Constants.TASK_INFO_WORK_STATUS_PROBLEM)) {
+                    showDialog();
                     scanPackageBtn.setEnabled(false);
                     return false;
                 }
 
-
+                scanPackageBtn.setEnabled(true);
                 String taskInfoEntityJsonString = new Gson().toJson(taskInfoEntity);
 
                 PreferenceManager.getDefaultSharedPreferences(ShowListOfTaskGroupByLocationKeyActivity.this).edit()
@@ -185,6 +187,21 @@ public class ShowListOfTaskGroupByLocationKeyActivity extends AppCompatActivity 
             }
         }
     };
+
+    void showDialog() {
+        Dialog dialog = new Dialog(this, R.style.MyDialogTheme);
+        dialog.setContentView(R.layout.parcel_error_dialog);
+        Button closeBtn = dialog.findViewById(R.id.closeButton);
+        dialog.setCancelable(false);
+        closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                finish();
+            }
+        });
+        dialog.show();
+    }
 
     @Override
     protected void onResume() {

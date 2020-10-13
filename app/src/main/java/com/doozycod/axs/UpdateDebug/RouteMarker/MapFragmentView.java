@@ -486,7 +486,7 @@ public class MapFragmentView {
 //     */
 //    void showDialog(String marker) {
 //        Dialog dialog = new Dialog(m_activity, R.style.MyDialogTheme);
-//        dialog.setContentView(R.layout.marker_dialog);
+//        dialog.setContentView(R.layout.parcel_error_dialog);
 //        TextView markerTxt = dialog.findViewById(R.id.markerName);
 //        markerTxt.setText(marker);
 //        dialog.show();

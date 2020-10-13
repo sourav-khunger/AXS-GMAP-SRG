@@ -63,6 +63,21 @@ public class ToDoTaskListAdapter extends RecyclerView.Adapter<ToDoTaskListAdapte
         } else {*/
         List<TaskInfoEntity> completedTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey(), Constants.TASK_INFO_WORK_STATUS_COMPLETED);
         List<TaskInfoEntity> pendingTasks = mTaskInfoRepository.getTaskInfoCompleted(listOfTaskInfoGroupByLocationKeys.get(position).getLocationKey(), Constants.TASK_INFO_WORK_STATUS_PROBLEM);
+
+
+//        Log.e(TAG, (position + 1) + "  onBindViewHolder: " + listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus() + "  "
+//                + listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() + " "
+//                + listOfTaskInfoGroupByLocationKeys.get(position).getGroupCount());
+
+        if (listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 1
+                && listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus()
+                .equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED)
+                || listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 1
+                && listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus()
+                .equals(Constants.TASK_INFO_WORK_STATUS_PROBLEM)
+        ) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#BDE1E5"));
+        }
         if (listOfTaskInfoGroupByLocationKeys.get(position).getRecordStatus() == 0
                 && listOfTaskInfoGroupByLocationKeys.get(position).getWorkStatus()
                 .equals(Constants.TASK_INFO_WORK_STATUS_COMPLETED)
@@ -142,7 +157,6 @@ public class ToDoTaskListAdapter extends RecyclerView.Adapter<ToDoTaskListAdapte
 
         @Override
         public boolean onLongClick(View view) {
-
             return false;
         }
     }
