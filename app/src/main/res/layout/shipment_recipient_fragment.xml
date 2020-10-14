@@ -121,6 +121,21 @@
         app:layout_constraintTop_toBottomOf="@+id/sigLinkBtn" />
 
     <Button
+        android:id="@+id/consoBillsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/primaryColor"
+        android:text="Consolidated Bills"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camLinkBtn" />
+
+    <Button
         android:id="@+id/continue_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

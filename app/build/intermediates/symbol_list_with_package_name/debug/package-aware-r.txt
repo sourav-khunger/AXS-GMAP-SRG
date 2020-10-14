@@ -2078,6 +2078,7 @@ id add
 id add_access_code_btn
 id add_hours_btn
 id add_route_btn
+id addressTxt
 id adjust_height
 id adjust_width
 id agreement_text
@@ -2128,6 +2129,7 @@ id chain
 id chains
 id changeDateButton
 id changeDateOption
+id checkBox
 id checkbox
 id checked
 id chip
@@ -2146,12 +2148,15 @@ id clip_horizontal
 id clip_vertical
 id closeButton
 id closeDialog
+id codTxt
 id collapseActionView
 id commentsEntered
 id comments_input_layout
 id compass
 id confirm_button
 id confirm_dcButton
+id consoBillsBtn
+id consolidateRecyclerView
 id container
 id content
 id contentPanel
@@ -2177,6 +2182,7 @@ id delivered_to_edit_text
 id deliverred_to_address_text
 id deliverred_to_name_text
 id deliverred_to_status_text
+id deliveryStatus
 id delivery_recipient_btn
 id delivery_status_btn
 id delivery_status_toggle_btn
@@ -2386,6 +2392,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id nameTV
+id nameTxt
 id nav_Menu
 id nav_controller_view_tag
 id nav_host_fragment
@@ -2434,6 +2441,7 @@ id prgressbar
 id progress_circular
 id progress_horizontal
 id qtyEntered
+id quantityTxt
 id quantity_input_layout
 id question_recipient_name_text
 id qvga
@@ -2510,6 +2518,7 @@ id shipment_reason_comment_edit_text
 id shipment_reason_radio_group
 id shipment_reason_text
 id shipment_recipient
+id shipment_recycler
 id shipment_signature
 id shipment_status
 id shipment_status_radio_group
@@ -2745,6 +2754,7 @@ layout abc_tooltip
 layout activity_arrival_time_map_type
 layout activity_camkit
 layout activity_choose_company
+layout activity_cosolidate_bills
 layout activity_delivery_recipient
 layout activity_delivery_status
 layout activity_delivery_to
@@ -2766,6 +2776,7 @@ layout activity_show_preview_img
 layout activity_signaturepad
 layout activity_task_info_update
 layout bottom_sheet_view
+layout consolidate_recycler_view
 layout content_delivery_recipient
 layout content_delivery_status
 layout content_delivery_to
@@ -2877,6 +2888,7 @@ layout shipment_reason_fragment
 layout shipment_recipient_fragment
 layout shipment_signature_fragment
 layout shipment_status_fragment
+layout summary_recycler_view
 layout support_simple_spinner_dropdown_item
 layout surface_view
 layout test_action_chip

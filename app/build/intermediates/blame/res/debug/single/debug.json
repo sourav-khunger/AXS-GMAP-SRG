@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\nav_drawer_header.xml"
     },
     {
-        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_delivery_status.xml.flat",
-        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\activity_delivery_status.xml"
-    },
-    {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_time_picker_dialog.xml.flat",
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\time_picker_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_delivery_status.xml.flat",
+        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\activity_delivery_status.xml"
     },
     {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_self_dispatch.xml.flat",
@@ -56,20 +56,20 @@
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\drawable\\box_bg.xml"
     },
     {
-        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_return_scan.xml.flat",
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\fragment_return_scan.xml"
     },
     {
-        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edittext_bg.xml.flat",
-        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\drawable\\edittext_bg.xml"
+        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\xml_file_paths.xml.flat",
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edittext_bg.xml.flat",
+        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\drawable\\edittext_bg.xml"
     },
     {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_map_marker_lay.xml.flat",
@@ -88,12 +88,12 @@
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\shipment_reason_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_compass.png.flat",
-        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\drawable\\compass.png"
-    },
-    {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_selfdispatch.xml.flat",
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\fragment_selfdispatch.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_compass.png.flat",
+        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\drawable\\compass.png"
     },
     {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_summary.xml.flat",
@@ -238,6 +238,10 @@
     {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_show_package.xml.flat",
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\activity_show_package.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_summary_recycler_view.xml.flat",
+        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\summary_recycler_view.xml"
     },
     {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_grid.png.flat",
@@ -400,6 +404,10 @@
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\activity_menu.xml"
     },
     {
+        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_cosolidate_bills.xml.flat",
+        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\activity_cosolidate_bills.xml"
+    },
+    {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_phone_call.xml.flat",
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\activity_phone_call.xml"
     },
@@ -450,6 +458,10 @@
     {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_placeholder.png.flat",
         "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\drawable\\placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_consolidate_recycler_view.xml.flat",
+        "source": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\src\\main\\res\\layout\\consolidate_recycler_view.xml"
     },
     {
         "merged": "C:\\Users\\Pranj\\Documents\\GitHub\\AXS-GMAP-SRG_android\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto.xml.flat",

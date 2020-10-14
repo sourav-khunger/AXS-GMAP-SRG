@@ -2,6 +2,7 @@ package com.doozycod.axs.ui.shipment;
 
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,8 +24,13 @@ import com.doozycod.axs.Database.Entities.StatusEntity;
 import com.doozycod.axs.Database.Entities.TaskInfoEntity;
 import com.doozycod.axs.Database.Repository.ShipmentStatusRepository;
 import com.doozycod.axs.R;
+import com.doozycod.axs.UpdateDebug.CosolidateBillsActivity;
 import com.doozycod.axs.ui.shipment.ViewModel.ShipmentRecipientViewModel;
 import com.google.gson.Gson;
+
+import java.util.ArrayList;
+
+import static android.app.Activity.RESULT_OK;
 
 public class ShipmentRecipientFragment extends Fragment {
 
@@ -36,7 +42,7 @@ public class ShipmentRecipientFragment extends Fragment {
     private ReasonEntity reason;
     private StatusEntity status;
 
-    private Button sigLinkBtn, camLinkBtn;
+    private Button sigLinkBtn, camLinkBtn, consolidateBtn;
     String statusType = "", reasonType = "";
 
     public static ShipmentRecipientFragment newInstance() {
@@ -59,9 +65,9 @@ public class ShipmentRecipientFragment extends Fragment {
         comment = view.findViewById(R.id.commentsEntered);
         sigLinkBtn = view.findViewById(R.id.sigLinkBtn);
         camLinkBtn = view.findViewById(R.id.camLinkBtn);
+        consolidateBtn = view.findViewById(R.id.consoBillsBtn);
 
 //        fetch task details
-
         TaskInfoEntity theTask = ShipmentActivity.selectedTask;
 
         ShipmentStatusRepository shipmentStatusRepository = new ShipmentStatusRepository(getActivity().getApplication());
@@ -79,6 +85,16 @@ public class ShipmentRecipientFragment extends Fragment {
 //            Log.e("TAGTAG", "onCreateView: " + reason.getReasonRule());
 
 
+        consolidateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), CosolidateBillsActivity.class);
+                intent.putExtra("locationKey", ShipmentActivity.selectedTask.getLocationKey());
+                intent.putExtra("name", ShipmentActivity.selectedTask.getName());
+                startActivityForResult(intent, 123);
+
+            }
+        });
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,6 +120,7 @@ public class ShipmentRecipientFragment extends Fragment {
                     Toast.makeText(getActivity(), "Comment is required", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
                 if ((reason != null && reasonType.equals("C")) && comment.getText().toString().equals("")) {
                     Toast.makeText(getActivity(), "Comment is required", Toast.LENGTH_SHORT).show();
                     return;
@@ -116,7 +133,6 @@ public class ShipmentRecipientFragment extends Fragment {
                 }
 
                 int qtyEnterbed = Integer.parseInt(quantity.getText().toString());
-
                 ShipmentActivity.selectedTask.setQtyEntered(qtyEnterbed);
                 ShipmentActivity.selectedTask.setDriverComment(comment.getText().toString());
                 ShipmentActivity.selectedTask.setReffNo(reff.getText().toString());
@@ -172,6 +188,20 @@ public class ShipmentRecipientFragment extends Fragment {
         }); */
 
         return view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Check which request we're responding to
+        if (requestCode == 123) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                // get the list of strings here
+                ArrayList<String> myHosts = (ArrayList<String>) data.getSerializableExtra("myHosts"); // key must be matching
+                // do operations on the list
+                Log.e("TAG", "onActivityResult: " + myHosts);
+            }
+        }
     }
 
     public void saveDataEntered() {

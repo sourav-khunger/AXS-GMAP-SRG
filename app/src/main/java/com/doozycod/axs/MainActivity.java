@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner {
             imeidisp.setText("Permissions required. \nPlease enable all required permissions");
             prgressbar.setVisibility(View.GONE);
         } else {
+            PreferenceManager.getDefaultSharedPreferences(this).edit().remove("ConsolidateBills").apply();
             PreferenceManager.getDefaultSharedPreferences(this).edit().remove(Constants.SELECTED_BATCH_ID).apply();
             PreferenceManager.getDefaultSharedPreferences(this).edit().remove(Constants.PREF_KEY_SELECTED_RUN).apply();
             PreferenceManager.getDefaultSharedPreferences(this).edit().remove(Constants.DELIVERY_STATUS).apply();

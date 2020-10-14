@@ -1,5 +1,6 @@
 package com.doozycod.axs.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.gson.Gson;
@@ -9,6 +10,7 @@ import com.doozycod.axs.Utils.Constants;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -39,6 +41,13 @@ public class ShipmentActivity extends AppCompatActivity {
 
             selectedTask.setArrivalTime(curDate);
         }
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        for (Fragment fragment : getSupportFragmentManager().getFragments()) {
+            fragment.onActivityResult(requestCode, resultCode, data);
+        }
     }
 }
