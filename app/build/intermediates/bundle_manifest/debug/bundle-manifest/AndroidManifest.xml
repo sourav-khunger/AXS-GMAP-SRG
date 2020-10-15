@@ -104,6 +104,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.doozycod.axs.Activity.ConsolicateBillsDetailsActivity" />
         <activity android:name="com.doozycod.axs.UpdateDebug.CosolidateBillsActivity" />
         <activity android:name="com.doozycod.axs.Activity.ArrivalTimeMapTypeActivity" />
         <activity android:name="com.doozycod.axs.UpdateDebug.RouteMarker.MapRouteActivity" />

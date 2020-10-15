@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.doozycod.axs.Adapter.ToDoTaskListAdapter;
 import com.doozycod.axs.Database.Entities.TaskInfoEntity;
 import com.doozycod.axs.R;
 
@@ -26,6 +27,7 @@ public class ConsolidateAdapter extends RecyclerView.Adapter<ConsolidateAdapter.
     OnClickListener onClickListener;
     List<String> selectedTasks = new ArrayList<>();
     private HashMap<TaskInfoEntity, Boolean> mChecked;
+    OnItemLongClickListener listener;
 
     public ConsolidateAdapter(List<TaskInfoEntity> taskInfoEntities, Context context, OnClickListener onClickListener) {
         this.taskInfoEntities = taskInfoEntities;
@@ -36,6 +38,14 @@ public class ConsolidateAdapter extends RecyclerView.Adapter<ConsolidateAdapter.
 
     public interface OnClickListener {
         void onCheckListener(List<String> taskBarcode);
+    }
+
+    public interface OnItemLongClickListener {
+        void onItemClick(long taskId, String locationKey);
+    }
+
+    public void setOnItemClickListener(OnItemLongClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -85,6 +95,7 @@ public class ConsolidateAdapter extends RecyclerView.Adapter<ConsolidateAdapter.
         });
     }
 
+
     //    @Override
 //    public void onViewRecycled(@NonNull RecyclerHolder holder) {
 //        holder.checkBox.setOnCheckedChangeListener(null);
@@ -116,6 +127,17 @@ public class ConsolidateAdapter extends RecyclerView.Adapter<ConsolidateAdapter.
             barcodeTxt = itemView.findViewById(R.id.barcodeTxt);
             quantityTxt = itemView.findViewById(R.id.quantityTxt);
             checkBox = itemView.findViewById(R.id.checkBox);
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        listener.onItemClick(taskInfoEntities.get(position).getTaskId(), taskInfoEntities.get(position).getLocationKey());
+                    }
+                    return true;
+                }
+            });
         }
+
     }
 }

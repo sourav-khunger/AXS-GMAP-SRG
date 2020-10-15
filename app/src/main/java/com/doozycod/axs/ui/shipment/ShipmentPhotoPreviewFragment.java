@@ -1,16 +1,23 @@
 package com.doozycod.axs.ui.shipment;
 
+import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -37,6 +44,8 @@ public class ShipmentPhotoPreviewFragment extends Fragment {
     // private ShipmentPhotoViewModel mViewModel;
     public static Bitmap bitmap;
     ImageView img;
+    TextView curdate;
+    RelativeLayout imageViewLayout;
     Button clearBtn, saveBtn;
     // DriverInfoRepository driverInfoRepository;
     String IMEI;
@@ -50,6 +59,8 @@ public class ShipmentPhotoPreviewFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.activity_show_preview_img, container, false);
 
+        curdate = root.findViewById(R.id.curdate);
+        imageViewLayout = root.findViewById(R.id.imageViewLayout);
         img = (ImageView) root.findViewById(R.id.taken_image);
         clearBtn = (Button) root.findViewById(R.id.clear_button);
         saveBtn = (Button) root.findViewById(R.id.save_button);
@@ -60,11 +71,13 @@ public class ShipmentPhotoPreviewFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_shipmentPhotoPreviewFragment_to_shipmentPhotoFragment);
             }
         });
-
+        String curDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+        curdate.setText(curDateTime);
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 saveImage(bitmap);
+//                saveImage(createBitmapFromView(getActivity(), imageViewLayout));
                 Navigation.findNavController(view).navigate(R.id.action_shipmentPhotoPreviewFragment_to_shipment_recipient);
             }
         });
@@ -84,6 +97,21 @@ public class ShipmentPhotoPreviewFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    private Bitmap createBitmapFromView(Context context, View view) {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+
+        view.measure(displayMetrics.widthPixels, displayMetrics.heightPixels);
+        view.layout(0, 0, displayMetrics.widthPixels, displayMetrics.heightPixels);
+        view.buildDrawingCache();
+        Bitmap bitmap = Bitmap.createBitmap(view.getMeasuredWidth(), view.getMeasuredHeight(), Bitmap.Config.ARGB_8888);
+
+        Canvas canvas = new Canvas(bitmap);
+        view.draw(canvas);
+
+        return bitmap;
+    }
 
     public void saveImage(Bitmap bitmap) {
 

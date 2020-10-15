@@ -1,6 +1,7 @@
 package com.doozycod.axs.ui.shipment;
 
 import android.app.Application;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -105,10 +106,8 @@ public class ShipmentDeliveredToFragment extends Fragment {
             shipHistTask += "\nComments \n " + thetask.getDriverComment();
         } else {
             strings = TextUtils.split(taskBarcode, ",");
-
         }
         ShipmentHist.setText(shipHistTask);
-
 
         try {
             taskInfoViewModel.getTaskInfoByLocationKey(ShipmentActivity.selectedTask.getLocationKey()).observe(getActivity(), new Observer<List<TaskInfoEntity>>() {
@@ -135,7 +134,6 @@ public class ShipmentDeliveredToFragment extends Fragment {
                                         Log.e("TAG", "onChanged: " + strings[a]);
                                     }
                                 }
-
                             }
                         }
                         shipmentAdapter = new ShipmentAdapter(taskInfoEntityList, getActivity());

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="400dp"
+    android:layout_gravity="center"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/shipment_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryLightColor"
+        android:fontFamily="@font/roboto"
+        android:padding="16dp"
+        android:text="Selected Bills"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/primaryTextColor" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selectedBillsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/closeDialogButton"
+        android:layout_below="@id/shipment_details"
+        android:layout_marginHorizontal="5dp" />
+
+    <Button
+        android:id="@+id/closeDialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/secondaryLightColor"
+        android:text="Ok"
+        android:textColor="#fff" />
+
+
+</RelativeLayout>

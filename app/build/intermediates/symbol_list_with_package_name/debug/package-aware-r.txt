@@ -2039,6 +2039,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accessorial
 id action0
 id action_bar
 id action_bar_activity_content
@@ -2121,6 +2122,7 @@ id camera
 id cancel_action
 id cancel_button
 id captureBtn
+id cashCollect
 id center
 id centerMap
 id center_horizontal
@@ -2148,10 +2150,13 @@ id clip_horizontal
 id clip_vertical
 id closeButton
 id closeDialog
+id closeDialogButton
 id codTxt
 id collapseActionView
+id comments
 id commentsEntered
 id comments_input_layout
+id commercialRadio
 id compass
 id confirm_button
 id confirm_dcButton
@@ -2167,6 +2172,7 @@ id controls_shadow
 id controls_wrapper
 id coordinator
 id cos
+id curdate
 id custom
 id customPanel
 id customSeekBar
@@ -2208,6 +2214,7 @@ id dragRight
 id dragStart
 id dragUp
 id drawer_layout
+id driverNotice
 id driver_company_nav_text
 id driver_name_nav_text
 id dropdown
@@ -2280,6 +2287,7 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageViewLayout
 id image_view_crop
 id image_view_logo
 id image_view_state_aspect_ratio
@@ -2405,6 +2413,7 @@ id naviCtrlButton
 id navigation_header_container
 id never
 id nextDestinationButton
+id noRadio
 id noScroll
 id none
 id normal
@@ -2429,6 +2438,10 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id paymentCAD
+id paymentCurrency
+id paymentTypeSpinner
+id paymentUSD
 id peekHeight
 id percent
 id phoneCallIV
@@ -2450,6 +2463,7 @@ id radioButton
 id radioButton2
 id radioButton3
 id radioButton4
+id radioGroup
 id ratio
 id reTurnParcel
 id reasonET
@@ -2461,6 +2475,7 @@ id rectangles
 id recyclerView
 id ref_no_input_layout
 id reffNo
+id residentRadio
 id reverseSawtooth
 id right
 id rightView
@@ -2473,6 +2488,7 @@ id route_menu
 id row_index_key
 id runId
 id satellite
+id saveBtn
 id save_button
 id save_non_transition_alpha
 id save_overlay_view
@@ -2501,6 +2517,8 @@ id search_voice_btn
 id selectTimeTxt
 id select_dialog_listview
 id selected
+id selectedBillsRecyclerView
+id selectedConsolidateBills
 id selectedRunTxt
 id selection_type
 id selfDispatchButton
@@ -2675,6 +2693,7 @@ id view_overlay
 id visible
 id visible_removing_fragment_view_tag
 id webview
+id weightEntered
 id wide
 id window
 id withText
@@ -2685,6 +2704,7 @@ id wrapper_controls
 id wrapper_reset_rotate
 id wrapper_rotate_by_angle
 id wrapper_states
+id yesRadio
 id zero_corner_chip
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
@@ -2754,6 +2774,7 @@ layout abc_tooltip
 layout activity_arrival_time_map_type
 layout activity_camkit
 layout activity_choose_company
+layout activity_consolicate_bills_details
 layout activity_cosolidate_bills
 layout activity_delivery_recipient
 layout activity_delivery_status
@@ -2881,6 +2902,8 @@ layout scanned_package_list
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout selected_consolidate_dialog
+layout selected_consolidate_recycler_view
 layout server_message_dialog
 layout shipment_comment_fragment
 layout shipment_delivered_to_fragment

@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.doozycod.axs.Activity.ConsolicateBillsDetailsActivity;
 import com.doozycod.axs.Database.Entities.TaskInfoEntity;
 import com.doozycod.axs.Database.ViewModel.TaskInfoViewModel;
 import com.doozycod.axs.POJO.TaskInfoGroupByLocationKey;
@@ -89,6 +90,15 @@ public class CosolidateBillsActivity extends AppCompatActivity implements Consol
                             CosolidateBillsActivity.this, CosolidateBillsActivity.this);
                     consolidateAdapter.setHasStableIds(true);
                     consolidateRecyclerView.setAdapter(consolidateAdapter);
+                    consolidateAdapter.setOnItemClickListener(new ConsolidateAdapter.OnItemLongClickListener() {
+                        @Override
+                        public void onItemClick(long taskId, String locationKey) {
+                            Intent intent = new Intent(CosolidateBillsActivity.this, ConsolicateBillsDetailsActivity.class);
+                            intent.putExtra("taskId", taskId);
+                            intent.putExtra("locationKey", locationKey);
+                            startActivity(intent);
+                        }
+                    });
 //                    consolidateAdapter.notifyDataSetChanged();
 //                    listViewAdapter.notifyDataSetChanged();
 //                    Log.e(TAG, "onChanged: " + taskInfoEntityList.toString());

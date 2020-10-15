@@ -58,14 +58,20 @@ public class UpdateRemoteDatabaseWorker extends Worker {
                         TaskInfoUpdateResponse mTaskInfoUpdateResponse = response.body();
                         Log.d(TAG, "onResponse: " + response.body());
 //                        Log.d(TAG, "onResponse: " + mTaskInfoUpdateResponse.getTaskId());
-                        TaskInfoEntity mTaskInfoEntity = mTaskInfoRepository.getTaskInfoWithId(Long.toString(mTaskInfoUpdateResponse.getTaskId()));
-                        mTaskInfoEntity.setRecordStatus(Constants.NOT_MODIFIED);
-                        mTaskInfoEntity.setDataId(mTaskInfoUpdateResponse.getDataId());
-                        mTaskInfoEntity.setStopId(mTaskInfoUpdateResponse.getStopId());
-                        mTaskInfoEntity.setWorkStatus(Constants.TASK_INFO_WORK_STATUS_COMPLETED);
-                        mTaskInfoRepository.update(mTaskInfoEntity);
+                        if (mTaskInfoUpdateResponse != null) {
+
+                            TaskInfoEntity mTaskInfoEntity = mTaskInfoRepository.getTaskInfoWithId(Long.toString(mTaskInfoUpdateResponse.getTaskId()));
+                            mTaskInfoEntity.setRecordStatus(Constants.NOT_MODIFIED);
+                            mTaskInfoEntity.setDataId(mTaskInfoUpdateResponse.getDataId());
+                            mTaskInfoEntity.setStopId(mTaskInfoUpdateResponse.getStopId());
+                            mTaskInfoEntity.setWorkStatus(Constants.TASK_INFO_WORK_STATUS_COMPLETED);
+                            mTaskInfoRepository.update(mTaskInfoEntity);
+                            Log.d(TAG, "onResponse: " + new Gson().toJson(mTaskInfoRepository.getTaskInfoWithId(Long.toString(mTaskInfoEntity.getTaskId()))));
+
+                        }
+
+
                         Log.d(TAG, "onResponse: " + "task info is updated ");
-                        Log.d(TAG, "onResponse: " + new Gson().toJson(mTaskInfoRepository.getTaskInfoWithId(Long.toString(mTaskInfoEntity.getTaskId()))));
                     }
 
                     @Override

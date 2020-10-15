@@ -1,7 +1,9 @@
 package com.doozycod.axs.ui.shipment;
 
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,7 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.preference.PreferenceManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,12 +30,17 @@ import com.doozycod.axs.Database.Entities.ReasonEntity;
 import com.doozycod.axs.Database.Entities.StatusEntity;
 import com.doozycod.axs.Database.Entities.TaskInfoEntity;
 import com.doozycod.axs.Database.Repository.ShipmentStatusRepository;
+import com.doozycod.axs.Database.ViewModel.TaskInfoViewModel;
 import com.doozycod.axs.R;
+import com.doozycod.axs.UpdateDebug.Adapter.SelectedConsolidateAdapter;
 import com.doozycod.axs.UpdateDebug.CosolidateBillsActivity;
 import com.doozycod.axs.ui.shipment.ViewModel.ShipmentRecipientViewModel;
 import com.google.gson.Gson;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -42,8 +54,12 @@ public class ShipmentRecipientFragment extends Fragment {
     private ReasonEntity reason;
     private StatusEntity status;
 
-    private Button sigLinkBtn, camLinkBtn, consolidateBtn;
+    private Button sigLinkBtn, camLinkBtn, consolidateBtn, selectedBillsBtn;
     String statusType = "", reasonType = "";
+
+    private TaskInfoViewModel taskInfoViewModel;
+    List<TaskInfoEntity> taskInfoEntityList;
+    String taskBarcode;
 
     public static ShipmentRecipientFragment newInstance() {
         return new ShipmentRecipientFragment();
@@ -58,6 +74,7 @@ public class ShipmentRecipientFragment extends Fragment {
 //
 
         shipInfo = view.findViewById(R.id.shipment_details);
+        selectedBillsBtn = view.findViewById(R.id.selectedConsolidateBills);
 
         signatureName = view.findViewById(R.id.sigName);
         quantity = view.findViewById(R.id.qtyEntered);
@@ -66,6 +83,14 @@ public class ShipmentRecipientFragment extends Fragment {
         sigLinkBtn = view.findViewById(R.id.sigLinkBtn);
         camLinkBtn = view.findViewById(R.id.camLinkBtn);
         consolidateBtn = view.findViewById(R.id.consoBillsBtn);
+
+//
+        taskInfoViewModel = new ViewModelProvider(this).get(TaskInfoViewModel.class);
+        taskInfoEntityList = new ArrayList<TaskInfoEntity>();
+
+
+        taskBarcode = PreferenceManager.getDefaultSharedPreferences(getActivity())
+                .getString("ConsolidateBills", "");
 
 //        fetch task details
         TaskInfoEntity theTask = ShipmentActivity.selectedTask;
@@ -76,8 +101,8 @@ public class ShipmentRecipientFragment extends Fragment {
         reason = shipmentStatusRepository.getReason(theTask.getReasonId());
         String tempStatus = new Gson().toJson(status);
         String tempReason = new Gson().toJson(reason);
-        Log.e("TAGTAG", "onCreateView: REASON " + tempReason);
-        Log.e("TAGTAG", "onCreateView: STATUS " + tempStatus);
+//        Log.e("TAGTAG", "onCreateView: REASON " + tempReason);
+//        Log.e("TAGTAG", "onCreateView: STATUS " + tempStatus);
 
         if (status != null) statusType = status.getStatusRule();
 
@@ -92,7 +117,22 @@ public class ShipmentRecipientFragment extends Fragment {
                 intent.putExtra("locationKey", ShipmentActivity.selectedTask.getLocationKey());
                 intent.putExtra("name", ShipmentActivity.selectedTask.getName());
                 startActivityForResult(intent, 123);
+            }
+        });
 
+        selectedBillsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                taskBarcode = PreferenceManager.getDefaultSharedPreferences(getActivity())
+                        .getString("ConsolidateBills", "");
+
+                if (taskBarcode.equals("")) {
+                    Toast.makeText(getActivity(), "No Selected bills found!", Toast.LENGTH_SHORT).show();
+                } else {
+                    showSelectedBills();
+
+                }
             }
         });
         continueBtn.setOnClickListener(new View.OnClickListener() {
@@ -188,6 +228,31 @@ public class ShipmentRecipientFragment extends Fragment {
         }); */
 
         return view;
+    }
+
+
+    void showSelectedBills() {
+        Dialog dialog = new Dialog(getActivity(), R.style.MyDialogTheme);
+        dialog.setContentView(R.layout.selected_consolidate_dialog);
+        RecyclerView recyclerView = dialog.findViewById(R.id.selectedBillsRecyclerView);
+        Button closeBtn = dialog.findViewById(R.id.closeDialogButton);
+        dialog.setCancelable(false);
+
+        if (!taskBarcode.equals("")) {
+            String[] strings = TextUtils.split(taskBarcode, ",");
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            recyclerView.setHasFixedSize(true);
+            recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+            recyclerView.setAdapter(new SelectedConsolidateAdapter(Arrays.asList(strings), getActivity()));
+        }
+        closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+//                finish();
+            }
+        });
+        dialog.show();
     }
 
     @Override
