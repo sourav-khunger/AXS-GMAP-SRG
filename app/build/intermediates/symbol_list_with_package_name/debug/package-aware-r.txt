@@ -1910,6 +1910,7 @@ drawable ic_baseline_settings_24
 drawable ic_calender
 drawable ic_clock_black_24dp
 drawable ic_closed_cardboard_box_32
+drawable ic_delivered_map
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1922,6 +1923,8 @@ drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable left
 drawable location
+drawable location_next
+drawable location_partial
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2079,6 +2082,7 @@ id add
 id add_access_code_btn
 id add_hours_btn
 id add_route_btn
+id additionalDetails
 id addressTxt
 id adjust_height
 id adjust_width
@@ -2785,6 +2789,7 @@ layout activity_main_here_adnav
 layout activity_main_here_turn_nav
 layout activity_map_route
 layout activity_menu
+layout activity_new_slider_pager
 layout activity_phone_call
 layout activity_scanner
 layout activity_screen_slide_pager
@@ -2932,6 +2937,7 @@ layout text_view_without_line_height
 layout texture_view
 layout time_picker_dialog
 layout to_do_task_item2
+layout to_do_task_item2_new
 layout to_do_task_list_row
 layout toolbar
 layout ucrop_activity_photobox

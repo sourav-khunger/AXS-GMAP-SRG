@@ -82,7 +82,7 @@ public class ConsolicateBillsDetailsActivity extends AppCompatActivity {
         weightET.setText(mTaskInfoEntity.getWeight());
         shipRefET.setText(mTaskInfoEntity.getReffNo());
         enteredQuantityET.setText(mTaskInfoEntity.getQuantity() + "");
-        if(mTaskInfoEntity.getCashCollect()!=null ){
+        if (mTaskInfoEntity.getCashCollect() != null) {
             cashCollect.setText(mTaskInfoEntity.getCashCollect());
         }
 //        payment type list
@@ -98,6 +98,12 @@ public class ConsolicateBillsDetailsActivity extends AppCompatActivity {
         paymentIntCOD.add(2);
         paymentIntCOD.add(3);
         paymentIntCOD.add(4);
+
+
+        ArrayAdapter paymentAdapter = new ArrayAdapter(this,
+                android.R.layout.simple_spinner_dropdown_item, paymentCOD);
+
+        paymentTypeSpinner.setAdapter(paymentAdapter);
 
         if (mTaskInfoEntity.getCodCurrency() != null) {
             if (mTaskInfoEntity.getCodCurrency().equals("0")) {
@@ -141,31 +147,24 @@ public class ConsolicateBillsDetailsActivity extends AppCompatActivity {
 
             }
         }
-        if (mTaskInfoEntity.getCod() == 0) {
+        int cod = (int) mTaskInfoEntity.getCod();
+        if (cod == 0) {
+            paymentTypeSpinner.setSelection(0);
+        }
+        if (cod == 1) {
+            paymentTypeSpinner.setSelection(1);
+        }
+        if (cod == 2) {
+            paymentTypeSpinner.setSelection(2);
+        }
+        if (cod == 3) {
+            paymentTypeSpinner.setSelection(3);
+        }
+        if (cod == 4) {
+            paymentTypeSpinner.setSelection(4);
 
-        } else {
-            if (mTaskInfoEntity.getCod() == 1) {
-                paymentTypeSpinner.setSelection(1);
-
-            }
-            if (mTaskInfoEntity.getCod() == 2) {
-                paymentTypeSpinner.setSelection(2);
-
-            }
-            if (mTaskInfoEntity.getCod() == 3) {
-                paymentTypeSpinner.setSelection(3);
-
-            }
-            if (mTaskInfoEntity.getCod() == 4) {
-                paymentTypeSpinner.setSelection(4);
-
-            }
         }
 
-        ArrayAdapter paymentAdapter = new ArrayAdapter(this,
-                android.R.layout.simple_spinner_dropdown_item, paymentCOD);
-
-        paymentTypeSpinner.setAdapter(paymentAdapter);
         paymentTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -251,8 +250,9 @@ public class ConsolicateBillsDetailsActivity extends AppCompatActivity {
                     mTaskInfoEntity.setReffNo(shipRefET.getText().toString());
                     mTaskInfoRepository.update(mTaskInfoEntity);
                     Log.e("TAG", "onClick: " + new Gson().toJson(mTaskInfoEntity));
+                    Toast.makeText(ConsolicateBillsDetailsActivity.this, "Consolidated bill updated!", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-
             }
         });
         taskInfoViewModel.getTaskInfoByLocationKey(locationKey).observe(this, new Observer<List<TaskInfoEntity>>() {

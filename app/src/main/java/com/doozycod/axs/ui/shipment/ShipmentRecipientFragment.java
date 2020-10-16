@@ -21,10 +21,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.doozycod.axs.Activity.ConsolicateBillsDetailsActivity;
 import com.doozycod.axs.Activity.ShipmentActivity;
 import com.doozycod.axs.Database.Entities.ReasonEntity;
 import com.doozycod.axs.Database.Entities.StatusEntity;
@@ -61,6 +67,15 @@ public class ShipmentRecipientFragment extends Fragment {
     List<TaskInfoEntity> taskInfoEntityList;
     String taskBarcode;
 
+
+    Spinner paymentTypeSpinner, accessorialSpinner;
+    List<String> paymentCOD = new ArrayList<>();
+    List<Integer> paymentIntCOD = new ArrayList<Integer>();
+    String paymentRadio = "", areaType = "", accessorialRadio = "";
+    RadioGroup paymentGroup, areaGroup, accessorialGroup;
+    RadioButton cadRadio, usdRadio, resiRadio, comRadio, yesRadio, noRadio;
+
+
     public static ShipmentRecipientFragment newInstance() {
         return new ShipmentRecipientFragment();
     }
@@ -71,7 +86,15 @@ public class ShipmentRecipientFragment extends Fragment {
         View view = inflater.inflate(R.layout.shipment_recipient_fragment, container, false);
 
         Button continueBtn = view.findViewById(R.id.continue_btn);
-//
+        accessorialGroup = view.findViewById(R.id.accessorial);
+        areaGroup = view.findViewById(R.id.radioGroup);
+        comRadio = view.findViewById(R.id.commercialRadio);
+        noRadio = view.findViewById(R.id.noRadio);
+        yesRadio = view.findViewById(R.id.yesRadio);
+        resiRadio = view.findViewById(R.id.residentRadio);
+        usdRadio = view.findViewById(R.id.paymentUSD);
+        cadRadio = view.findViewById(R.id.paymentCAD);
+        paymentGroup = view.findViewById(R.id.paymentCurrency);
 
         shipInfo = view.findViewById(R.id.shipment_details);
         selectedBillsBtn = view.findViewById(R.id.selectedConsolidateBills);
@@ -83,10 +106,31 @@ public class ShipmentRecipientFragment extends Fragment {
         sigLinkBtn = view.findViewById(R.id.sigLinkBtn);
         camLinkBtn = view.findViewById(R.id.camLinkBtn);
         consolidateBtn = view.findViewById(R.id.consoBillsBtn);
+        paymentTypeSpinner = view.findViewById(R.id.paymentTypeSpinner);
 
 //
         taskInfoViewModel = new ViewModelProvider(this).get(TaskInfoViewModel.class);
         taskInfoEntityList = new ArrayList<TaskInfoEntity>();
+
+
+//        payment type list
+        paymentCOD.add("    NO");
+        paymentCOD.add("    CASH");
+        paymentCOD.add("    CHEQUE");
+        paymentCOD.add("    CREDIT CARD");
+        paymentCOD.add("    ON ACCOUNT");
+
+        paymentIntCOD.add(0);
+        paymentIntCOD.add(1);
+        paymentIntCOD.add(2);
+        paymentIntCOD.add(3);
+        paymentIntCOD.add(4);
+
+
+        ArrayAdapter paymentAdapter = new ArrayAdapter(getActivity(),
+                android.R.layout.simple_spinner_dropdown_item, paymentCOD);
+
+        paymentTypeSpinner.setAdapter(paymentAdapter);
 
 
         taskBarcode = PreferenceManager.getDefaultSharedPreferences(getActivity())
@@ -94,6 +138,116 @@ public class ShipmentRecipientFragment extends Fragment {
 
 //        fetch task details
         TaskInfoEntity theTask = ShipmentActivity.selectedTask;
+
+
+        if (theTask.getCodCurrency() != null) {
+            if (theTask.getCodCurrency().equals("0")) {
+                cadRadio.setChecked(true);
+                usdRadio.setChecked(false);
+                paymentRadio = "0";
+
+            }
+            if (theTask.getCodCurrency().equals("1")) {
+                usdRadio.setChecked(true);
+                cadRadio.setChecked(false);
+                paymentRadio = "1";
+
+            }
+        }
+        if (theTask.getAccessorial() != null) {
+            if (theTask.getAccessorial().equals("0")) {
+                noRadio.setChecked(true);
+                yesRadio.setChecked(false);
+                accessorialRadio = "0";
+
+            }
+            if (theTask.getAccessorial().equals("1")) {
+                yesRadio.setChecked(true);
+                noRadio.setChecked(false);
+                accessorialRadio = "1";
+
+            }
+        }
+        if (theTask.getAreaType() != null) {
+            if (theTask.getAreaType().equals("R")) {
+                resiRadio.setChecked(true);
+                comRadio.setChecked(false);
+                areaType = "R";
+
+            }
+            if (theTask.getAreaType().equals("C")) {
+                comRadio.setChecked(true);
+                resiRadio.setChecked(false);
+                areaType = "C";
+
+            }
+        }
+        int cod = (int) theTask.getCod();
+        Log.e("TAG", "onCreateView: " + cod);
+        if (cod == 0) {
+            paymentTypeSpinner.setSelection(0);
+        }
+        if (cod == 1) {
+            paymentTypeSpinner.setSelection(1);
+        }
+        if (cod == 2) {
+            paymentTypeSpinner.setSelection(2);
+        }
+        if (cod == 3) {
+            paymentTypeSpinner.setSelection(3);
+        }
+        if (cod == 4) {
+            paymentTypeSpinner.setSelection(4);
+        }
+
+
+        paymentTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+        paymentGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (cadRadio.isChecked()) {
+                    paymentRadio = "0";
+                }
+                if (usdRadio.isChecked()) {
+                    paymentRadio = "1";
+                }
+            }
+        });
+        areaGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (resiRadio.isChecked()) {
+                    areaType = "R";
+                }
+                if (comRadio.isChecked()) {
+                    areaType = "C";
+                }
+            }
+        });
+        accessorialGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (yesRadio.isChecked()) {
+                    accessorialRadio = "1";
+                }
+                if (noRadio.isChecked()) {
+                    accessorialRadio = "0";
+                }
+            }
+        });
+
 
         ShipmentStatusRepository shipmentStatusRepository = new ShipmentStatusRepository(getActivity().getApplication());
 
@@ -109,7 +263,6 @@ public class ShipmentRecipientFragment extends Fragment {
         if (reason != null) reasonType = reason.getReasonRule();
 //            Log.e("TAGTAG", "onCreateView: " + reason.getReasonRule());
 
-
         consolidateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -120,10 +273,10 @@ public class ShipmentRecipientFragment extends Fragment {
             }
         });
 
+
         selectedBillsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 taskBarcode = PreferenceManager.getDefaultSharedPreferences(getActivity())
                         .getString("ConsolidateBills", "");
 
@@ -131,10 +284,10 @@ public class ShipmentRecipientFragment extends Fragment {
                     Toast.makeText(getActivity(), "No Selected bills found!", Toast.LENGTH_SHORT).show();
                 } else {
                     showSelectedBills();
-
                 }
             }
         });
+
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -171,8 +324,25 @@ public class ShipmentRecipientFragment extends Fragment {
                     Toast.makeText(getActivity(), "Photo is required", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (accessorialRadio.equals("")) {
+                    Toast.makeText(getActivity(), "Please Select Accessorial!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (areaType.equals("")) {
+                    Toast.makeText(getActivity(), "Please select Area Type!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (paymentRadio.equals("")) {
+                    Toast.makeText(getActivity(), "Please select payment currency!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 int qtyEnterbed = Integer.parseInt(quantity.getText().toString());
+
+                ShipmentActivity.selectedTask.setAccessorial(accessorialRadio);
+                ShipmentActivity.selectedTask.setAreaType(areaType);
+                ShipmentActivity.selectedTask.setCod(paymentIntCOD.get(paymentTypeSpinner.getSelectedItemPosition()));
+                ShipmentActivity.selectedTask.setCodCurrency(paymentRadio);
                 ShipmentActivity.selectedTask.setQtyEntered(qtyEnterbed);
                 ShipmentActivity.selectedTask.setDriverComment(comment.getText().toString());
                 ShipmentActivity.selectedTask.setReffNo(reff.getText().toString());
@@ -218,14 +388,6 @@ public class ShipmentRecipientFragment extends Fragment {
 
         comment.setText(theTask.getDriverComment());
         signatureName.setText(theTask.getSignatureName());
-
-        /*Button addCommentBtn = view.findViewById(R.id.add_comment_btn);
-        addCommentBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_shipment_recipient_to_shipment_comment);
-            }
-        }); */
 
         return view;
     }

@@ -26,6 +26,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.doozycod.axs.Fragments.ToDoTaskListFragment;
+import com.doozycod.axs.UpdateDebug.SlidingActivity.NewSliderPagerActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
@@ -219,7 +220,7 @@ public class ScreenSlidePagerActivity extends AppCompatActivity implements Navig
                 break;
             case R.id.nav_Menu:
                 // Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(ScreenSlidePagerActivity.this, MenuActivity.class));
+                startActivity(new Intent(ScreenSlidePagerActivity.this, NewSliderPagerActivity.class));
                 break;
             case R.id.nav_show_calendar:
                 //

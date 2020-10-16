@@ -194,6 +194,10 @@ public class ShipmentDeliveredToFragment extends Fragment {
         /*curDateTime = PreferenceManager.getDefaultSharedPreferences(getActivity())
                 .getString(Constants.PREF_DELIVERY_COMPLETEDTIME, "");*/
 
+        taskInfoEntity.setAccessorial(ShipmentActivity.selectedTask.getAccessorial());
+        taskInfoEntity.setAreaType(ShipmentActivity.selectedTask.getAreaType());
+        taskInfoEntity.setCodCurrency(ShipmentActivity.selectedTask.getCodCurrency());
+        taskInfoEntity.setCod(ShipmentActivity.selectedTask.getCod());
         taskInfoEntity.setStatusId(ShipmentActivity.selectedTask.getStatusId());
         taskInfoEntity.setReasonId(ShipmentActivity.selectedTask.getReasonId());
         taskInfoEntity.setImageTaken(ShipmentActivity.selectedTask.getImageTaken());
@@ -204,7 +208,7 @@ public class ShipmentDeliveredToFragment extends Fragment {
         taskInfoEntity.setSignatureName(ShipmentActivity.selectedTask.getSignatureName());
         taskInfoEntity.setDriverComment(ShipmentActivity.selectedTask.getDriverComment());
         taskInfoEntity.setQtyEntered(ShipmentActivity.selectedTask.getQtyEntered());
-        taskInfoEntity.setCod(0);
+//        taskInfoEntity.setCod(0);
         taskInfoEntity.setCompleteTime(curDateTime);
         taskInfoEntity.setRecordStatus(2);
         mTaskInfoRepository.update(taskInfoEntity);

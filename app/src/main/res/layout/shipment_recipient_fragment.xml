@@ -6,160 +6,341 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:id="@+id/shipment_details"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/primaryLightColor"
-        android:fontFamily="@font/roboto"
-        android:padding="32dp"
-        android:text="Shipment Info"
-        android:textAlignment="center"
-        android:textColor="@color/primaryTextColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ref_no_input_layout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shipment_details">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/reffNo"
+        <TextView
+            android:id="@+id/shipment_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ref" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:background="@color/primaryLightColor"
+            android:fontFamily="@font/roboto"
+            android:padding="22dp"
+            android:text="Shipment Info"
+            android:textAlignment="center"
+            android:textColor="@color/primaryTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/quantity_input_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ref_no_input_layout">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/qtyEntered"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Quantity Entered"
-            android:inputType="number" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/comments_input_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quantity_input_layout">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/commentsEntered"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Comments Entered" />
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ref_no_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/signature_input_input_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comments_input_layout">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/reffNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ref" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sigName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Signature" />
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/quantity_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ref_no_input_layout">
 
-    <Button
-        android:id="@+id/sigLinkBtn"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/primaryColor"
-        android:text="Recipient Signature"
-        android:textColor="@color/primaryTextColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signature_input_input_layout" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/qtyEntered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Quantity Entered"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/camLinkBtn"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/primaryColor"
-        android:text="Take Photo"
-        android:textColor="@color/primaryTextColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sigLinkBtn" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/comments_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/quantity_input_layout">
 
-    <Button
-        android:id="@+id/consoBillsBtn"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/primaryColor"
-        android:text="Add Consolidated Bills"
-        android:textColor="@color/primaryTextColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/camLinkBtn" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/commentsEntered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Comments Entered" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/selectedConsolidateBills"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/primaryColor"
-        android:text="Show Selected Bills"
-        android:textColor="@color/primaryTextColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consoBillsBtn" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signature_input_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/comments_input_layout">
 
-    <Button
-        android:id="@+id/continue_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/secondaryLightColor"
-        android:text="Continue"
-        android:textColor="@color/primaryTextColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sigName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Signature" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/additionalDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signature_input_input_layout">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#adadad" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#E4E4E4" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#adadad" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:paddingBottom="10dp"
+                        android:text="Area Type:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#000" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/residentRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Residential"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <RadioButton
+                            android:id="@+id/commercialRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Commercial"
+
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:text="Payment Currency:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#000" />
+
+                    <RadioGroup
+                        android:id="@+id/paymentCurrency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/paymentCAD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="CAD"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <RadioButton
+                            android:id="@+id/paymentUSD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="USD"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:text="Accessorial:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#000" />
+
+                    <RadioGroup
+                        android:id="@+id/accessorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/yesRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <RadioButton
+                            android:id="@+id/noRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#adadad" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:paddingHorizontal="20dp"
+                        android:text="Payment"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/edittext_bg">
+
+                        <Spinner
+                            android:id="@+id/paymentTypeSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/sigLinkBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/primaryColor"
+                    android:text="Recipient Signature"
+                    android:textColor="@color/primaryTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/additionalDetails" />
+
+                <Button
+                    android:id="@+id/camLinkBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/primaryColor"
+                    android:text="Take Photo"
+                    android:textColor="@color/primaryTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sigLinkBtn" />
+
+                <Button
+                    android:id="@+id/consoBillsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/primaryColor"
+                    android:text="Add Consolidated Bills"
+                    android:textColor="@color/primaryTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/camLinkBtn" />
+
+                <Button
+                    android:id="@+id/selectedConsolidateBills"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/primaryColor"
+                    android:text="Show Selected Bills"
+                    android:textColor="@color/primaryTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/consoBillsBtn" />
+
+                <Button
+                    android:id="@+id/continue_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/secondaryLightColor"
+                    android:text="Continue"
+                    android:textColor="@color/primaryTextColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/selectedConsolidateBills" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="32dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="#adadad" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/location_next"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="99"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <RelativeLayout
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="45dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="100 City Centre Dr, Mississauga, ON L5B 2C9, Canada"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/primaryDarkColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvTaskAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="100 City Centre Dr, Mississauga, ON L5B 2C9, Canada"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/primaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L5B 2C9"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <TextView
+                android:id="@+id/tvBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 Parcel 2 Delivery"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textStyle="bold"
+
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvQuantity1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 Parcel 2 Delivery"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 Parcel 2 Delivery"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/secondaryColor"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="32dp"
+                android:background="@color/primaryLightColor" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

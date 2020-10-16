@@ -46,7 +46,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup">
-        <activity android:name=".Activity.ConsolicateBillsDetailsActivity"></activity>
+        <activity android:name=".UpdateDebug.SlidingActivity.NewSliderPagerActivity"></activity>
+        <activity android:name=".Activity.ConsolicateBillsDetailsActivity" />
         <activity android:name=".UpdateDebug.CosolidateBillsActivity" />
         <activity android:name=".Activity.ArrivalTimeMapTypeActivity" />
         <activity android:name=".UpdateDebug.RouteMarker.MapRouteActivity" />
