@@ -113,7 +113,6 @@ public class ChooseCompanyActivity extends AppCompatActivity implements View.OnC
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnLogOn:
-                Log.d(TAG, "onClick: " + "btn is clicked");
                 Log.d(TAG, "onClick: " + companyName + " token:  " + token);
 
                 if (companyId == 0) return;

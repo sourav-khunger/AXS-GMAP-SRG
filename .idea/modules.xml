@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AJVoIP/AJVoIP.iml" filepath="$PROJECT_DIR$/.idea/modules/AJVoIP/AJVoIP.iml" group="TabWithListView/AJVoIP" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TabWithListView.iml" filepath="$PROJECT_DIR$/.idea/modules/TabWithListView.iml" group="TabWithListView" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="TabWithListView/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TabWithListView.iml" filepath="$PROJECT_DIR$/.idea/modules/TabWithListView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AJVoIP/TabWithListView.AJVoIP.iml" filepath="$PROJECT_DIR$/.idea/modules/AJVoIP/TabWithListView.AJVoIP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TabWithListView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TabWithListView.app.iml" />
     </modules>
   </component>
 </project>
